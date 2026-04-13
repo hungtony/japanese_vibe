@@ -409,11 +409,10 @@ export default function PlacementTestPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
-                  className={`mt-5 px-4 py-2.5 rounded-xl text-sm ${
-                    selectedOption === question.answer
+                  className={`mt-5 px-4 py-2.5 rounded-xl text-sm ${selectedOption === question.answer
                       ? 'bg-emerald-400/10 text-emerald-300'
                       : 'bg-red-400/10 text-red-300'
-                  }`}
+                    }`}
                 >
                   {selectedOption === question.answer
                     ? '✓ 正確！'
@@ -432,15 +431,14 @@ export default function PlacementTestPage() {
           {quiz.map((_, idx) => (
             <div
               key={idx}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                idx < answers.length
+              className={`h-1.5 rounded-full transition-all duration-300 ${idx < answers.length
                   ? answers[idx].isCorrect
                     ? 'bg-emerald-400 w-4'
                     : 'bg-red-400 w-4'
                   : idx === currentQ
-                  ? `bg-${levelInfo.color} w-6`
-                  : 'bg-white/10 w-4'
-              }`}
+                    ? `bg-${levelInfo.color} w-6`
+                    : 'bg-white/10 w-4'
+                }`}
             />
           ))}
         </div>
