@@ -47,22 +47,15 @@ export default function QuizPage() {
     setAnswers(newAnswers)
 
     setTimeout(() => {
-      if (currentQ < quiz.length - 1) {
+      if (currentQ + 1 < quiz.length) {
         setCurrentQ(prev => prev + 1)
         setSelectedOption(null)
       } else {
-        // Quiz finished
-        const correctCount = newAnswers.filter(a => a.isCorrect).length
-        const passed = correctCount >= 7
-
-        if (passed) {
-          setShowConfetti(true)
-          completeNode(chapter.id)
-        }
-
         setShowResult(true)
+        if (isCorrect && !passed) setShowConfetti(true)
+        completeNode(chapter.id)
       }
-    }, 800)
+    }, isCorrect ? 1000 : 2500)
   }, [selectedOption, answers, currentQ, quiz, question, chapter.id, completeNode])
 
   const correctCount = answers.filter(a => a.isCorrect).length

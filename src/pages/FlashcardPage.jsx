@@ -41,15 +41,14 @@ const Card = ({ card, index, removeCard, isActive, onResult, colorConfig }) => {
   if (!isActive) {
     return (
       <motion.div
-        className="absolute top-0 left-0 w-full h-full rounded-[2rem] card-glass shadow-xl p-8 flex items-center justify-center flex-col pointer-events-none"
+        className="absolute top-0 left-0 w-full h-full rounded-[2rem] bg-white/[0.02] border border-white/[0.05] shadow-xl p-8 flex items-center justify-center flex-col pointer-events-none"
         initial={{ scale: 0.95, y: 12 }}
         animate={{ scale: 0.95, y: 12 }}
         style={{ zIndex: 0 }}
       >
-        <div className="w-16 h-16 rounded-full bg-surface-800/50 flex items-center justify-center mb-6">
-          <Brain className="w-8 h-8 text-surface-600" />
+        <div className="w-12 h-12 rounded-full bg-surface-800/30 flex items-center justify-center mb-6 opacity-20">
+          <Brain className="w-6 h-6 text-surface-600" />
         </div>
-        <p className="text-surface-600 font-bold tracking-widest text-sm uppercase">Next Card</p>
       </motion.div>
     );
   }
@@ -76,9 +75,11 @@ const Card = ({ card, index, removeCard, isActive, onResult, colorConfig }) => {
           style={{ transformStyle: 'preserve-3d' }}
         >
           {/* 正面：日文單字 */}
-          <div 
-            className="absolute w-full h-full rounded-[2rem] bg-surface-800 border border-white/10 shadow-2xl flex flex-col items-center justify-center px-6 overflow-hidden"
+          <motion.div 
+            className="absolute w-full h-full rounded-[2rem] bg-[#1a1a1a] border border-white/10 shadow-2xl flex flex-col items-center justify-center px-6 overflow-hidden"
             style={{ backfaceVisibility: 'hidden' }}
+            animate={{ opacity: flipped ? 0 : 1 }}
+            transition={{ duration: 0.15 }}
           >
             {/* 左滑/右滑的視覺提示 */}
             <motion.div 
@@ -110,19 +111,25 @@ const Card = ({ card, index, removeCard, isActive, onResult, colorConfig }) => {
               <span className="flex flex-col items-center"><ArrowLeft className="w-5 h-5 mb-1" /> 不熟</span>
               <span className="flex flex-col items-center"><ArrowLeft className="w-5 h-5 mb-1 rotate-180" /> 記住了</span>
             </div>
-          </div>
+          </motion.div>
 
           {/* 背面：解釋 */}
-          <div 
-            className={`absolute top-0 left-0 w-full h-full rounded-[2rem] bg-gradient-to-br ${colorConfig.gradient} border border-white/20 shadow-2xl shadow-${colorConfig.color}/30 flex flex-col items-center justify-center px-6`}
+          <motion.div 
+            className={`absolute top-0 left-0 w-full h-full rounded-[2rem] bg-[#1a1a1a] border border-white/20 shadow-2xl shadow-${colorConfig.color}/30 flex flex-col items-center justify-center px-6`}
             style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+            animate={{ 
+              opacity: flipped ? 1 : 0,
+              // 使用漸層背景但確保不透明
+              backgroundImage: flipped ? `linear-gradient(to bottom right, var(--tw-gradient-from), var(--tw-gradient-to))` : 'none'
+            }}
+            transition={{ duration: 0.15 }}
           >
              <span className="text-white/70 text-xs tracking-widest uppercase mb-6 drop-shadow-md">Tap to flip 點擊翻面</span>
              <h3 className="text-4xl font-bold font-jp text-white mb-2 drop-shadow-lg">{card.reading}</h3>
              <p className="text-white/80 font-mono text-lg mb-8">{card.romaji}</p>
              <div className="w-16 h-1 bg-white/30 rounded-full mb-8" />
              <p className="text-2xl font-bold text-white text-center">{card.meaning}</p>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </motion.div>

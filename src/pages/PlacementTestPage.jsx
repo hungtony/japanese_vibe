@@ -63,7 +63,7 @@ export default function PlacementTestPage() {
         setPassed(correct >= 7)
         setStage('result')
       }
-    }, 600)
+    }, isCorrect ? 1000 : 2500)
   }, [selectedOption, answers, currentQ, quiz, question, selectedLevel])
 
   const handleStartJourney = () => {
