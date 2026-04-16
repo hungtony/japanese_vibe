@@ -10,15 +10,15 @@ export const chaptersN5 = [
         pattern: 'AはBです',
         explanation: '表示「A是B」，最基本的肯定句型。「は」讀作「wa」。',
         examples: [
-          { jp: '私{わたし}は學{がく}生{せい}です。', romaji: 'Watashi wa gakusei desu.', zh: '我是學生。' },
-          { jp: '田中{たなか}さんは先{せん}生{せい}です。', romaji: 'Tanaka-san wa sensei desu.', zh: '田中先生是老師。' },
+          { jp: '私{わたし}は学生{がくせい}です。', romaji: 'Watashi wa gakusei desu.', zh: '我是學生。' },
+          { jp: '田中{たなか}さんは先生{せんせい}です。', romaji: 'Tanaka-san wa sensei desu.', zh: '田中先生是老師。' },
         ]
       },
       {
         pattern: 'AはBじゃありません',
         explanation: '「A不是B」。口語也常用「〜じゃないです」。',
         examples: [
-          { jp: '私{わたし}は先{せん}生{せい}じゃありません。', romaji: 'Watashi wa sensei ja arimasen.', zh: '我不是老師。' },
+          { jp: '私{わたし}は先生{せんせい}じゃありません。', romaji: 'Watashi wa sensei ja arimasen.', zh: '我不是老師。' },
           { jp: 'あれは本{ほん}じゃないです。', romaji: 'Are wa hon ja nai desu.', zh: '那不是書。' },
         ]
       }
@@ -54,8 +54,8 @@ export const chaptersN5 = [
         pattern: '〜ですか',
         explanation: '在句尾加「か」表示疑問。',
         examples: [
-          { jp: '田中{たなか}さんは先{せん}生{せい}ですか。', romaji: 'Tanaka-san wa sensei desu ka.', zh: '田中先生是老師嗎？' },
-          { jp: 'あなたも學{がく}生{せい}ですか。', romaji: 'Anata mo gakusei desu ka.', zh: '你也是學生嗎？' },
+          { jp: '田中{たなか}さんは先生{せんせい}ですか。', romaji: 'Tanaka-san wa sensei desu ka.', zh: '田中先生是老師嗎？' },
+          { jp: 'あなたも学生{がくせい}ですか。', romaji: 'Anata mo gakusei desu ka.', zh: '你也是學生嗎？' },
         ]
       },
       {
@@ -133,8 +133,8 @@ export const chaptersN5 = [
         pattern: 'ここ / そこ / あそこ',
         explanation: '指示場所。這兒、那兒、那兒(遠方)。',
         examples: [
-          { jp: 'ここは教{きょう}室{しつ}です。', romaji: 'Koko wa kyōshitsu desu.', zh: '這裡地是教室。' },
-          { jp: 'お手{て}洗{あら}いはあそこです。', romaji: 'O-tearai wa asoko desu.', zh: '洗手間在那邊。' },
+          { jp: 'ここは教室{きょうしつ}です。', romaji: 'Koko wa kyōshitsu desu.', zh: '這裡地是教室。' },
+          { jp: 'お手洗{てあら}いはあそこです。', romaji: 'O-tearai wa asoko desu.', zh: '洗手間在那邊。' },
         ]
       }
     ],
@@ -170,7 +170,7 @@ export const chaptersN5 = [
         explanation: '助詞「の」表示所有、所屬。',
         examples: [
           { jp: '私{わたし}の本{ほん}です。', romaji: 'Watashi no hon desu.', zh: '是我的書。' },
-          { jp: '日{に}本{ほん}の車{くるま}です。', romaji: 'Nihon no kuruma desu.', zh: '是日本的車。' },
+          { jp: '日本{にほん}の車{くるま}です。', romaji: 'Nihon no kuruma desu.', zh: '是日本的車。' },
         ]
       }
     ],
@@ -205,8 +205,8 @@ export const chaptersN5 = [
         pattern: '時（じ）/ 分（ふん・ぷん）',
         explanation: '表示時間。注意 4, 7, 9 時的讀法。',
         examples: [
-          { jp: '今{いま}、四{よ}時{じ}です。', romaji: 'Ima, yo-ji desu.', zh: '現在是四點。' },
-          { jp: '九{く}時{じ}半{はん}です。', romaji: 'Kuji han desu.', zh: '九點半。' },
+          { jp: '今{いま}、四時{よじ}です。', romaji: 'Ima, yo-ji desu.', zh: '現在是四點。' },
+          { jp: '九時{くじ}半{はん}です。', romaji: 'Kuji han desu.', zh: '九點半。' },
         ]
       }
     ],
@@ -241,7 +241,7 @@ export const chaptersN5 = [
         pattern: '動詞ます形',
         explanation: '肯定：～ます，否定：～ません，過去：～ました。日文動詞依「ます」前一音分為I類(い段)、II類(え段或少數い段)、III類(します、きます)。',
         examples: [
-          { jp: '勉{べん}強{きょう}します。', romaji: 'Benkyō shimasu.', zh: '學習。' },
+          { jp: '勉強{べんきょう}します。', romaji: 'Benkyō shimasu.', zh: '學習。' },
           { jp: '昨日{きのう}、起{お}きませんでした。', romaji: 'Kinō, okimasen deshita.', zh: '昨天沒起床。' },
         ]
       }
@@ -277,7 +277,7 @@ export const chaptersN5 = [
         pattern: '場所 + へ + 行きます / 来ます / 帰ります',
         explanation: '表示移動的方向。助詞「へ」讀作「e」。',
         examples: [
-          { jp: '日{に}本{ほん}へ行{い}きます。', romaji: 'Nihon e ikimasu.', zh: '去日本。' },
+          { jp: '日本{にほん}へ行{い}きます。', romaji: 'Nihon e ikimasu.', zh: '去日本。' },
           { jp: '家{うち}へ帰{かえ}ります。', romaji: 'Uchi e kaerimasu.', zh: '回家。' },
         ]
       }
@@ -313,8 +313,8 @@ export const chaptersN5 = [
         pattern: '交通工具 + で / 人 + と',
         explanation: '「で」表示手段，「と」表示夥伴。',
         examples: [
-          { jp: '電{でん}車{しゃ}で行{い}きます。', romaji: 'Densha de ikimasu.', zh: '搭電車去。' },
-          { jp: '家{か}族{ぞく}と來{き}ました。', romaji: 'Kazoku to kimashita.', zh: '和家人一起來。' },
+          { jp: '電車{でんしゃ}で行{い}きます。', romaji: 'Densha de ikimasu.', zh: '搭電車去。' },
+          { jp: '家族{かぞく}と来{き}ました。', romaji: 'Kazoku to kimashita.', zh: '和家人一起來。' },
         ]
       }
     ],
@@ -350,7 +350,7 @@ export const chaptersN5 = [
         explanation: '「を」標示動作的直接對象。',
         examples: [
           { jp: 'ご飯{ごはん}を食{た}べます。', romaji: 'Gohan o tabemasu.', zh: '吃飯。' },
-          { jp: '音{おん}樂{がく}を聞{き}きます。', romaji: 'Ongaku o kikimasu.', zh: '聽音樂。' },
+          { jp: '音楽{おんがく}を聞{き}きます。', romaji: 'Ongaku o kikimasu.', zh: '聽音樂。' },
         ]
       }
     ],
@@ -458,7 +458,7 @@ export const chaptersN5 = [
         explanation: '「で」表示使用的工具或手段。',
         examples: [
           { jp: '箸{はし}で食{た}べます。', romaji: 'Hashi de tabemasu.', zh: '用筷子吃。' },
-          { jp: '日本語{にほんご}で手{て}紙{がみ}を書{か}きます。', romaji: 'Nihongo de tegami o kakimasu.', zh: '用日語寫信。' },
+          { jp: '日本語{にほんご}で手紙{てがみ}を書{か}きます。', romaji: 'Nihongo de tegami o kakimasu.', zh: '用日語寫信。' },
         ]
       }
     ],
@@ -484,7 +484,7 @@ export const chaptersN5 = [
         explanation: '「あげます」是我給別人，「もらいます」是我從別人那裡得到。',
         examples: [
           { jp: '私{わたし}は田中{たなか}さんに本{ほん}をあげました。', romaji: 'Watashi wa Tanaka-san ni hon o agemashita.', zh: '我給了田中先生書。' },
-          { jp: '私{わたし}は先{せん}生{せい}に時計{とけい}をもらいました。', romaji: 'Watashi wa sensei ni tokei o moraimashita.', zh: '我從老師那裡得到了手錶。' },
+          { jp: '私{わたし}は先生{せんせい}に時計{とけい}をもらいました。', romaji: 'Watashi wa sensei ni tokei o moraimashita.', zh: '我從老師那裡得到了手錶。' },
         ]
       }
     ],
@@ -520,7 +520,7 @@ export const chaptersN5 = [
         explanation: '形容詞分兩類：い形容詞字尾是「い」，な形容詞接名詞時加「な」。(注意：きれい、有名是な形容詞)',
         examples: [
           { jp: 'この靴{くつ}は安{やす}いです。', romaji: 'Kono kutsu wa yasui desu.', zh: '這雙鞋很便宜。' },
-          { jp: '田中{たなか}さんは親{しん}切{せつ}な人{ひと}です。', romaji: 'Tanaka-san wa shinsetsu na hito desu.', zh: '田中先生是個親切的人。' },
+          { jp: '田中{たなか}さんは親切{しんせつ}な人{ひと}です。', romaji: 'Tanaka-san wa shinsetsu na hito desu.', zh: '田中先生是個親切的人。' },
         ]
       }
     ],
@@ -592,7 +592,7 @@ export const chaptersN5 = [
         explanation: '喜好與能力對象用「が」。',
         examples: [
           { jp: '私{わたし}は料理{りょうり}が好{す}きです。', romaji: 'Watashi wa ryōri ga suki desu.', zh: '我喜歡料理。' },
-          { jp: '田中{たなか}さんは日本{にほん}語{ご}が上{じょう}手{ず}です。', romaji: 'Tanaka-san wa nihongo ga jōzu desu.', zh: '田中先生日語很好。' },
+          { jp: '田中{たなか}さんは日本語{にほんご}が上手{じょうず}です。', romaji: 'Tanaka-san wa nihongo ga jōzu desu.', zh: '田中先生日語很好。' },
         ]
       }
     ],
@@ -876,7 +876,7 @@ export const chaptersN5 = [
         pattern: 'V1て、V2て、V3ます',
         explanation: '用て形連接多個動作。依發生順序排列，時態由最後一個動詞決定。',
         examples: [
-          { jp: '朝{あさ}起{お}きて、ご飯{ごはん}を食{た}べて、學{がく}校{こう}へ行{い}きます。', romaji: 'Asa okite, gohan o tabete, gakkō e ikimasu.', zh: '早起，吃飯，然後去學校。' },
+          { jp: '朝{あさ}起{お}きて、ご飯{ごはん}を食{た}べて、学校{がっこう}へ行{い}きます。', romaji: 'Asa okite, gohan o tabete, gakkō e ikimasu.', zh: '早起，吃飯，然後去學校。' },
         ]
       }
     ],
@@ -948,7 +948,7 @@ export const chaptersN5 = [
         explanation: '請求對方不要做某事。ない形變化：I類(ます前音改あ段加ない)、II類(去ます加ない)、III類(しない、こない)。',
         examples: [
           { jp: '忘{わす}れないでください。', romaji: 'Wasurenaide kudasai.', zh: '請不要忘記。' },
-          { jp: '寫{しゃ}真{しん}を撮{と}らないでください。', romaji: 'Shashin o toranaide kudasai.', zh: '請不要拍照。' },
+          { jp: '写真{しゃしん}を撮{と}らないでください。', romaji: 'Shashin o toranaide kudasai.', zh: '請不要拍照。' },
         ]
       }
     ],

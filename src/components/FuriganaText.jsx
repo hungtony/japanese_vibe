@@ -5,8 +5,8 @@
 export default function FuriganaText({ text, className = "" }) {
   if (!text) return null;
 
-  // Regex to match "part{reading}"
-  const regex = /([^{}\s]+)\{([^{}]+)\}/g;
+  // Regex to match "漢字{reading}" - only CJK characters before {reading}
+  const regex = /([\u4E00-\u9FFF\u3400-\u4DBF\uF900-\uFAFF]+)\{([^{}]+)\}/g;
   const parts = [];
   let lastIndex = 0;
   let match;

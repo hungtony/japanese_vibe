@@ -96,19 +96,15 @@
     @apply h-full rounded-full transition-all duration-500 ease-out;
   }
 
-  /* 漢字假名標註樣式 */
+  /* 漢字假名標註樣式（使用瀏覽器原生 ruby 排版） */
   ruby {
     ruby-position: over;
     ruby-align: center;
-    @apply inline-flex flex-col-reverse items-center align-bottom;
-    line-height: 1;
   }
 
   rt {
     font-size: 0.55em;
-    line-height: 1.2;
-    @apply opacity-70 tracking-tighter mb-0.5;
-    display: block;
+    @apply opacity-70 tracking-tighter;
     text-align: center;
   }
 }

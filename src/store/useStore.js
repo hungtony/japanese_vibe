@@ -12,6 +12,7 @@ const useStore = create(
       userLevel: null,           // 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
       unlockedNodeId: null,      // 目前解鎖到的最新章節 id
       completedNodes: [],        // 已通關章節 id 列表
+      masteredWords: {},         // 已記住的單字 { 'N5': ['学生', '先生'], 'N4': [...], ... }
 
       // ---- 程度測驗完成 ----
       completePlacement: (level) => {
@@ -64,6 +65,34 @@ const useStore = create(
         return 'locked'
       },
 
+      // ---- 單字記憶管理 ----
+      masterWord: (level, word) => {
+        const { masteredWords } = get()
+        const levelWords = masteredWords[level] || []
+        if (levelWords.includes(word)) return
+        set({
+          masteredWords: {
+            ...masteredWords,
+            [level]: [...levelWords, word],
+          },
+        })
+      },
+
+      resetMasteredWords: (level) => {
+        const { masteredWords } = get()
+        set({
+          masteredWords: {
+            ...masteredWords,
+            [level]: [],
+          },
+        })
+      },
+
+      getMasteredWords: (level) => {
+        const { masteredWords } = get()
+        return masteredWords[level] || []
+      },
+
       // ---- 重置所有進度 ----
       resetProgress: () => {
         set({
@@ -71,6 +100,7 @@ const useStore = create(
           userLevel: null,
           unlockedNodeId: null,
           completedNodes: [],
+          masteredWords: {},
         })
       },
     }),
