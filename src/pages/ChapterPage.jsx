@@ -231,9 +231,9 @@ export default function ChapterPage() {
               </motion.div>
 
               <h2 className="text-2xl font-bold mb-3">準備好了嗎？</h2>
-              <p className="text-surface-400 mb-2">章節測驗共 10 題</p>
+              <p className="text-surface-400 mb-2">章節測驗共 {chapter.quiz.length} 題</p>
               <p className="text-surface-500 text-sm mb-10">
-                答對 7 題以上 (≥70%) 即可通關<br />解鎖下一章節
+                全部答對即可通關<br />解鎖下一章節
               </p>
 
               <motion.button

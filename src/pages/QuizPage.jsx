@@ -51,15 +51,18 @@ export default function QuizPage() {
         setCurrentQ(prev => prev + 1)
         setSelectedOption(null)
       } else {
+        const finalPassed = newAnswers.every(a => a.isCorrect)
         setShowResult(true)
-        if (isCorrect && !passed) setShowConfetti(true)
-        completeNode(chapter.id)
+        if (finalPassed) {
+          setShowConfetti(true)
+          completeNode(chapter.id)
+        }
       }
     }, isCorrect ? 1000 : 2500)
   }, [selectedOption, answers, currentQ, quiz, question, chapter.id, completeNode])
 
   const correctCount = answers.filter(a => a.isCorrect).length
-  const passed = correctCount >= 7
+  const passed = correctCount === quiz.length
   const score = Math.round((correctCount / quiz.length) * 100)
 
   const handleRetry = () => {
@@ -139,7 +142,7 @@ export default function QuizPage() {
                 transition={{ delay: 0.6, duration: 0.8 }}
               />
             </div>
-            <p className="text-xs text-surface-500 mt-2 text-right">通關門檻 70%</p>
+            <p className="text-xs text-surface-500 mt-2 text-right">通關門檻：全部答對</p>
           </motion.div>
 
           {/* 錯題解析 */}
