@@ -52,7 +52,7 @@ export default function MapPage() {
       <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="sticky top-0 z-50 backdrop-blur-xl bg-surface-950/80 border-b border-white/5"
+        className="header-glass"
       >
         <div className="max-w-lg mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -67,14 +67,14 @@ export default function MapPage() {
           <div className="flex items-center gap-1">
             <button
               onClick={toggleTheme}
-              className="text-surface-600 hover:text-surface-300 transition-colors p-2 rounded-lg hover:bg-white/5"
+              className="icon-btn"
               title={theme === 'dark' ? '切換至亮色模式' : '切換至暗色模式'}
             >
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
             <button
               onClick={resetProgress}
-              className="text-surface-600 hover:text-surface-300 transition-colors p-2 rounded-lg hover:bg-white/5"
+              className="icon-btn"
               title="重置進度"
             >
               <RotateCcw className="w-4 h-4" />

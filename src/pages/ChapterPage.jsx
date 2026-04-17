@@ -44,7 +44,7 @@ export default function ChapterPage() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-surface-950/80 border-b border-white/5">
+      <header className="header-glass">
         <div className="max-w-lg mx-auto px-6 py-4">
           <div className="flex items-center gap-3">
             <button onClick={() => navigate('/')} className="text-surface-400 hover:text-white transition-colors p-1">

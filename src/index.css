@@ -8,14 +8,54 @@
   --card-bg: rgba(255, 255, 255, 0.05);
   --card-border: rgba(255, 255, 255, 0.1);
   --text-muted: #9E9E9E;
+
+  /* header */
+  --header-bg: rgba(17, 17, 17, 0.85);
+  --header-border: rgba(255, 255, 255, 0.05);
+
+  /* option buttons / quiz choices */
+  --btn-bg: rgba(255, 255, 255, 0.05);
+  --btn-border: rgba(255, 255, 255, 0.1);
+  --btn-hover-bg: rgba(255, 255, 255, 0.1);
+  --btn-hover-border: rgba(255, 255, 255, 0.2);
+  --btn-selected-bg: rgba(255, 255, 255, 0.1);
+
+  /* misc */
+  --divider-color: rgba(255, 255, 255, 0.1);
+  --progress-bg: rgba(255, 255, 255, 0.1);
+
+  /* icon buttons in header */
+  --icon-color: #757575;
+  --icon-hover-color: #E0E0E0;
+  --icon-hover-bg: rgba(255, 255, 255, 0.05);
 }
 
 .light-theme {
   --bg-color: #FAFAFA;
   --text-color: #111111;
-  --card-bg: rgba(0, 0, 0, 0.03);
-  --card-border: rgba(0, 0, 0, 0.08);
+  --card-bg: rgba(0, 0, 0, 0.04);
+  --card-border: rgba(0, 0, 0, 0.1);
   --text-muted: #757575;
+
+  /* header */
+  --header-bg: rgba(250, 250, 250, 0.92);
+  --header-border: rgba(0, 0, 0, 0.1);
+
+  /* option buttons / quiz choices */
+  --btn-bg: rgba(0, 0, 0, 0.04);
+  --btn-border: rgba(0, 0, 0, 0.12);
+  --btn-hover-bg: rgba(0, 0, 0, 0.08);
+  --btn-hover-border: rgba(0, 0, 0, 0.2);
+  --btn-selected-bg: rgba(0, 0, 0, 0.08);
+
+  /* misc */
+  --divider-color: rgba(0, 0, 0, 0.1);
+  --progress-bg: rgba(0, 0, 0, 0.08);
+
+  /* icon buttons in header */
+  --icon-color: #757575;
+  --icon-hover-color: #111111;
+  --icon-hover-bg: rgba(0, 0, 0, 0.06);
 }
 
 @layer base {
@@ -52,6 +92,23 @@
 }
 
 @layer components {
+  .header-glass {
+    @apply sticky top-0 z-50 backdrop-blur-xl;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .icon-btn {
+    @apply transition-colors p-2 rounded-lg;
+    color: var(--icon-color);
+  }
+
+  .icon-btn:hover {
+    color: var(--icon-hover-color);
+    background-color: var(--icon-hover-bg);
+  }
+
   .card-glass {
     background-color: var(--card-bg);
     backdrop-filter: blur(12px);
@@ -65,11 +122,19 @@
   }
 
   .btn-option {
-    @apply w-full px-5 py-4 rounded-xl text-left font-medium bg-white/5 border border-white/10 transition-all duration-200 ease-out hover:bg-white/10 hover:border-white/20 active:scale-[0.98];
+    @apply w-full px-5 py-4 rounded-xl text-left font-medium transition-all duration-200 ease-out active:scale-[0.98];
+    background-color: var(--btn-bg);
+    border: 1px solid var(--btn-border);
+  }
+
+  .btn-option:hover {
+    background-color: var(--btn-hover-bg);
+    border-color: var(--btn-hover-border);
   }
 
   .btn-option-selected {
-    @apply border-2 bg-white/10;
+    @apply border-2;
+    background-color: var(--btn-selected-bg);
   }
 
   .btn-option-correct {
@@ -81,7 +146,8 @@
   }
 
   .section-divider {
-    @apply w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-8;
+    @apply w-full h-px my-8;
+    background: linear-gradient(to right, transparent, var(--divider-color), transparent);
   }
 
   .level-badge {
@@ -89,7 +155,8 @@
   }
 
   .progress-bar {
-    @apply h-1.5 rounded-full bg-white/10 overflow-hidden;
+    @apply h-1.5 rounded-full overflow-hidden;
+    background-color: var(--progress-bg);
   }
 
   .progress-fill {
@@ -123,3 +190,35 @@
     display: none;
   }
 }
+
+/* ── Light mode text colour overrides ─────────────────────────────────────── */
+
+/* Near-white surface shades → readable dark text */
+.light-theme .text-surface-100,
+.light-theme .text-surface-200,
+.light-theme .text-surface-300 {
+  color: #1a1a1a;
+}
+
+.light-theme .text-surface-400 {
+  color: #424242;
+}
+
+/* surface-500 (#9E9E9E) contrast on white is only 2.5:1 — raise it */
+.light-theme .text-surface-500 {
+  color: #555555;
+}
+
+/* Hover states that resolve to white or near-white */
+.light-theme .hover\:text-white:hover,
+.light-theme .hover\:text-surface-300:hover {
+  color: #111111;
+}
+
+/* Quiz / placement feedback pastel colours → deeper saturated variants */
+.light-theme .text-emerald-300 { color: #15803d; }   /* emerald-700 */
+.light-theme .text-red-300     { color: #b91c1c; }   /* red-700 */
+
+/* Component class overrides */
+.light-theme .btn-option-correct { color: #15803d; }
+.light-theme .btn-option-wrong   { color: #b91c1c; }

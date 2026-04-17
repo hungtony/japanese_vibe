@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import useStore from './store/useStore'
 import MapPage from './pages/MapPage'
@@ -10,8 +11,16 @@ function App() {
   const placementDone = useStore(s => s.placementDone)
   const theme = useStore(s => s.theme)
 
+  useEffect(() => {
+    if (theme === 'light') {
+      document.documentElement.classList.add('light-theme')
+    } else {
+      document.documentElement.classList.remove('light-theme')
+    }
+  }, [theme])
+
   return (
-    <div className={`min-h-screen ${theme === 'light' ? 'light-theme' : ''}`}>
+    <div className="min-h-screen transition-colors duration-300">
       <BrowserRouter>
         <Routes>
           <Route
