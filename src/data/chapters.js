@@ -6,9 +6,9 @@ import { chaptersN2 } from './chaptersN2'
 import { chaptersN1 } from './chaptersN1'
 
 export const levelConfig = {
-  N5: { color: 'n5', label: '入門', description: '基礎文法、助詞與日常表達 (27章)' },
-  N4: { color: 'n4', label: '初級', description: '日常生活與簡單對話 (26章)' },
-  N3: { color: 'n3', label: '中級', description: '社交與表達意見 (27章)' },
+  N5: { color: 'n5', label: '入門', description: '基礎文法、助詞與日常表達 (28章)' },
+  N4: { color: 'n4', label: '初級', description: '日常生活與簡單對話 (27章)' },
+  N3: { color: 'n3', label: '中級', description: '社交與表達意見 (28章)' },
   N2: { color: 'n2', label: '中上級', description: '新聞閱讀與正式場合' },
   N1: { color: 'n1', label: '上級', description: '學術與商務日語' },
 }

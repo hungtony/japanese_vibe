@@ -1,4 +1,4 @@
-// N4 章節資料 - 初級 (26章)
+// N4 章節資料 - 初級 (27章)
 export const chaptersN4 = [
   // ---- 第 28 關：普通形變身 (動詞、形容詞、名詞的常體表現) ----
   {
@@ -7,8 +7,8 @@ export const chaptersN4 = [
     title: '普通形變身 (常體表現)',
     grammar: [
       {
-        pattern: '動詞辭書形 / ない形 / た形 / なかった形',
-        explanation: '普通形是不帶「ます/です」的常體。辭書形：I類改u段，II類去ます加る，III類する/くる。ない形：I類改a段+ない（う改わ），II類去ます加ない，III類しない/こない。た形：I類同て形變化，II類去ます加た，III類した/きた。',
+        pattern: '動詞辞書形 / ない形 / た形 / なかった形',
+        explanation: '普通形是不帶「ます/です」的常體。辞書形：I類改u段，II類去ます加る，III類する/くる。ない形：I類改a段+ない（う改わ），II類去ます加ない，III類しない/こない。た形：I類同て形變化，II類去ます加た，III類した/きた。',
         examples: [
           { jp: '明日{あした}、東京{とうきょう}へ行{い}く。', romaji: 'Ashita, tōkyō e iku.', zh: '明天要去東京。（行く = 行きます）' },
           { jp: '昨日{きのう}は勉強{べんきょう}しなかった。', romaji: 'Kinō wa benkyō shinakatta.', zh: '昨天沒讀書。（しなかった = しませんでした）' },
@@ -141,7 +141,7 @@ export const chaptersN4 = [
       { word: '電話する', reading: 'でんわする', romaji: 'denwa suru', meaning: '打電話 (III類動詞)' },
       { word: '働く', reading: 'はたらく', romaji: 'hataraku', meaning: '工作 (I類動詞)' },
       { word: '歌う', reading: 'うたう', romaji: 'utau', meaning: '唱歌 (I類動詞)' },
-      { word: 'ガム', reading: 'ごむ', romaji: 'gamu', meaning: '口香糖' },
+      { word: 'ガム', reading: 'がむ', romaji: 'gamu', meaning: '口香糖' },
     ],
     quiz: [
       { question: '音楽を聞き___、勉強します。', options: ['たり', 'ながら', 'て', 'から'], answer: 1 },
@@ -160,7 +160,7 @@ export const chaptersN4 = [
     grammar: [
       {
         pattern: '普通形 ＋ 名詞',
-        explanation: '日文可以直接將動詞的普通形（辭書形、た形、ない形）放在名詞前面，作為形容詞來修飾名詞。例如：「買書的人」、「昨天買的書」。',
+        explanation: '日文可以直接將動詞的普通形（辞書形、た形、ない形）放在名詞前面，作為形容詞來修飾名詞。例如：「買書的人」、「昨天買的書」。',
         examples: [
           { jp: 'これは私{わたし}が昨日{きのう}買{か}った本{ほん}です。', romaji: 'Kore wa watashi ga kinō katta hon desu.', zh: '這是我昨天買的書。' },
           { jp: 'メガネをかけている人{ひと}は田中{たなか}さんです。', romaji: 'Megane o kakete iru hito wa Tanaka-san desu.', zh: '戴著眼鏡的人是田中先生。' },
@@ -212,7 +212,7 @@ export const chaptersN4 = [
     vocabulary: [
       { word: '開く', reading: 'あく', romaji: 'aku', meaning: '開(自動詞) (I類動詞)' },
       { word: '閉まる', reading: 'しまる', romaji: 'shimaru', meaning: '關(自動詞) (I類動詞)' },
-      { word: 'つく', reading: 'つける', romaji: 'tsuku', meaning: '開啟/點亮(自動詞) (I類動詞)' },
+      { word: 'つく', reading: 'つく', romaji: 'tsuku', meaning: '開啟/點亮(自動詞) (I類動詞)' },
       { word: '消える', reading: 'きえる', romaji: 'kieru', meaning: '熄滅/消失(自動詞) (II類動詞)' },
       { word: '貼る', reading: 'はる', romaji: 'haru', meaning: '貼(他動詞) (I類動詞)' },
       { word: '置く', reading: 'おく', romaji: 'oku', meaning: '放置(他動詞) (I類動詞)' },
@@ -309,8 +309,8 @@ export const chaptersN4 = [
     title: '絕對服從 (命令與禁止)',
     grammar: [
       {
-        pattern: '動詞命令形 / 動詞辭書形＋な（禁止形）',
-        explanation: '強烈的命令（去做！）或禁止（不准做！）。【命令形】I類動詞字尾改え段，II類去ます加ろ，III類：する變しろ，来る變こい。【禁止形】所有動詞的辭書形直接加「な」。',
+        pattern: '動詞命令形 / 動詞辞書形＋な（禁止形）',
+        explanation: '強烈的命令（去做！）或禁止（不准做！）。【命令形】I類動詞字尾改え段，II類去ます加ろ，III類：する變しろ，来る變こい。【禁止形】所有動詞的辞書形直接加「な」。',
         examples: [
           { jp: '急{いそ}げ！', romaji: 'Isoge!', zh: '快一點！' },
           { jp: '触{さわ}るな！', romaji: 'Sawaru na!', zh: '不准摸！' },
@@ -360,7 +360,7 @@ export const chaptersN4 = [
         ]
       },
       {
-        pattern: '動詞辭書形 / 名詞だ ＋ と',
+        pattern: '動詞辞書形 / 名詞だ ＋ と',
         explanation: '表示「一...就會...」。客觀的自然法則、真理、或是某個動作必然導致的結果。',
         examples: [
           { jp: '春{はる}になると、桜{さくら}が咲{さ}きます。', romaji: 'Haru ni naru to, sakura ga sakimasu.', zh: '一到春天，櫻花就會開。' },
@@ -402,7 +402,7 @@ export const chaptersN4 = [
     title: '照貓畫虎 (～とおりに)',
     grammar: [
       {
-        pattern: '動詞辭書形/た形 ＋ とおりに / 名詞 ＋ のとおりに',
+        pattern: '動詞辞書形/た形 ＋ とおりに / 名詞 ＋ のとおりに',
         explanation: '表示與前面的事物完全一樣地執行動作。「按照... / 如同...」。',
         examples: [
           { jp: '私{わたし}が言{い}ったとおりに、書{か}いてください。', romaji: 'Watashi ga itta tōri ni, kaite kudasai.', zh: '請照著我說的寫。' },
@@ -438,7 +438,7 @@ export const chaptersN4 = [
     title: '為了某個期盼 (～ように)',
     grammar: [
       {
-        pattern: '非意志動詞辭書形/動詞ない形 ＋ ように',
+        pattern: '非意志動詞辞書形/動詞ない形 ＋ ように',
         explanation: '表示為了達成某個目標狀態。「為了能夠... / 為了不要...」。前面通常是不受意志控制的動詞（如可能形、自動詞）或否定形。',
         examples: [
           { jp: '日本語が話{はな}せるように、毎日{まいにち}練習{れんしゅう}します。', romaji: 'Nihongo ga hanaseru yō ni, mainichi renshū shimasu.', zh: '為了能說日語，我每天練習。' },
@@ -510,7 +510,7 @@ export const chaptersN4 = [
     title: '把動作當作名詞 (名詞化)',
     grammar: [
       {
-        pattern: '動詞辭書形 ＋ のは / のが / のを',
+        pattern: '動詞辞書形 ＋ のは / のが / のを',
         explanation: '在動詞後面加上「の」，將整個動作子句名詞化，當作句子的主詞或受詞。',
         examples: [
           { jp: '日本語{にほんご}を勉強{べんきょう}するのは面白{おもしろ}いです。', romaji: 'Nihongo o benkyō suru no wa omoshiroi desu.', zh: '學日文很有趣。' },
@@ -591,7 +591,7 @@ export const chaptersN4 = [
       }
     ],
     vocabulary: [
-      { word: 'ニュース', reading: 'にゅーす', romaji: 'nyūsu', meaning: '新聞' },
+      { word: 'ニュース', reading: 'にゅうす', romaji: 'nyūsu', meaning: '新聞' },
       { word: 'びっくりする', reading: 'びっくりする', romaji: 'bikkuri suru', meaning: '吃驚/嚇一跳 (III類動詞)' },
       { word: '風邪', reading: 'かぜ', romaji: 'kaze', meaning: '感冒' },
       { word: '休む', reading: 'やすむ', romaji: 'yasumu', meaning: '休息/請假 (I類動詞)' },
@@ -690,7 +690,7 @@ export const chaptersN4 = [
     title: '為了明確目標 (～ために)',
     grammar: [
       {
-        pattern: '動詞辭書形/名詞＋の ＋ ために',
+        pattern: '動詞辞書形/名詞＋の ＋ ために',
         explanation: '表示有明確意志的目的。「為了(做)...」。前後主語必須一致。',
         examples: [
           { jp: '家{いえ}を買{か}うために、貯金{ちょきん}しています。', romaji: 'Ie o kau tame ni, chokin shite imasu.', zh: '為了買房子正在存錢。' },
@@ -834,8 +834,8 @@ export const chaptersN4 = [
     title: '就在這一瞬間 (～ところです)',
     grammar: [
       {
-        pattern: '動詞辭書形/て形いる/た形 ＋ ところです',
-        explanation: '表示動作正處於哪個階段。「辭書形+ところ」表正要開始，「て形いる+ところ」表正在進行，「た形+ところ」表剛結束。',
+        pattern: '動詞辞書形/て形いる/た形 ＋ ところです',
+        explanation: '表示動作正處於哪個階段。「辞書形+ところ」表正要開始，「て形いる+ところ」表正在進行，「た形+ところ」表剛結束。',
         examples: [
           { jp: '今{いま}からご飯{ごはん}を食{た}べるところです。', romaji: 'Ima kara gohan o taberu tokoro desu.', zh: '現在正準備要吃飯。' },
           { jp: 'たった今{いま}、バスが出発{しゅっぱつ}したところです。', romaji: 'Tattaima, basu ga shuppatsu shita tokoro desu.', zh: '公車剛剛才出發。' },
@@ -978,4 +978,55 @@ export const chaptersN4 = [
       { question: '「伺う」的意思包含？', options: ['問/聽/拜訪(謙讓)', '吃/喝(尊敬)', '說(尊敬)', '做(謙讓)'], answer: 0 },
     ]
   },
+
+  // ---- 第 54 關：總複習 (動詞變化/長句) ----
+  {
+    id: 'n4_review',
+    level: 'N4',
+    title: 'N4 總複習 (動詞變化/長句)',
+    grammar: [
+      {
+        pattern: '動詞三大類分類與基礎變化 (辞書形、ない形、て形、た形)',
+        explanation: '動詞分為三類。I類動詞（又稱五段動詞）的字尾會在あ、い、う、え、お五個段變化。\n- ます形 (i段)：書きます\n- ない形 (a段)：書かない (字尾う變わ)\n- 辞書形 (u段)：書く\n- ば形 (e段)：書けば\n- 意向形 (o段)：書こう\nII類（一段動詞）去ます直接接後綴，III類（不規則）為する/くる。',
+        examples: [
+          { jp: '書{か}く(I) -> 書{か}かない -> 書{か}いて -> 書{か}いた', romaji: 'kaku -> kakanai -> kaite -> kaita', zh: '寫' },
+          { jp: '食{た}べる(II) -> 食{た}べない -> 食{た}べて -> 食{た}べた', romaji: 'taberu -> tabenai -> tabete -> tabeta', zh: '吃' }
+        ]
+      },
+      {
+        pattern: 'N4 重大動詞變形 (可能形、被動形、使役形、條件形「ば」)',
+        explanation: '五段動詞 (I類) 的三大進階變形：\n- 可能形 (能做...)：改 e段 + る (書ける)\n- 被動形 (被做...)：改 a段 + れる (書かれる)\n- 使役形 (讓/逼著做...)：改 a段 + せる (書かせる)\nII類皆為去ます加 られる/させる，III類為 できる/される/させる。',
+        examples: [
+          { jp: '飲{の}める(可能) / 飲{の}まれる(被動) / 飲{の}ませる(使役) / 飲{の}めば(條件)', romaji: 'nomeru / nomareru / nomaseru / nomeba', zh: '能喝 / 被喝 / 讓...喝 / 如果喝' }
+        ]
+      },
+      {
+        pattern: '修飾名詞與長句結構',
+        explanation: '動詞與形容詞的普通形（包含現在式/過去式、肯定/否定）可以直接用來修飾名詞，構成長句。注意修飾名詞時，時態需與動作發生的時間點或事物狀態一致。',
+        examples: [
+          { jp: '昨日{きのう}私{わたし}が作{つく}った料理{りょうり}は美味{おい}しかったです。', romaji: 'Kinō watashi ga tsukutta ryōri wa oishikatta desu.', zh: '昨天我做的料理很好吃。' },
+          { jp: '日本{にほん}へ行{い}く予定{よてい}があります。', romaji: 'Nihon e iku yotei ga arimasu.', zh: '有去日本的計畫。' }
+        ]
+      }
+    ],
+    vocabulary: [
+      { word: '帰る', reading: 'かえる', romaji: 'kaeru', meaning: '回去 (I類動詞)' },
+      { word: '借りる', reading: 'かりる', romaji: 'kariru', meaning: '借入 (II類動詞)' },
+      { word: '走る', reading: 'はしる', romaji: 'hashiru', meaning: '跑 (I類動詞)' },
+      { word: '続く', reading: 'つづく', romaji: 'tsuzuku', meaning: '繼續 (I類動詞)' },
+      { word: '褒める', reading: 'ほめる', romaji: 'homeru', meaning: '稱讚 (II類動詞)' },
+      { word: '連絡する', reading: 'れんらくする', romaji: 'renraku suru', meaning: '聯絡 (III類動詞)' },
+      { word: '複雑', reading: 'ふくざつ', romaji: 'fukuzatsu', meaning: '複雜的 (な形容詞)' },
+      { word: '寂しい', reading: 'さびしい', romaji: 'sabishii', meaning: '寂寞的 (い形容詞)' },
+      { word: '役に立つ', reading: 'やくにたつ', romaji: 'yaku ni tatsu', meaning: '有用的 (I類動詞)' },
+      { word: '予定', reading: 'よてい', romaji: 'yotei', meaning: '預定/計畫 (名詞)' }
+    ],
+    quiz: [
+      { question: '「帰る」雖然字尾是る，但它屬於哪一類動詞？', options: ['I類動詞', 'II類動詞', 'III類動詞', '特殊動詞'], answer: 0 },
+      { question: '「褒める」的被動形（被稱讚）是？', options: ['褒めさせる', '褒められる', '褒めれる', '褒めませる'], answer: 1 },
+      { question: '先生が学生に本を___。（讓學生讀，使役形）', options: ['読ませた', '読まれた', '読めた', '読めば'], answer: 0 },
+      { question: '「走る」的條件形（如果跑的話）是？', options: ['走れば', '走らば', '走ろば', '走って'], answer: 0 },
+      { question: '昨日私が___本はとても面白かったです。(買的)', options: ['買う', '買った', '買って', '買わない'], answer: 1 }
+    ]
+  }
 ];

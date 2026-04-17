@@ -1,4 +1,4 @@
-// N5 章節資料 - 入門 (27章)
+// N5 章節資料 - 入門 (28章)
 export const chaptersN5 = [
   // ---- 第 1 關：我是誰 (AはBです / 否定句) ----
   {
@@ -36,10 +36,10 @@ export const chaptersN5 = [
       { word: '銀行員', reading: 'ぎんこういん', romaji: 'ginkōin', meaning: '銀行職員' },
     ],
     quiz: [
-      { question: '私___學生です。', options: ['が', 'は', 'を', 'に'], answer: 1 },
+      { question: '私___学生です。', options: ['が', 'は', 'を', 'に'], answer: 1 },
       { question: '我不是老師：私は先生___。', options: ['です', 'ます', 'じゃありません', 'あります'], answer: 2 },
       { question: '「日本人」的讀音是？', options: ['にほんじん', 'にほんご', 'にっぽん', 'にほん'], answer: 0 },
-      { question: '「會社員」的意思是？', options: ['公司職員', '會計', '公務員', '老師'], answer: 0 },
+      { question: '「会社員」的意思是？', options: ['公司職員', '會計', '公務員', '老師'], answer: 0 },
       { question: '「銀行員」的讀音是？', options: ['ぎんこういん', 'きんこういん', 'ぎんこいん', 'ぎんごいん'], answer: 0 },
     ]
   },
@@ -81,7 +81,7 @@ export const chaptersN5 = [
     quiz: [
       { question: '田中さんは先生です___。', options: ['よ', 'ね', 'か', 'の'], answer: 2 },
       { question: 'お名字は___ですか。', options: ['だれ', 'なん', 'どこ', 'いつ'], answer: 1 },
-      { question: '「醫生」的讀音是？', options: ['いしゃ', 'いさ', 'いしゅ', 'いっしょ'], answer: 0 },
+      { question: '「医者」的讀音是？', options: ['いしゃ', 'いさ', 'いしゅ', 'いっしょ'], answer: 0 },
       { question: '初次見面時說：', options: ['はじめまして', 'おやすみ', 'ありがとう', 'さようなら'], answer: 0 },
       { question: '詢問「是一位（禮貌）」用哪個詞？', options: ['だれ', 'どなた', 'なん', 'どこ'], answer: 1 },
     ]
@@ -110,14 +110,14 @@ export const chaptersN5 = [
       { word: '辞書', reading: 'じしょ', romaji: 'jisho', meaning: '字典' },
       { word: '雑誌', reading: 'ざっし', romaji: 'zasshi', meaning: '雜誌' },
       { word: '新聞', reading: 'しんぶん', romaji: 'shinbun', meaning: '報紙' },
-      { word: 'ノート', reading: 'のーと', romaji: 'nōto', meaning: '筆記本' },
+      { word: 'ノート', reading: 'のおと', romaji: 'nōto', meaning: '筆記本' },
       { word: '手帳', reading: 'てちょう', romaji: 'techō', meaning: '手帳/手冊' },
       { word: '鉛筆', reading: 'えんぴつ', romaji: 'enpitsu', meaning: '鉛筆' },
     ],
     quiz: [
       { question: '___は何ですか。(近我)', options: ['これ', 'それ', 'あれ', 'どれ'], answer: 0 },
       { question: '「じしょ」的意思是？', options: ['雜誌', '報紙', '字典', '筆記本'], answer: 2 },
-      { question: '「報紙」的讀音是？', options: ['しんぶん', 'ざっし', 'ほん', 'のーと'], answer: 0 },
+      { question: '「報紙」的讀音是？', options: ['しんぶん', 'ざっし', 'ほん', 'のおと'], answer: 0 },
       { question: '「えんぴつ」的意思是？', options: ['鉛筆', '原子筆', '筆記本', '字典'], answer: 0 },
       { question: '指遠方(多離雙方都遠)的物品用？', options: ['これ', 'それ', 'あれ', 'どれ'], answer: 2 },
     ]
@@ -146,7 +146,7 @@ export const chaptersN5 = [
       { word: '教室', reading: 'きょうしつ', romaji: 'kyōshitsu', meaning: '教室' },
       { word: 'お手洗い', reading: 'おてあらい', romaji: 'otearai', meaning: '洗手間' },
       { word: '事務所', reading: 'じむしょ', romaji: 'jimusho', meaning: '辦公室' },
-      { word: 'エレベーター', reading: 'えれべーたー', romaji: 'erebētā', meaning: '電梯' },
+      { word: 'エレベーター', reading: 'えれべえたあ', romaji: 'erebētā', meaning: '電梯' },
       { word: 'どちら', reading: 'どちら', romaji: 'dochira', meaning: '哪邊(禮貌)' },
       { word: '自動販売機', reading: 'じどうはんばいき', romaji: 'jidōhanbaiki', meaning: '自動販賣機' },
     ],
@@ -154,7 +154,7 @@ export const chaptersN5 = [
       { question: 'お手洗いは___ですか。(在哪裡)', options: ['なん', 'どこ', 'だれ', 'いつ'], answer: 1 },
       { question: '「あそこ」表示？', options: ['近我', '近你', '遠離雙方', '這面'], answer: 2 },
       { question: '「教室」的讀音是？', options: ['きょうしつ', 'きょうし', 'きょうだい', 'きょうき'], answer: 0 },
-      { question: '「えれべーたー」的意思是？', options: ['電梯', '樓梯', '電車', '教室'], answer: 0 },
+      { question: '「えれべえたあ」的意思是？', options: ['電梯', '樓梯', '電車', '教室'], answer: 0 },
       { question: '詢問場所(禮貌)用哪個詞？', options: ['どちら', 'どこ', 'なん', 'だれ'], answer: 0 },
     ]
   },
@@ -223,7 +223,7 @@ export const chaptersN5 = [
       { word: '前', reading: 'まえ', romaji: 'mae', meaning: '前/以前' },
     ],
     quiz: [
-      { question: '「四點」的正確讀法是？', options: ['しじ', 'よнじ', 'よじ', 'よんじ'], answer: 2 },
+      { question: '「四點」的正確讀法是？', options: ['しじ', 'よんじ', 'よじ', 'よんじ'], answer: 2 },
       { question: '九點半的「半」讀法是？', options: ['はん', 'ほん', 'ばん', 'ぱん'], answer: 0 },
       { question: '「上午」的日文是？', options: ['ごぜん', 'ごご', 'あさ', 'ばん'], answer: 0 },
       { question: '「あさ」的意思是？', options: ['早上', '中午', '晚上', '下午'], answer: 0 },
@@ -267,7 +267,7 @@ export const chaptersN5 = [
     ]
   },
 
-  // ---- 第 8 關：移動方向 (去、來、回：行きます / 来ます / 歸ります) ----
+  // ---- 第 8 關：移動方向 (去、來、回：行きます / 来ます / 帰ります) ----
   {
     id: 'n5_ch8',
     level: 'N5',
@@ -324,7 +324,7 @@ export const chaptersN5 = [
       { word: '友達', reading: 'ともだち', romaji: 'tomodachi', meaning: '朋友' },
       { word: '自転車', reading: 'じてんしゃ', romaji: 'jitensha', meaning: '自行車' },
       { word: 'バス', reading: 'ばす', romaji: 'basu', meaning: '公車' },
-      { word: 'タクシー', reading: 'たくしー', romaji: 'takushī', meaning: '出租車' },
+      { word: 'タクシー', reading: 'たくしい', romaji: 'takushī', meaning: '出租車' },
       { word: '地下鉄', reading: 'ちかてつ', romaji: 'chikatetsu', meaning: '地下鐵' },
       { word: '一人で', reading: 'ひとりで', romaji: 'hitori de', meaning: '一個人' },
       { word: '誰', reading: 'だれ', romaji: 'dare', meaning: '誰' },
@@ -333,7 +333,7 @@ export const chaptersN5 = [
     quiz: [
       { question: '電車___行きます。(搭乘)', options: ['を', 'へ', 'で', 'と'], answer: 2 },
       { question: '朋友___行きます。(和...)', options: ['で', 'と', 'へ', 'を'], answer: 1 },
-      { question: '「地下鐵」的讀音是？', options: ['ちかてつ', 'でんしゃ', 'ばす', 'たくしー'], answer: 0 },
+      { question: '「地下鐵」的讀音是？', options: ['ちかてつ', 'でんしゃ', 'ばす', 'たくしい'], answer: 0 },
       { question: '「何時」的日文是？', options: ['いつ', 'だれ', 'どこ', 'なん'], answer: 0 },
       { question: '「ひとりで」的意思是？', options: ['兩個人', '誰', '大家', '一個人'], answer: 3 },
     ]
@@ -463,13 +463,23 @@ export const chaptersN5 = [
       }
     ],
     vocabulary: [
-      { word: '箸', reading: 'はし', romaji: 'hashi', meaning: '筷子' },
-      { word: '手', reading: 'て', romaji: 'te', meaning: '手' },
-      { word: '日本語', reading: 'にほんご', romaji: 'nihongo', meaning: '日語' },
+      { word: '箸', reading: 'はし', romaji: 'hashi', meaning: '筷子 (名詞)' },
+      { word: '手', reading: 'て', romaji: 'te', meaning: '手 (名詞)' },
+      { word: '日本語', reading: 'にほんご', romaji: 'nihongo', meaning: '日語 (名詞)' },
+      { word: 'スプーン', reading: 'すぷうん', romaji: 'supūn', meaning: '湯匙 (名詞)' },
+      { word: 'フォーク', reading: 'ふおおく', romaji: 'fōku', meaning: '叉子 (名詞)' },
+      { word: 'ナイフ', reading: 'ないふ', romaji: 'naifu', meaning: '刀子 (名詞)' },
+      { word: 'ハサミ', reading: 'はさみ', romaji: 'hasami', meaning: '剪刀 (名詞)' },
+      { word: 'パソコン', reading: 'ぱそこん', romaji: 'pasokon', meaning: '電腦 (名詞)' },
+      { word: 'ケータイ', reading: 'けえたい', romaji: 'kētai', meaning: '手機 (名詞)' },
+      { word: '紙', reading: 'かみ', romaji: 'kami', meaning: '紙 (名詞)' },
     ],
     quiz: [
       { question: '箸___食べます。', options: ['を', 'へ', 'で', 'に'], answer: 2 },
       { question: '「にほんご」的意思是？', options: ['英語', '中文', '日語', '法語'], answer: 2 },
+      { question: 'ハサミ___紙を切ります。(用剪刀剪紙)', options: ['を', 'に', 'が', 'で'], answer: 3 },
+      { question: '「すぷうん」的意思是？', options: ['刀子', '叉子', '湯匙', '筷子'], answer: 2 },
+      { question: '用電腦寫信：パソコン___手紙を書きます。', options: ['を', 'で', 'に', 'へ'], answer: 1 },
     ]
   },
 
@@ -493,7 +503,7 @@ export const chaptersN5 = [
       { word: 'もらいます', reading: 'もらいます', romaji: 'moraimasu', meaning: '得到 (I類動詞)' },
       { word: '花', reading: 'はな', romaji: 'hana', meaning: '花' },
       { word: 'クリスマス', reading: 'くりすます', romaji: 'kurisumasu', meaning: '聖誕節' },
-      { word: 'チョコレート', reading: 'ちょこれーと', romaji: 'chokorēto', meaning: '巧克力' },
+      { word: 'チョコレート', reading: 'ちょこれえと', romaji: 'chokorēto', meaning: '巧克力' },
       { word: 'シャツ', reading: 'しゃつ', romaji: 'shatsu', meaning: '襯衫' },
       { word: '父', reading: 'ちち', romaji: 'chichi', meaning: '(我)爸爸' },
       { word: '母', reading: 'はは', romaji: 'haha', meaning: '(我)媽媽' },
@@ -503,7 +513,7 @@ export const chaptersN5 = [
     quiz: [
       { question: '我給田中先生：田中さんに___。', options: ['あげます', 'もらいます', 'くれます', 'あります'], answer: 0 },
       { question: '「もらいます」的意思是？', options: ['給予', '得到', '買', '賣'], answer: 1 },
-      { question: '「聖誕節」的日文是？', options: ['くりすます', 'ちょこれーと', 'はな', 'しゃつ'], answer: 0 },
+      { question: '「聖誕節」的日文是？', options: ['くりすます', 'ちょこれえと', 'はな', 'しゃつ'], answer: 0 },
       { question: '「はは」的意思是？', options: ['爸爸', '媽媽', '哥哥', '姊姊'], answer: 1 },
       { question: '「襯衫」的日文讀音是？', options: ['しゃつ', 'ぱんつ', 'くつ', 'かばん'], answer: 0 },
     ]
@@ -602,17 +612,17 @@ export const chaptersN5 = [
       { word: '上手', reading: 'じょうず', romaji: 'jōzu', meaning: '擅長 (な形容詞)' },
       { word: '下手', reading: 'へた', romaji: 'heta', meaning: '不擅長 (な形容詞)' },
       { word: '料理', reading: 'りょうり', romaji: 'ryōri', meaning: '料理/烹飪' },
-      { word: 'スポーツ', reading: 'すぽーつ', romaji: 'supōtsu', meaning: '運動' },
+      { word: 'スポーツ', reading: 'すぽおつ', romaji: 'supōtsu', meaning: '運動' },
       { word: '野球', reading: 'やきゅう', romaji: 'yakyū', meaning: '棒球' },
       { word: '歌', reading: 'うた', romaji: 'uta', meaning: '歌曲/唱歌' },
       { word: 'ダンス', reading: 'だんす', romaji: 'dansu', meaning: '舞蹈' },
       { word: 'カラオケ', reading: 'からおけ', romaji: 'karaoke', meaning: '卡拉OK' },
     ],
     quiz: [
-      { question: '料理___喜歡です。', options: ['を', 'に', 'が', 'で'], answer: 2 },
+      { question: '料理___好きです。', options: ['を', 'に', 'が', 'で'], answer: 2 },
       { question: '擅長的反義詞(不擅長)是？', options: ['下手', '上手', '苦手', '得意'], answer: 0 },
       { question: '「唱歌」的日文讀音是？', options: ['うた', 'おと', 'はな', 'ねこ'], answer: 0 },
-      { question: '「運動」的日文是？', options: ['すぽーつ', 'からおけ', 'だんす', 'りょうり'], answer: 0 },
+      { question: '「運動」的日文是？', options: ['すぽおつ', 'からおけ', 'だんす', 'りょうり'], answer: 0 },
       { question: '「下手」的意思是？', options: ['擅長', '不擅長', '喜歡', '討厭'], answer: 1 },
     ]
   },
@@ -786,7 +796,7 @@ export const chaptersN5 = [
       { word: 'どこへも', reading: 'どこへも', romaji: 'doko e mo', meaning: '哪裡都(接否定)' },
     ],
     quiz: [
-      { question: '想要車子：車___欲しい。', options: ['を', 'に', '推', 'が'], answer: 3 },
+      { question: '想要車子：車___欲しい。', options: ['を', 'に', 'で', 'が'], answer: 3 },
       { question: '「想做」的助詞通常是？', options: ['を/が', 'に', 'で', 'から'], answer: 0 },
       { question: '「想玩」的日文是？', options: ['あそびたい', 'のみたい', 'たべたい', 'かいたい'], answer: 0 },
       { question: '「哪裡都不去」的日文是？', options: ['どこへも行きません', 'なにも食べません', 'どこへ行きますか', 'だれとも会いません'], answer: 0 },
@@ -823,7 +833,7 @@ export const chaptersN5 = [
     ],
     quiz: [
       { question: '等一下：待って___。', options: ['ください', 'ます', 'ました', 'て'], answer: 0 },
-      { question: '「ください」接在動詞什麼形之後？', options: ['ます形', 'て形', '辭書形', 'ない形'], answer: 1 },
+      { question: '「ください」接在動詞什麼形之後？', options: ['ます形', 'て形', '辞書形', 'ない形'], answer: 1 },
       { question: '「請趕快」的日文是？', options: ['いそいでください', 'まってください', 'みてください', 'おしえてください'], answer: 0 },
       { question: '「請幫忙」的日文是？', options: ['てつだってください', 'かしてください', 'よんでください', 'もってください'], answer: 0 },
       { question: '「もういちど」的意思是？', options: ['再次', '稍微', '慢慢地', '快點'], answer: 0 },
@@ -852,7 +862,7 @@ export const chaptersN5 = [
       { word: '名前', reading: 'なまえ', romaji: 'namae', meaning: '名字' },
       { word: '住所', reading: 'じゅうしょ', romaji: 'jūsho', meaning: '住址' },
       { word: '市役所', reading: 'しやくしょ', romaji: 'shiyakusho', meaning: '市政府/市公所' },
-      { word: 'パスポート', reading: 'ぱすぽーと', romaji: 'pasupōto', meaning: '護照' },
+      { word: 'パスポート', reading: 'ぱすぽおと', romaji: 'pasupōto', meaning: '護照' },
       { word: '地図', reading: 'ちず', romaji: 'chizu', meaning: '地圖' },
       { word: '資料', reading: 'しりょう', romaji: 'shiryō', meaning: '資料' },
       { word: 'カタログ', reading: 'かたろぐ', romaji: 'katarogu', meaning: '目錄' },
@@ -861,7 +871,7 @@ export const chaptersN5 = [
       { question: '可以嗎？：___いいですか。', options: ['ても', 'た', 'ては', 'て'], answer: 0 },
       { question: '不可以！：___いけません。', options: ['ても', 'ては', 'て', 'た'], answer: 1 },
       { question: '「市役所」的意思是？', options: ['市政府', '圖書館', '火車站', '警察局'], answer: 0 },
-      { question: '「護照」的日文是？', options: ['ぱすぽーと', 'ちず', 'しりょう', 'かたろぐ'], answer: 0 },
+      { question: '「護照」的日文是？', options: ['ぱすぽおと', 'ちず', 'しりょう', 'かたろぐ'], answer: 0 },
       { question: '「じゅうしょ」的意思是？', options: ['住址', '職業', '電話', '國籍'], answer: 0 },
     ]
   },
@@ -882,7 +892,7 @@ export const chaptersN5 = [
     ],
     vocabulary: [
       { word: '朝', reading: 'あさ', romaji: 'asa', meaning: '早上' },
-      { word: 'それから', reading: 'それkara', romaji: 'sorekara', meaning: '然後' },
+      { word: 'それから', reading: 'それから', romaji: 'sorekara', meaning: '然後' },
       { word: '洗います', reading: 'あらいます', romaji: 'araimasu', meaning: '洗 (I類動詞)' },
       { word: '浴びます', reading: 'あびます', romaji: 'abimasu', meaning: '淋浴/洗澡 (II類動詞)' },
       { word: '出かけます', reading: 'でかけます', romaji: 'dekakemasu', meaning: '出門 (II類動詞)' },
@@ -893,7 +903,7 @@ export const chaptersN5 = [
       { word: 'お寺', reading: 'おてら', romaji: 'otera', meaning: '寺廟' },
     ],
     quiz: [
-      { question: '連接動詞時用什麼形？', options: ['ます形', 'て形', '辭書形', 'ない形'], answer: 1 },
+      { question: '連接動詞時用什麼形？', options: ['ます形', 'て形', '辞書形', 'ない形'], answer: 1 },
       { question: '起きて、食べて___。(最後去)', options: ['いきます', 'いって', 'いく', 'いった'], answer: 0 },
       { question: '「淋浴」的日文是？', options: ['（シャワーを）あびます', 'あらいます', 'でかけます', 'おります'], answer: 0 },
       { question: '「打工」的日文是？', options: ['あるばいと', 'さんぽ', 'おてら', 'のりかえ'], answer: 0 },
@@ -961,7 +971,7 @@ export const chaptersN5 = [
       { word: '薬', reading: 'くすり', romaji: 'kusuri', meaning: '藥' },
       { word: '風邪', reading: 'かぜ', romaji: 'kaze', meaning: '感冒' },
       { word: '熱', reading: 'ねつ', romaji: 'netsu', meaning: '發燒' },
-      { word: '無理しないで', reading: 'むり shinaide', romaji: 'muri shinaide', meaning: '不要勉強 (III類動詞)' },
+      { word: '無理しないで', reading: 'むりしないで', romaji: 'muri shinaide', meaning: '不要勉強 (III類動詞)' },
       { word: '病院', reading: 'びょういん', romaji: 'byōin', meaning: '醫院' },
     ],
     quiz: [
@@ -972,4 +982,56 @@ export const chaptersN5 = [
       { question: '「きをつけて」的意思是？', options: ['請小心', '請安靜', '請幫忙', '請等待'], answer: 0 },
     ]
   },
+
+  // ---- 第 28 關：N5 總複習 (介詞/形容詞/時態) ----
+  {
+    id: 'n5_review',
+    level: 'N5',
+    title: 'N5 總複習 (介詞/形容詞/時態)',
+    grammar: [
+      {
+        pattern: '介詞比較 (は/が/を/に/で)',
+        explanation: '「は」提示主題，「が」提示主語或新資訊，「を」接續動作對象，「に」表示時間、目的地或對象，「で」表示方法、工具或動作場所。',
+        examples: [
+          { jp: '私{わたし}は家{いえ}でご飯{ごはん}を食{た}べます。', romaji: 'Watashi wa ie de gohan o tabemasu.', zh: '我在家吃飯。' },
+          { jp: '明日{あした}、学校{がっこう}に行{い}きます。', romaji: 'Ashita, gakkō ni ikimasu.', zh: '明天去學校。' }
+        ]
+      },
+      {
+        pattern: '形容詞變化總複習',
+        explanation: 'い形容詞：肯定(〜いです)、否定(〜くないです)、過去(〜かったです)、過去否定(〜くなかったです)。\nな形容詞：肯定(〜です)、否定(〜じゃありません)、過去(〜でした)、過去否定(〜じゃありませんでした)。',
+        examples: [
+          { jp: '昨日{きのう}の天気{てんき}は良{よ}くなかったです。', romaji: 'Kinō no tenki wa yokunakatta desu.', zh: '昨天的天氣不好。' },
+          { jp: '昔{むかし}、この町{まち}は静{しず}かでした。', romaji: 'Mukashi, kono machi wa shizuka deshita.', zh: '以前這個城鎮很安靜。' }
+        ]
+      },
+      {
+        pattern: '動詞時態與基本變化',
+        explanation: 'ます(現在/未來肯定)，ました(過去肯定)，ません(現在/未來否定)，ませんでした(過去否定)。て形(連接/請求/進行狀態)，ない形(否定請求)。',
+        examples: [
+          { jp: '昨日{きのう}、テレビを見{み}ませんでした。', romaji: 'Kinō, terebi o mimasen deshita.', zh: '昨天沒有看電視。' },
+          { jp: 'ここに座{すわ}らないでください。', romaji: 'Koko ni suwaranaide kudasai.', zh: '請不要坐在這裡。' }
+        ]
+      }
+    ],
+    vocabulary: [
+      { word: '会う', reading: 'あう', romaji: 'au', meaning: '見面 (I類動詞)' },
+      { word: '食べる', reading: 'たべる', romaji: 'taberu', meaning: '吃 (II類動詞)' },
+      { word: '来る', reading: 'くる', romaji: 'kuru', meaning: '來 (III類動詞)' },
+      { word: '大きい', reading: 'おおきい', romaji: 'ōkii', meaning: '大的 (い形容詞)' },
+      { word: '元気', reading: 'げんき', romaji: 'genki', meaning: '健康/有精神 (な形容詞)' },
+      { word: '先生', reading: 'せんせい', romaji: 'sensei', meaning: '老師 (名詞)' },
+      { word: '図書館', reading: 'としょかん', romaji: 'toshokan', meaning: '圖書館 (名詞)' },
+      { word: '電車', reading: 'でんしゃ', romaji: 'densha', meaning: '電車 (名詞)' },
+      { word: 'いつも', reading: 'いつも', romaji: 'itsumo', meaning: '總是 (副詞)' },
+      { word: '全然', reading: 'ぜんぜん', romaji: 'zenzen', meaning: '完全不 (接否定)' }
+    ],
+    quiz: [
+      { question: '私は毎日電車___学校へ行きます。(搭乘電車)', options: ['で', 'に', 'を', 'が'], answer: 0 },
+      { question: '昨日の天気は___。(昨天的天氣不好)', options: ['よくないです', 'よくなかったです', 'いいじゃなかったです', 'よかったじゃありません'], answer: 1 },
+      { question: '昨日、晩ご飯を___。(昨天沒有吃晚餐)', options: ['食べません', '食べない', '食べませんでした', '食べなかったでした'], answer: 2 },
+      { question: 'その町は昔、とても___。(那個城鎮以前非常安靜)', options: ['静かです', '静かでした', '静かかった', '静かだったです'], answer: 1 },
+      { question: '部屋___本を___ください。(請在房間裡看書)', options: ['で、読んで', 'に、読んで', 'で、読みて', 'に、読みて'], answer: 0 }
+    ]
+  }
 ];

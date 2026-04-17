@@ -1,4 +1,4 @@
-// N3 章節資料 - 中級 (27章)
+// N3 章節資料 - 中級 (28章)
 export const chaptersN3 = [
   // ---- 第 54 關：被逼著做 (使役受身形) ----
   {
@@ -445,7 +445,7 @@ export const chaptersN3 = [
       }
     ],
     vocabulary: [
-      { word: 'ゲーム', reading: 'げーむ', romaji: 'gēmu', meaning: '遊戲' },
+      { word: 'ゲーム', reading: 'げえむ', romaji: 'gēmu', meaning: '遊戲' },
       { word: '甘い', reading: 'あまい', romaji: 'amai', meaning: '甜的 (い形容詞)' },
       { word: '泥', reading: 'どろ', romaji: 'doro', meaning: '泥巴' },
       { word: '間違い', reading: 'まちがい', romaji: 'machigai', meaning: '錯誤' },
@@ -620,7 +620,7 @@ export const chaptersN3 = [
       }
     ],
     vocabulary: [
-      { word: 'ニュース', reading: 'にゅーす', romaji: 'nyūsu', meaning: '新聞' },
+      { word: 'ニュース', reading: 'にゅうす', romaji: 'nyūsu', meaning: '新聞' },
       { word: '地震', reading: 'じしん', romaji: 'jishin', meaning: '地震' },
       { word: '部長', reading: 'ぶちょう', romaji: 'buchō', meaning: '部長' },
       { word: '遅れる', reading: 'おくれる', romaji: 'okureru', meaning: '遲到 (II類動詞)' },
@@ -1133,7 +1133,7 @@ export const chaptersN3 = [
       { word: 'びっくりする', reading: 'びっくりする', romaji: 'bikkuri suru', meaning: '吃驚/嚇一跳 (III類動詞)' },
       { word: '思う', reading: 'おもう', romaji: 'omou', meaning: '認為/想 (I類動詞)' },
       { word: '結婚する', reading: 'けっこんする', romaji: 'kekkon suru', meaning: '結婚 (III類動詞)' },
-      { word: 'ゲーム', reading: 'げーむ', romaji: 'gēmu', meaning: '遊戲' },
+      { word: 'ゲーム', reading: 'げえむ', romaji: 'gēmu', meaning: '遊戲' },
       { word: '信じられない', reading: 'しんじられない', romaji: 'shinjirarenai', meaning: '不敢相信 (II類動詞)' },
       { word: '優勝する', reading: 'ゆうしょうする', romaji: 'yūshō suru', meaning: '奪冠/得第一 (III類動詞)' },
       { word: '嘘', reading: 'うそ', romaji: 'uso', meaning: '謊言' },
@@ -1148,4 +1148,56 @@ export const chaptersN3 = [
       { question: '「優勝」的讀音是？', options: ['ゆうしょう', 'ゆうしょう', 'ゆしょう', 'ゆしょう'], answer: 0 },
     ]
   },
+
+  // ---- 第 81 關：N3 總複習 (使役受身/傳聞/敬語) ----
+  {
+    id: 'n3_review',
+    level: 'N3',
+    title: 'N3 總複習 (使役受身/傳聞/敬語)',
+    grammar: [
+      {
+        pattern: '使役受身形 (被逼著做)',
+        explanation: '表示「被迫做某事」。\n【I類】～あされる (例如：飲まされる)\n【II類】～させられる (例如：食べさせられる)\n【III類】する → させられる、くる → こさせられる',
+        examples: [
+          { jp: '子{こ}どもの頃{ころ}、母{はは}にピアノを習{なら}わされました。', romaji: 'Kodomo no koro, haha ni piano o narawasaremashita.', zh: '小時候被媽媽逼著學鋼琴。' },
+          { jp: '毎日{まいにち}遅{おそ}くまで残業{ざんぎょう}させられます。', romaji: 'Mainichi osoku made zangyō saseraremasu.', zh: '每天被迫加班到很晚。' },
+        ]
+      },
+      {
+        pattern: '推測與傳聞的對比 (そう/らしい/みたい/はず/かもしれない)',
+        explanation: '・そう(傳聞)：聽說... (接普通形)\n・らしい：聽說...、似乎... (根據客觀事實推測)\n・みたい：好像... (主觀推測、比喻)\n・はず：應該... (有根據的推斷)\n・かもしれない：也許... (可能性較低)',
+        examples: [
+          { jp: '天気予報{てんきよほう}によると、明日{あした}は雨{あめ}が降{ふ}るそうです。', romaji: 'Tenkiyohō ni yoruto, ashita wa ame ga furu sō desu.', zh: '根據天氣預報，聽說明天下雨。(傳聞)' },
+          { jp: 'あの人{ひと}は日本人{にほんじん}ではないらしい。', romaji: 'Ano hito wa nihonjin de wa nai rashii.', zh: '那個人似乎不是日本人。(客觀推測)' },
+        ]
+      },
+      {
+        pattern: '敬語進階 (尊敬語與謙讓語的公式統整)',
+        explanation: '・尊敬語 (抬高對方)：お/ご～になる、れる/られる、特殊敬語 (召し上がる等)\n・謙讓語 (貶低自己)：お/ご～する、お/ご～いたす、特殊謙讓語 (参る、伺う等)',
+        examples: [
+          { jp: '社長{しゃちょう}はもうお帰{かえ}りになりました。', romaji: 'Shachō wa mō okaeri ni narimashita.', zh: '總經理已經回去了。(尊敬語：お～になる)' },
+          { jp: '私{わたし}が荷物{にもつ}をお持{も}ちします。', romaji: 'Watashi ga nimotsu o omochi shimasu.', zh: '我來幫您拿行李。(謙讓語：お～する)' },
+        ]
+      }
+    ],
+    vocabulary: [
+      { word: '飲まされる', reading: 'のまされる', romaji: 'nomasareru', meaning: '被迫喝 (I類動詞)' },
+      { word: '尊敬する', reading: 'そんけいする', romaji: 'sonkei suru', meaning: '尊敬 (III類動詞)' },
+      { word: '参る', reading: 'まいる', romaji: 'mairu', meaning: '去、來(謙讓語) (I類動詞)' },
+      { word: '召し上がる', reading: 'めしあがる', romaji: 'meshiagaru', meaning: '吃、喝(尊敬語) (I類動詞)' },
+      { word: '伺う', reading: 'うかがう', romaji: 'ukagau', meaning: '拜訪、詢問(謙讓語) (I類動詞)' },
+      { word: '噂', reading: 'うわさ', romaji: 'uwasa', meaning: '傳聞、謠言 (名詞)' },
+      { word: '厳しい', reading: 'きびしい', romaji: 'kibishii', meaning: '嚴格的 (い形容詞)' },
+      { word: '当然', reading: 'とうぜん', romaji: 'tōzen', meaning: '理所當然 (な形容詞)' },
+      { word: '複雑', reading: 'ふくざつ', romaji: 'fukuzatsu', meaning: '複雜的 (な形容詞)' },
+      { word: '感謝する', reading: 'かんしゃする', romaji: 'kansha suru', meaning: '感謝 (III類動詞)' },
+    ],
+    quiz: [
+      { question: '子供の頃、よく母にピアノを___。', options: ['習わせた', '習われた', '習わせられた', '習わされた'], answer: 3 },
+      { question: '天気予報によると、明日は雪が___。(聽說)', options: ['降るそうだ', '降りそうだ', '降るらしい', '降るみたいだ'], answer: 0 },
+      { question: '社長はもう___。(總經理已經回去了)', options: ['お帰りしました', '帰られました', '帰らせました', 'お帰りいたしました'], answer: 1 },
+      { question: '先生の部屋に___時は、ノックをしてください。(拜訪)', options: ['いらっしゃる', '参る', '伺う', 'おいでになる'], answer: 2 },
+      { question: 'あの人は日本人ではない___。日本語が少し不自然だ。(客觀推測)', options: ['そう', 'らしい', 'べき', 'はずがない'], answer: 1 },
+    ]
+  }
 ];
