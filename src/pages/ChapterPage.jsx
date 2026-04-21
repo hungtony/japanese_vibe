@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowLeft, BookOpen, Languages, ClipboardCheck, ChevronRight, Volume2, Square } from 'lucide-react'
@@ -16,6 +16,20 @@ export default function ChapterPage() {
   const chapter = chapters.find(ch => ch.id === id)
   const [currentStep, setCurrentStep] = useState(0)
   const [vocabIndex, setVocabIndex] = useState(0)
+  const [direction, setDirection] = useState(0)
+  const headerRef = useRef(null)
+  const [headerHeight, setHeaderHeight] = useState(120)
+  const { speakingId, speak } = useSpeech()
+
+  // 動態取得 header 高度，讓單字卡的 sticky 位置精準對齊
+  useEffect(() => {
+    const updateHeight = () => {
+      if (headerRef.current) setHeaderHeight(headerRef.current.offsetHeight)
+    }
+    updateHeight()
+    window.addEventListener('resize', updateHeight)
+    return () => window.removeEventListener('resize', updateHeight)
+  }, [])
 
   if (!chapter) {
     navigate('/')
@@ -24,7 +38,25 @@ export default function ChapterPage() {
 
   const config = levelConfig[chapter.level]
   const colorKey = chapter.level.toLowerCase()
-  const { speakingId, speak } = useSpeech()
+
+  // 單字卡換頁與動畫
+  const paginate = (dir) => {
+    if (!chapter.vocabulary?.length) return
+    setDirection(dir)
+    setVocabIndex((prev) => {
+      const len = chapter.vocabulary.length
+      return (prev + dir + len) % len
+    })
+  }
+  const goToVocab = (idx) => {
+    setDirection(idx > vocabIndex ? 1 : -1)
+    setVocabIndex(idx)
+  }
+  const cardVariants = {
+    enter: (dir) => ({ x: dir > 0 ? 220 : -220, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (dir) => ({ x: dir > 0 ? -220 : 220, opacity: 0 }),
+  }
 
   const colorMap = {
     n5: { gradient: 'from-n5 to-n5-dark', text: 'text-n5', bg: 'bg-n5', lightBg: 'bg-n5/10', border: 'border-n5/30' },
@@ -52,7 +84,7 @@ export default function ChapterPage() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="header-glass">
+      <header ref={headerRef} className="header-glass">
         <div className="max-w-lg mx-auto px-6 py-4">
           <div className="flex items-center gap-3">
             <button onClick={() => navigate('/')} className="text-surface-400 hover:text-white transition-colors p-1">
@@ -73,13 +105,12 @@ export default function ChapterPage() {
               return (
                 <div
                   key={step}
-                  className={`flex-1 flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-medium transition-all duration-300 ${
-                    isActive
+                  className={`flex-1 flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-medium transition-all duration-300 ${isActive
                       ? `${cs.lightBg} ${cs.text} ${cs.border} border`
                       : isDone
-                      ? 'bg-white/5 text-surface-400'
-                      : 'text-surface-600'
-                  }`}
+                        ? 'bg-white/5 text-surface-400'
+                        : 'text-surface-600'
+                    }`}
                 >
                   <Icon className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">{stepLabels[step]}</span>
@@ -171,64 +202,111 @@ export default function ChapterPage() {
               exit={{ opacity: 0, x: -30 }}
               transition={{ duration: 0.3 }}
             >
-              <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                <Languages className={`w-5 h-5 ${cs.text}`} />
+              <h2 className="text-lg font-bold mb-2 flex items-center gap-2">
+                <Languages className={`w-4 h-4 ${cs.text}`} />
                 相關單字
-                <span className="text-sm text-surface-500 font-normal ml-2">
+                <span className="text-xs text-surface-500 font-normal ml-1">
                   {vocabIndex + 1} / {chapter.vocabulary.length}
                 </span>
               </h2>
 
-              {/* 單字卡 */}
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={vocabIndex}
-                  initial={{ opacity: 0, rotateY: 10, x: 40 }}
-                  animate={{ opacity: 1, rotateY: 0, x: 0 }}
-                  exit={{ opacity: 0, rotateY: -10, x: -40 }}
-                  transition={{ duration: 0.35 }}
-                  className="card-glass p-8 text-center mb-6"
-                >
-                  <p className={`font-jp text-5xl font-bold mb-4 ${cs.text}`}>
-                    <FuriganaText text={chapter.vocabulary[vocabIndex].word} />
-                  </p>
-                  <p className="font-jp text-xl text-surface-300 mb-2">
-                    {chapter.vocabulary[vocabIndex].reading}
-                  </p>
-                  <p className="text-sm text-surface-500 mb-1">
-                    {chapter.vocabulary[vocabIndex].romaji}
-                  </p>
-                  <div className="w-12 h-px bg-white/10 mx-auto my-4" />
-                  <p className="text-lg text-surface-200">
-                    {chapter.vocabulary[vocabIndex].meaning}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
+              {/* 單字卡 sticky 區塊：凍結在 header 下方 */}
+              <div
+                className="sticky z-30 -mx-6 px-6 pt-2 pb-2"
+                style={{ top: headerHeight, backgroundColor: 'var(--bg-color)' }}
+              >
+                <div className="overflow-hidden">
+                  <AnimatePresence mode="wait" custom={direction}>
+                    {(() => {
+                      const v = chapter.vocabulary[vocabIndex]
+                      const speakId = `vocab_${chapter.id}_${vocabIndex}`
+                      const isSpeakingVocab = speakingId === speakId
+                      return (
+                        <motion.div
+                          key={vocabIndex}
+                          custom={direction}
+                          variants={cardVariants}
+                          initial="enter"
+                          animate="center"
+                          exit="exit"
+                          transition={{ duration: 0.3, ease: 'easeOut' }}
+                          drag="x"
+                          dragConstraints={{ left: 0, right: 0 }}
+                          dragElastic={0.5}
+                          onDragEnd={(e, { offset, velocity }) => {
+                            const swipeThreshold = 80
+                            if (offset.x < -swipeThreshold || velocity.x < -500) paginate(1)
+                            else if (offset.x > swipeThreshold || velocity.x > 500) paginate(-1)
+                          }}
+                          className="card-glass px-4 py-3 text-center relative cursor-grab active:cursor-grabbing select-none touch-pan-y"
+                        >
+                          {/* 左上：序號 */}
+                          <span className="absolute top-2 left-3 text-[10px] font-bold text-surface-500">
+                            {vocabIndex + 1} / {chapter.vocabulary.length}
+                          </span>
 
-              {/* 導航點 */}
-              <div className="flex justify-center gap-2 mb-6">
-                {chapter.vocabulary.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setVocabIndex(idx)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      idx === vocabIndex ? `${cs.bg} w-6` : 'bg-white/20'
-                    }`}
-                  />
-                ))}
+                          {/* 右上：朗讀按鈕 */}
+                          <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onPointerDown={(e) => e.stopPropagation()}
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              speak(speakId, v.word)
+                            }}
+                            className={`absolute top-2 right-2 flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-semibold transition-all
+                              ${isSpeakingVocab
+                                ? `${cs.bg} text-white shadow-md`
+                                : `${cs.lightBg} ${cs.text} border ${cs.border} hover:opacity-80`
+                              }
+                            `}
+                          >
+                            {isSpeakingVocab
+                              ? <><Square className="w-2.5 h-2.5" fill="currentColor" />停止</>
+                              : <><Volume2 className="w-2.5 h-2.5" />朗讀</>
+                            }
+                          </motion.button>
+
+                          {/* 主要內容（緊湊版） */}
+                          <p className={`font-jp text-3xl font-bold mt-2 ${cs.text}`}>
+                            <FuriganaText text={v.word} />
+                          </p>
+                          <div className="flex items-center justify-center gap-3 mt-1.5 text-surface-400">
+                            <span className="font-jp text-sm">{v.reading}</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-3 mt-1.5 text-surface-400">
+                            <span className="text-[11px] text-surface-500 italic">{v.romaji}</span>
+                          </div>
+                          <p className="text-sm text-surface-200 mt-2">{v.meaning}</p>
+                        </motion.div>
+                      )
+                    })()}
+                  </AnimatePresence>
+                </div>
+
+                {/* 導航點 */}
+                <div className="flex justify-center gap-1.5 mt-2">
+                  {chapter.vocabulary.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => goToVocab(idx)}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${idx === vocabIndex ? `${cs.bg} w-5` : 'bg-white/20 w-1.5'
+                        }`}
+                    />
+                  ))}
+                </div>
               </div>
 
-              {/* 單字列表 */}
-              <div className="space-y-2">
+              {/* 單字列表 (可滾動，sticky 卡片會凍結在上方) */}
+              <div className="space-y-2 mt-3">
                 {chapter.vocabulary.map((v, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setVocabIndex(idx)}
-                    className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-200 flex items-center gap-4 ${
-                      idx === vocabIndex
+                    onClick={() => goToVocab(idx)}
+                    className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-200 flex items-center gap-4 ${idx === vocabIndex
                         ? `${cs.lightBg} ${cs.border} border`
                         : 'hover:bg-white/5'
-                    }`}
+                      }`}
                   >
                     <span className="font-jp text-lg font-bold w-16">
                       <FuriganaText text={v.word} />

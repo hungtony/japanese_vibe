@@ -763,7 +763,7 @@ export const chaptersN5 = [
       { word: '一年', reading: 'いちねん', romaji: 'ichinen', meaning: '一年' },
     ],
     quiz: [
-      { question: '一個蘋果：りんご一個___。', options: ['ひとつ', 'ひとり', 'いちまい', 'いっこ'], answer: 0 },
+      { question: '一個蘋果：りんご___。', options: ['ひとつ', 'ひとり', 'いちまい', 'いっこ'], answer: 0 },
       { question: '「三人」的讀音是？', options: ['さんにん', 'はんにん', 'みたり', 'さんじん'], answer: 0 },
       { question: '「兩個人」的讀音是？', options: ['ふたり', 'ひとり', 'ににん', 'さんにん'], answer: 0 },
       { question: '「いくつ」的意思是？', options: ['幾個', '誰', '哪裡', '何時'], answer: 0 },
