@@ -16,7 +16,7 @@ function shuffleArray(array) {
 }
 
 // 單張卡片組件
-const Card = ({ card, index, removeCard, isActive, onResult, colorConfig }) => {
+const Card = ({ card, index, removeCard, isActive, onResult, colorConfig, level }) => {
   const [flipped, setFlipped] = useState(false);
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-200, 200], [-18, 18]);
@@ -39,7 +39,7 @@ const Card = ({ card, index, removeCard, isActive, onResult, colorConfig }) => {
   if (!isActive) {
     return (
       <motion.div
-        className="absolute top-0 left-0 w-full h-full rounded-[2rem] bg-white/[0.02] border border-white/[0.05] shadow-xl p-8 flex items-center justify-center flex-col pointer-events-none"
+        className="absolute top-0 left-0 w-full h-full rounded-[2rem] flashcard-stack shadow-xl p-8 flex items-center justify-center flex-col pointer-events-none"
         initial={{ scale: 0.95, y: 12 }}
         animate={{ scale: 0.95, y: 12 }}
         style={{ zIndex: 0 }}
@@ -74,7 +74,7 @@ const Card = ({ card, index, removeCard, isActive, onResult, colorConfig }) => {
         >
           {/* 正面：日文單字 */}
           <motion.div
-            className="absolute w-full h-full rounded-[2rem] bg-[#1a1a1a] border border-white/10 shadow-2xl flex flex-col items-center justify-center px-6 overflow-hidden"
+            className="absolute w-full h-full rounded-[2rem] flashcard-front flex flex-col items-center justify-center px-6 overflow-hidden"
             style={{ backfaceVisibility: 'hidden' }}
             animate={{ opacity: flipped ? 0 : 1 }}
             transition={{ duration: 0.15 }}
@@ -102,7 +102,7 @@ const Card = ({ card, index, removeCard, isActive, onResult, colorConfig }) => {
             </motion.div>
 
             <span className="text-surface-500 text-xs tracking-widest uppercase mb-8 z-10">Tap to flip</span>
-            <h2 className="text-5xl md:text-6xl font-bold font-jp text-white mb-2 z-10">{card.word}</h2>
+            <h2 className="text-5xl md:text-6xl font-bold font-jp mb-2 z-10" style={{ color: 'var(--flashcard-front-text)' }}>{card.word}</h2>
 
             <div className="absolute bottom-8 left-0 w-full flex justify-center gap-12 text-surface-500 text-sm z-10">
               <span className="flex flex-col items-center"><ArrowLeft className="w-5 h-5 mb-1" /> 不熟</span>
@@ -112,19 +112,17 @@ const Card = ({ card, index, removeCard, isActive, onResult, colorConfig }) => {
 
           {/* 背面：解釋 */}
           <motion.div
-            className={`absolute top-0 left-0 w-full h-full rounded-[2rem] bg-[#1a1a1a] border border-white/20 shadow-2xl shadow-${colorConfig.color}/30 flex flex-col items-center justify-center px-6`}
+            data-level={level}
+            className={`absolute top-0 left-0 w-full h-full rounded-[2rem] flashcard-back bg-gradient-to-br from-${colorConfig.color} to-${colorConfig.color}-dark shadow-2xl shadow-${colorConfig.color}/30 flex flex-col items-center justify-center px-6`}
             style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
-            animate={{
-              opacity: flipped ? 1 : 0,
-              backgroundImage: flipped ? `linear-gradient(to bottom right, var(--tw-gradient-from), var(--tw-gradient-to))` : 'none'
-            }}
+            animate={{ opacity: flipped ? 1 : 0 }}
             transition={{ duration: 0.15 }}
           >
-            <span className="text-white/70 text-xs tracking-widest uppercase mb-6 drop-shadow-md">Tap to flip</span>
-            <h3 className="text-4xl font-bold font-jp text-white mb-2 drop-shadow-lg">{card.reading}</h3>
-            <p className="text-white/80 font-mono text-lg mb-8">{card.romaji}</p>
-            <div className="w-16 h-1 bg-white/30 rounded-full mb-8" />
-            <p className="text-2xl font-bold text-white text-center">{card.meaning}</p>
+            <span className="flashcard-back-faint text-xs tracking-widest uppercase mb-6 drop-shadow-md">Tap to flip</span>
+            <h3 className="flashcard-back-title text-4xl font-bold font-jp mb-2 drop-shadow-lg">{card.reading}</h3>
+            <p className="flashcard-back-soft font-mono text-lg mb-8">{card.romaji}</p>
+            <div className="flashcard-back-divider w-16 h-1 rounded-full mb-8" />
+            <p className="flashcard-back-title text-2xl font-bold text-center">{card.meaning}</p>
           </motion.div>
         </motion.div>
       </div>
@@ -238,7 +236,7 @@ export default function FlashcardPage() {
   // ---- 全部掌握畫面 ----
   if (allMastered) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-6">
+      <div className="flashcard-page min-h-screen flex items-center justify-center px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -276,7 +274,7 @@ export default function FlashcardPage() {
   }
 
   return (
-    <div className="min-h-screen overflow-hidden relative flex flex-col px-6 pt-32">
+    <div className="flashcard-page min-h-screen overflow-hidden relative flex flex-col px-6 pt-32">
       {/* 標題列 */}
       <header className="absolute top-0 left-0 w-full px-6 py-6 z-50">
         <div className="flex items-center justify-between mb-2">
@@ -328,6 +326,7 @@ export default function FlashcardPage() {
                     removeCard={popCard}
                     onResult={handleResult}
                     colorConfig={colorConfig}
+                    level={level}
                   />
                 );
               })}

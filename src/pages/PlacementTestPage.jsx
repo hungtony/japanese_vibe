@@ -92,8 +92,8 @@ export default function PlacementTestPage() {
           </motion.div>
 
           <h1 className="text-3xl font-bold mb-3 tracking-tight">
-            Nihongo
-            <span className="text-gradient bg-gradient-to-r from-n5 to-n4"> Vibe</span>
+            Vibe！
+            <span className="text-gradient bg-gradient-to-r from-n5 to-n4">日語學習</span>
           </h1>
           <p className="text-surface-400 mb-2 text-lg font-light">極簡地圖式日語學習</p>
           <p className="text-surface-500 text-sm mb-10 leading-relaxed">
@@ -410,8 +410,8 @@ export default function PlacementTestPage() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   className={`mt-5 px-4 py-2.5 rounded-xl text-sm ${selectedOption === question.answer
-                      ? 'bg-emerald-400/10 text-emerald-300'
-                      : 'bg-red-400/10 text-red-300'
+                    ? 'bg-emerald-400/10 text-emerald-300'
+                    : 'bg-red-400/10 text-red-300'
                     }`}
                 >
                   {selectedOption === question.answer
@@ -432,12 +432,12 @@ export default function PlacementTestPage() {
             <div
               key={idx}
               className={`h-1.5 rounded-full transition-all duration-300 ${idx < answers.length
-                  ? answers[idx].isCorrect
-                    ? 'bg-emerald-400 w-4'
-                    : 'bg-red-400 w-4'
-                  : idx === currentQ
-                    ? `bg-${levelInfo.color} w-6`
-                    : 'bg-white/10 w-4'
+                ? answers[idx].isCorrect
+                  ? 'bg-emerald-400 w-4'
+                  : 'bg-red-400 w-4'
+                : idx === currentQ
+                  ? `bg-${levelInfo.color} w-6`
+                  : 'bg-white/10 w-4'
                 }`}
             />
           ))}

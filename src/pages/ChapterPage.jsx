@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, BookOpen, Languages, ClipboardCheck, ChevronRight } from 'lucide-react'
+import { ArrowLeft, BookOpen, Languages, ClipboardCheck, ChevronRight, Volume2, Square } from 'lucide-react'
 import { chapters, levelConfig } from '../data/chapters'
 import FuriganaText from '../components/FuriganaText'
+import { useSpeech } from '../hooks/useSpeech'
 
 const steps = ['grammar', 'vocabulary', 'quiz']
 const stepLabels = { grammar: '文法介紹', vocabulary: '相關單字', quiz: '章節測驗' }
@@ -23,6 +24,7 @@ export default function ChapterPage() {
 
   const config = levelConfig[chapter.level]
   const colorKey = chapter.level.toLowerCase()
+  const { speakingId, speak } = useSpeech()
 
   const colorMap = {
     n5: { gradient: 'from-n5 to-n5-dark', text: 'text-n5', bg: 'bg-n5', lightBg: 'bg-n5/10', border: 'border-n5/30' },
@@ -38,6 +40,12 @@ export default function ChapterPage() {
       setCurrentStep(prev => prev + 1)
     } else {
       navigate(`/quiz/${chapter.id}`)
+    }
+  }
+
+  const prevStep = () => {
+    if (currentStep > 0) {
+      setCurrentStep(prev => prev - 1)
     }
   }
 
@@ -116,15 +124,37 @@ export default function ChapterPage() {
                     <p className="text-surface-300 text-sm mb-5 leading-relaxed">{g.explanation}</p>
 
                     <div className="space-y-3">
-                      {g.examples.map((ex, exIdx) => (
-                        <div key={exIdx} className="bg-white/[0.03] rounded-xl px-4 py-3">
-                          <p className="font-jp text-base font-medium mb-1">
-                            <FuriganaText text={ex.jp} />
-                          </p>
-                          <p className="text-xs text-surface-500 mb-0.5">{ex.romaji}</p>
-                          <p className="text-xs text-surface-400">{ex.zh}</p>
-                        </div>
-                      ))}
+                      {g.examples.map((ex, exIdx) => {
+                        const speakId = `${chapter.id}_g${gIdx}_ex${exIdx}`
+                        const isSpeaking = speakingId === speakId
+                        return (
+                          <div key={exIdx} className="bg-white/[0.03] rounded-xl px-4 py-3">
+                            <div className="flex items-start justify-between gap-2 mb-1">
+                              <p className="font-jp text-base font-medium leading-relaxed flex-1">
+                                <FuriganaText text={ex.jp} />
+                              </p>
+                              <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={() => speak(speakId, ex.jp)}
+                                className={`flex-shrink-0 flex items-center gap-1 px-2 py-1 rounded-lg text-[11px] font-semibold transition-all mt-0.5
+                                  ${isSpeaking
+                                    ? `${cs.bg} text-white shadow-md`
+                                    : `${cs.lightBg} ${cs.text} border ${cs.border} hover:opacity-80`
+                                  }
+                                `}
+                              >
+                                {isSpeaking
+                                  ? <><Square className="w-2.5 h-2.5" fill="currentColor" />停止</>
+                                  : <><Volume2 className="w-2.5 h-2.5" />朗讀</>
+                                }
+                              </motion.button>
+                            </div>
+                            <p className="text-xs text-surface-500 mb-0.5">{ex.romaji}</p>
+                            <p className="text-xs text-surface-400">{ex.zh}</p>
+                          </div>
+                        )
+                      })}
                     </div>
                   </motion.div>
                 ))}
@@ -249,14 +279,30 @@ export default function ChapterPage() {
           )}
         </AnimatePresence>
 
-        {/* 下一步按鈕 (文法/單字步驟) */}
+        {/* 下一步 / 上一步 按鈕 (文法/單字步驟) */}
         {currentStep < 2 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="mt-10 flex justify-end"
+            className="mt-10 flex items-center justify-between"
           >
+            {/* 上一頁 */}
+            {currentStep > 0 ? (
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={prevStep}
+                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-surface-300 font-medium"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                上一頁
+              </motion.button>
+            ) : (
+              <div />
+            )}
+
+            {/* 下一步 */}
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -265,6 +311,26 @@ export default function ChapterPage() {
             >
               {currentStep === 0 ? '查看單字' : '準備測驗'}
               <ChevronRight className="inline ml-1 w-4 h-4" />
+            </motion.button>
+          </motion.div>
+        )}
+
+        {/* 準備測驗頁的上一頁按鈕 */}
+        {currentStep === 2 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="mt-6 flex justify-center"
+          >
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={prevStep}
+              className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-surface-300 font-medium"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              回上一頁
             </motion.button>
           </motion.div>
         )}

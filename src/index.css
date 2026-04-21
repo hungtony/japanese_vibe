@@ -28,6 +28,19 @@
   --icon-color: #757575;
   --icon-hover-color: #E0E0E0;
   --icon-hover-bg: rgba(255, 255, 255, 0.05);
+
+  /* flashcard */
+  --flashcard-front-bg: #1a1a1a;
+  --flashcard-front-border: rgba(255, 255, 255, 0.1);
+  --flashcard-front-text: #ffffff;
+  --flashcard-front-muted: #9E9E9E;
+  --flashcard-stack-bg: rgba(255, 255, 255, 0.02);
+  --flashcard-stack-border: rgba(255, 255, 255, 0.05);
+  --flashcard-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --flashcard-back-text: #ffffff;
+  --flashcard-back-text-soft: rgba(255, 255, 255, 0.8);
+  --flashcard-back-text-faint: rgba(255, 255, 255, 0.7);
+  --flashcard-back-divider: rgba(255, 255, 255, 0.3);
 }
 
 .light-theme {
@@ -56,6 +69,19 @@
   --icon-color: #757575;
   --icon-hover-color: #111111;
   --icon-hover-bg: rgba(0, 0, 0, 0.06);
+
+  /* flashcard */
+  --flashcard-front-bg: #ffffff;
+  --flashcard-front-border: rgba(0, 0, 0, 0.08);
+  --flashcard-front-text: #111111;
+  --flashcard-front-muted: #757575;
+  --flashcard-stack-bg: rgba(0, 0, 0, 0.03);
+  --flashcard-stack-border: rgba(0, 0, 0, 0.08);
+  --flashcard-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --flashcard-back-text: #111111;
+  --flashcard-back-text-soft: #333333;
+  --flashcard-back-text-faint: #555555;
+  --flashcard-back-divider: rgba(0, 0, 0, 0.18);
 }
 
 @layer base {
@@ -163,6 +189,30 @@
     @apply h-full rounded-full transition-all duration-500 ease-out;
   }
 
+  /* Flashcard surfaces */
+  .flashcard-front {
+    background-color: var(--flashcard-front-bg);
+    color: var(--flashcard-front-text);
+    border: 1px solid var(--flashcard-front-border);
+    box-shadow: var(--flashcard-shadow);
+  }
+
+  .flashcard-back {
+    background-color: var(--flashcard-front-bg);
+    border: 1px solid var(--flashcard-front-border);
+    box-shadow: var(--flashcard-shadow);
+  }
+
+  .flashcard-stack {
+    background-color: var(--flashcard-stack-bg);
+    border: 1px solid var(--flashcard-stack-border);
+  }
+
+  .flashcard-back-title  { color: var(--flashcard-back-text); }
+  .flashcard-back-soft   { color: var(--flashcard-back-text-soft); }
+  .flashcard-back-faint  { color: var(--flashcard-back-text-faint); }
+  .flashcard-back-divider{ background-color: var(--flashcard-back-divider); }
+
   /* 漢字假名標註樣式（使用瀏覽器原生 ruby 排版） */
   ruby {
     ruby-position: over;
@@ -222,3 +272,43 @@
 /* Component class overrides */
 .light-theme .btn-option-correct { color: #15803d; }
 .light-theme .btn-option-wrong   { color: #b91c1c; }
+
+/* ── Flashcard page light-mode scoped overrides ───────────────────────────── */
+
+/* Back-face gradient: switch to lighter gradient endpoints in light mode for
+   better legibility of dark text. Default (dark mode) keeps the saturated
+   from-${color} to-${color}-dark gradient via inline style. */
+.light-theme .flashcard-back[data-level="n5"] {
+  background-image: linear-gradient(to bottom right, #B8D4E3, #7EA8BE);
+}
+.light-theme .flashcard-back[data-level="n4"] {
+  background-image: linear-gradient(to bottom right, #B8D4B9, #8DB48E);
+}
+.light-theme .flashcard-back[data-level="n3"] {
+  background-image: linear-gradient(to bottom right, #DCC88E, #C4A35A);
+}
+.light-theme .flashcard-back[data-level="n2"] {
+  background-image: linear-gradient(to bottom right, #CFA5C3, #B07AA1);
+}
+.light-theme .flashcard-back[data-level="n1"] {
+  background-image: linear-gradient(to bottom right, #EBA593, #E07A5F);
+}
+
+/* Soft surface utilities used inside the flashcard page become invisible on
+   the light page background. Re-tint them in dark-on-light. Scoped to the
+   page to avoid bleeding into other surfaces. */
+.light-theme .flashcard-page .bg-white\/5  { background-color: rgba(0, 0, 0, 0.04); }
+.light-theme .flashcard-page .bg-white\/10 { background-color: rgba(0, 0, 0, 0.06); }
+.light-theme .flashcard-page .bg-white\/15 { background-color: rgba(0, 0, 0, 0.09); }
+.light-theme .flashcard-page .hover\:bg-white\/10:hover { background-color: rgba(0, 0, 0, 0.09); }
+.light-theme .flashcard-page .hover\:bg-white\/15:hover { background-color: rgba(0, 0, 0, 0.12); }
+.light-theme .flashcard-page .bg-surface-800\/50 { background-color: rgba(0, 0, 0, 0.08); }
+.light-theme .flashcard-page .bg-surface-800\/30 { background-color: rgba(0, 0, 0, 0.06); }
+
+/* Stat numbers in the "本輪完成" panel — deepen for AA contrast on light bg. */
+.light-theme .flashcard-page .text-emerald-400 { color: #059669; }
+.light-theme .flashcard-page .text-red-400     { color: #dc2626; }
+
+/* Swipe-overlay badges (記住了 / 不熟): deepen border + text in light mode. */
+.light-theme .flashcard-page .border-emerald-400 { border-color: #059669; }
+.light-theme .flashcard-page .border-red-400     { border-color: #dc2626; }

@@ -13,6 +13,7 @@ const useStore = create(
       unlockedNodeId: null,      // 目前解鎖到的最新章節 id
       completedNodes: [],        // 已通關章節 id 列表
       masteredWords: {},         // 已記住的單字 { 'N5': ['学生', '先生'], 'N4': [...], ... }
+      completedTravelChapters: [], // 已完成的旅遊章節 id 列表
 
       // ---- 程度測驗完成 ----
       completePlacement: (level) => {
@@ -93,6 +94,13 @@ const useStore = create(
         return masteredWords[level] || []
       },
 
+      // ---- 旅遊章節完成 ----
+      completeTravelChapter: (chapterId) => {
+        const { completedTravelChapters } = get()
+        if (completedTravelChapters.includes(chapterId)) return
+        set({ completedTravelChapters: [...completedTravelChapters, chapterId] })
+      },
+
       // ---- 重置所有進度 ----
       resetProgress: () => {
         set({
@@ -101,6 +109,7 @@ const useStore = create(
           unlockedNodeId: null,
           completedNodes: [],
           masteredWords: {},
+          completedTravelChapters: [],
         })
       },
     }),

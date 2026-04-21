@@ -6,6 +6,8 @@ import PlacementTestPage from './pages/PlacementTestPage'
 import ChapterPage from './pages/ChapterPage'
 import QuizPage from './pages/QuizPage'
 import FlashcardPage from './pages/FlashcardPage'
+import TravelMapPage from './pages/TravelMapPage'
+import TravelChapterPage from './pages/TravelChapterPage'
 
 function App() {
   const placementDone = useStore(s => s.placementDone)
@@ -31,6 +33,8 @@ function App() {
           <Route path="/chapter/:id" element={<ChapterPage />} />
           <Route path="/quiz/:id" element={<QuizPage />} />
           <Route path="/flashcards/:level" element={<FlashcardPage />} />
+          <Route path="/travel" element={<TravelMapPage />} />
+          <Route path="/travel/:id" element={<TravelChapterPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>

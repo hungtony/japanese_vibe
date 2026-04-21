@@ -41,6 +41,8 @@ export const chaptersN4 = [
       { question: '「行きません」的普通形（現在否定）是？', options: ['行く', '行かない', '行った', '行かなかった'], answer: 1 },
       { question: '「暇」的意思是？', options: ['休息', '有趣的', '空閒的', '忙碌的'], answer: 2 },
       { question: '「忙しいです」的普通形是？', options: ['忙しいだ', '忙しい', '忙しくない', '忙しいな'], answer: 1 },
+      { question: '「休まない」的普通形過去式是？', options: ['休まない', '休んだ', '休まなかった', '休まなくない'], answer: 2 },
+      { question: '「静かです」的普通形過去式是？', options: ['静かだった', '静かだ', '静かじゃない', '静かな'], answer: 0 },
     ]
   },
 
@@ -77,6 +79,8 @@ export const chaptersN4 = [
       { question: '病気___んです。(因為生病)', options: ['だ', 'な', 'の', '（不加）'], answer: 1 },
       { question: '「熱」的讀音是？', options: ['ねつ', 'あつい', 'きぶん', 'びょうき'], answer: 0 },
       { question: '「手伝う」的意思是？', options: ['尋找', '打掃', '幫忙', '搬家'], answer: 2 },
+      { question: '明日テストが___んです。', options: ['あるな', 'ある', 'あるの', 'あるだ'], answer: 1 },
+      { question: 'どうして___んですか。', options: ['泣いている', '泣くの', '泣いてだ', '泣きな'], answer: 0 },
     ]
   },
 
@@ -102,7 +106,7 @@ export const chaptersN4 = [
       { word: '漢字', reading: 'かんじ', romaji: 'kanji', meaning: '漢字' },
       { word: '読む', reading: 'よむ', romaji: 'yomu', meaning: '閱讀 (I類動詞)' },
       { word: '歌う', reading: 'うたう', romaji: 'utau', meaning: '唱歌 (I類動詞)' },
-      { word: 'ピアノ', reading: 'ぴあの', romaji: 'piano', meaning: '鋼琴' },
+      { word: 'ピアノ', reading: 'ピアノ', romaji: 'piano', meaning: '鋼琴' },
       { word: '運転する', reading: 'うんてんする', romaji: 'unten suru', meaning: '駕駛 (III類動詞)' },
       { word: '予約する', reading: 'よやくする', romaji: 'yoyaku suru', meaning: '預約 (III類動詞)' },
       { word: '直す', reading: 'なおす', romaji: 'naosu', meaning: '修理 (I類動詞)' },
@@ -113,6 +117,8 @@ export const chaptersN4 = [
       { question: '「弾く」的意思是？', options: ['駕駛', '閱讀', '修理', '彈奏'], answer: 3 },
       { question: '「する」的可能形是？', options: ['される', 'させる', 'できる', 'しられる'], answer: 2 },
       { question: '泳ぐ的可能形是？', options: ['泳げる', '泳がれる', '泳ぎれる', '泳ぐれる'], answer: 0 },
+      { question: '「来る」的可能形是？', options: ['こられる', 'きられる', 'くられる', 'これる'], answer: 0 },
+      { question: '刺身が___。', options: ['食べせます', '食べられます', '食べれます', '食べます'], answer: 1 },
     ]
   },
 
@@ -141,7 +147,7 @@ export const chaptersN4 = [
       { word: '電話する', reading: 'でんわする', romaji: 'denwa suru', meaning: '打電話 (III類動詞)' },
       { word: '働く', reading: 'はたらく', romaji: 'hataraku', meaning: '工作 (I類動詞)' },
       { word: '歌う', reading: 'うたう', romaji: 'utau', meaning: '唱歌 (I類動詞)' },
-      { word: 'ガム', reading: 'がむ', romaji: 'gamu', meaning: '口香糖' },
+      { word: 'ガム', reading: 'ガム', romaji: 'gamu', meaning: '口香糖' },
     ],
     quiz: [
       { question: '音楽を聞き___、勉強します。', options: ['たり', 'ながら', 'て', 'から'], answer: 1 },
@@ -149,6 +155,8 @@ export const chaptersN4 = [
       { question: 'テレビを___ながら、ご飯を食べます。(看)', options: ['見る', '見て', '見', '見た'], answer: 2 },
       { question: '「歩く」的意思是？', options: ['跑步', '跳躍', '走路', '駕駛'], answer: 2 },
       { question: '運転___ながら、電話をしてはいけません。', options: ['し', 'する', 'して', 'す'], answer: 0 },
+      { question: 'お茶を___ながら、話しましょう。', options: ['飲む', '飲んで', '飲み', '飲ま'], answer: 2 },
+      { question: '音楽を___ながら、掃除をします。', options: ['聞く', '聞き', '聞いて', '聞か'], answer: 1 },
     ]
   },
 
@@ -171,7 +179,7 @@ export const chaptersN4 = [
       { word: '本', reading: 'ほん', romaji: 'hon', meaning: '書' },
       { word: '買う', reading: 'かう', romaji: 'kau', meaning: '買 (I類動詞)' },
       { word: '昨日', reading: 'きのう', romaji: 'kinō', meaning: '昨天' },
-      { word: 'メガネ', reading: 'めがね', romaji: 'megane', meaning: '眼鏡' },
+      { word: 'メガネ', reading: 'メガネ', romaji: 'megane', meaning: '眼鏡' },
       { word: 'かける', reading: 'かける', romaji: 'kakeru', meaning: '戴上(眼鏡等) (II類動詞)' },
       { word: '人', reading: 'ひと', romaji: 'hito', meaning: '人' },
       { word: '映画', reading: 'えいが', romaji: 'eiga', meaning: '電影' },
@@ -185,6 +193,8 @@ export const chaptersN4 = [
       { question: '「かける」在這裡的意思是？', options: ['打電話', '花費(時間)', '戴上(眼鏡)', '懸掛'], answer: 2 },
       { question: '帽子をかぶって___人は誰ですか。(戴著)', options: ['いる', 'ある', 'みる', 'おく'], answer: 0 },
       { question: '「作る」的讀音是？', options: ['わかる', 'おくる', 'つくる', 'おこる'], answer: 2 },
+      { question: 'これは私が___ケーキです。', options: ['作る', '作った', '作って', '作らない'], answer: 1 },
+      { question: 'あそこで___人は田中さんです。', options: ['寝ている', '寝るの', '寝て', '寝たの'], answer: 0 },
     ]
   },
 
@@ -227,6 +237,8 @@ export const chaptersN4 = [
       { question: '電気が___います。(關著)', options: ['消して', '消えて', '消って', '消れて'], answer: 1 },
       { question: '「並べる」的意思是？', options: ['比較', '排列(他動)', '排隊(自動)', '貼上'], answer: 1 },
       { question: '「壊れる」的意思是？', options: ['修理', '弄壞(他動)', '壞掉(自動)', '破掉'], answer: 2 },
+      { question: '壁にポスターが___。', options: ['貼っています', '貼ってあります', '貼ります', '貼るです'], answer: 1 },
+      { question: '窓が___います。', options: ['開けて', '開いて', '開く', '開ける'], answer: 1 },
     ]
   },
 
@@ -263,6 +275,8 @@ export const chaptersN4 = [
       { question: '「将来」的意思是？', options: ['過去', '現在', '未來/將來', '最近'], answer: 2 },
       { question: '日本語を勉強し___と思っています。(打算讀)', options: ['よう', 'る', 'て', 'ます'], answer: 0 },
       { question: '「夢」的讀音是？', options: ['ゆめ', 'きぼう', 'もくひょう', 'ねがい'], answer: 0 },
+      { question: '来年、日本へ___と思っています。', options: ['行こう', '行く', '行った', '行か'], answer: 0 },
+      { question: '新しい車を___と思っています。', options: ['買う', '買おう', '買って', '買った'], answer: 1 },
     ]
   },
 
@@ -289,7 +303,7 @@ export const chaptersN4 = [
       { word: '薬', reading: 'くすり', romaji: 'kusuri', meaning: '藥' },
       { word: '病院', reading: 'びょういん', romaji: 'byōin', meaning: '醫院' },
       { word: '医者', reading: 'いしゃ', romaji: 'isha', meaning: '醫生' },
-      { word: 'タバコ', reading: 'たばこ', romaji: 'tabako', meaning: '香菸' },
+      { word: 'タバコ', reading: 'タバコ', romaji: 'tabako', meaning: '香菸' },
       { word: '吸う', reading: 'すう', romaji: 'sū', meaning: '吸(菸) (I類動詞)' },
       { word: '無理する', reading: 'むりする', romaji: 'muri suru', meaning: '勉強/硬撐 (III類動詞)' },
     ],
@@ -299,6 +313,8 @@ export const chaptersN4 = [
       { question: '「無理する」的意思是？', options: ['浪費', '生病', '勉強/硬撐', '休息'], answer: 2 },
       { question: '「遅い」的讀音是？', options: ['おそい', 'はやい', 'とおい', 'ちかい'], answer: 0 },
       { question: '薬を___ほうがいいですよ。(最好吃/喝)', options: ['飲んだ', '飲む', '飲んで', '飲まない'], answer: 0 },
+      { question: '無理を___ほうがいいですよ。', options: ['しない', 'しなかった', 'する', 'して'], answer: 0 },
+      { question: '早く___ほうがいいです。', options: ['寝た', '寝る', '寝て', '寝ない'], answer: 0 },
     ]
   },
 
@@ -335,6 +351,8 @@ export const chaptersN4 = [
       { question: '「触る」的讀音是？', options: ['さわる', 'とまる', 'おわる', 'かわる'], answer: 0 },
       { question: '「逃げる」的意思是？', options: ['丟掉', '躲藏', '逃跑', '進入'], answer: 2 },
       { question: '「頑張る」的命令形是？', options: ['頑張れ', '頑張るな', '頑張ろ', '頑張ら'], answer: 0 },
+      { question: '「飲む」的禁止形是？', options: ['飲むな', '飲め', '飲まない', '飲まないな'], answer: 0 },
+      { question: '「する」的命令形是？', options: ['すれ', 'しろ', 'せよ', 'しな'], answer: 1 },
     ]
   },
 
@@ -392,6 +410,8 @@ export const chaptersN4 = [
       { question: '「咲く」的意思是？', options: ['開花', '結果', '枯萎', '落下'], answer: 0 },
       { question: '安かっ___、買います。(如果便宜的話)', options: ['たら', 'れば', 'と', 'なら'], answer: 0 },
       { question: '「着く」的讀音是？', options: ['つく', 'きく', 'さく', 'なく'], answer: 0 },
+      { question: '「食べる」的ば形是？', options: ['食べれば', '食べらば', '食べろば', '食べば'], answer: 0 },
+      { question: '雨が___、行きません。', options: ['降ると', '降ったら', '降れば', '降るなら'], answer: 1 },
     ]
   },
 
@@ -428,6 +448,8 @@ export const chaptersN4 = [
       { question: '「組み立てる」的意思是？', options: ['折疊', '剪開', '組裝', '說明'], answer: 2 },
       { question: '「説明書」的讀音是？', options: ['せつめいしょ', 'せつめしょ', 'しつめいしょ', 'せつみしょ'], answer: 0 },
       { question: '先生が教える___に、作ります。', options: ['ため', 'よう', 'とおり', 'まま'], answer: 2 },
+      { question: '説明書の___に、使います。', options: ['とおり', 'どうり', 'まま', 'よう'], answer: 0 },
+      { question: '見た___に、絵を描いてください。', options: ['とおり', 'よう', 'ため', 'から'], answer: 0 },
     ]
   },
 
@@ -464,6 +486,8 @@ export const chaptersN4 = [
       { question: '「一生懸命」的讀音是？', options: ['いっしょうけんめい', 'いっしょけんめい', 'いしょうけんめ', 'いっしょけんめ'], answer: 0 },
       { question: '日本語が話せる___、練習します。(為了能夠)', options: ['ために', 'ように', 'ことに', 'ものに'], answer: 1 },
       { question: '「気をつける」的意思是？', options: ['擔心', '生氣', '注意/小心', '疲累'], answer: 2 },
+      { question: '風邪を___ように、コートを着ます。', options: ['引かない', '引く', '引いた', '引いて'], answer: 0 },
+      { question: '字が___ように、メガネをかけます。', options: ['見える', '見る', '見られる', '見せる'], answer: 0 },
     ]
   },
 
@@ -500,6 +524,8 @@ export const chaptersN4 = [
       { question: '私が写真を撮って___ましょうか。(我幫你拍吧)', options: ['あげ', 'もらい', 'くれ', 'あり'], answer: 0 },
       { question: '「貸す」的反義詞是？', options: ['返す', '借りる', '送る', '直す'], answer: 1 },
       { question: '「案内する」的讀音是？', options: ['あんないする', 'あんらいする', 'いないする', 'いんらいする'], answer: 0 },
+      { question: '私は田中さんに本を貸して___ました。', options: ['あげ', 'くれ', 'もらい', 'いただき'], answer: 0 },
+      { question: '妹が私にケーキを作って___ました。', options: ['くれ', 'もらい', 'あげ', 'やり'], answer: 0 },
     ]
   },
 
@@ -536,6 +562,8 @@ export const chaptersN4 = [
       { question: '薬を飲む___忘れました。(把吃藥這件事)', options: ['のが', 'のは', 'のを', 'のに'], answer: 2 },
       { question: '「走る」的讀音是？', options: ['あるく', 'はしる', 'およぐ', 'いく'], answer: 1 },
       { question: '彼が来る___を知っていますか。', options: ['のが', 'のを', 'のは', 'のにも'], answer: 1 },
+      { question: 'スポーツを見る___好きです。', options: ['のが', 'のを', 'のは', 'のに'], answer: 0 },
+      { question: '一人で旅行する___楽しいです。', options: ['のは', 'のを', 'のが', 'のに'], answer: 0 },
     ]
   },
 
@@ -572,6 +600,8 @@ export const chaptersN4 = [
       { question: '「泥棒」的意思是？', options: ['警察', '醫生', '小偷', '老師'], answer: 2 },
       { question: '犬に___ました。(被咬)', options: ['噛まれ', '噛みれ', '噛めれ', '噛させ'], answer: 0 },
       { question: '「叱る」的讀音是？', options: ['しかる', 'ほめる', 'おこる', 'なく'], answer: 0 },
+      { question: '私は母に___ました。', options: ['叱られ', '叱らせ', '叱り', '叱れ'], answer: 0 },
+      { question: '「食べる」的被動形是？', options: ['食べられる', '食べさせる', '食べれる', '食べせる'], answer: 0 },
     ]
   },
 
@@ -591,7 +621,7 @@ export const chaptersN4 = [
       }
     ],
     vocabulary: [
-      { word: 'ニュース', reading: 'にゅうす', romaji: 'nyūsu', meaning: '新聞' },
+      { word: 'ニュース', reading: 'ニュース', romaji: 'nyūsu', meaning: '新聞' },
       { word: 'びっくりする', reading: 'びっくりする', romaji: 'bikkuri suru', meaning: '吃驚/嚇一跳 (III類動詞)' },
       { word: '風邪', reading: 'かぜ', romaji: 'kaze', meaning: '感冒' },
       { word: '休む', reading: 'やすむ', romaji: 'yasumu', meaning: '休息/請假 (I類動詞)' },
@@ -608,6 +638,8 @@ export const chaptersN4 = [
       { question: '「安心する」的意思是？', options: ['生氣', '吃驚', '安心', '擔心'], answer: 2 },
       { question: '道が___、分かりません。(因為複雜)', options: ['複雑で', '複雑くて', '複雑なで', '複雑くては'], answer: 0 },
       { question: '「びっくりする」的意思是？', options: ['開心', '生氣', '吃驚/嚇一跳', '安心'], answer: 2 },
+      { question: 'テストが___、悲しいです。', options: ['難しくて', '難しいで', '難しく', '難しいくて'], answer: 0 },
+      { question: '熱が___、休みます。', options: ['あって', 'あるで', 'ありて', 'あんで'], answer: 0 },
     ]
   },
 
@@ -644,6 +676,8 @@ export const chaptersN4 = [
       { question: '美味しい___、食べてみてください。(是否好吃)', options: ['か', 'だか', 'かどうか', 'なだか'], answer: 2 },
       { question: '「本当」的讀音是？', options: ['ほんとう', 'ほんと', 'ほんちょう', 'はんとう'], answer: 0 },
       { question: '何時に着く___、教えてください。', options: ['かどうか', 'か', 'の', 'が'], answer: 1 },
+      { question: '明日パーティーに行く___、分かりません。', options: ['かどうか', 'か', 'が', 'を'], answer: 0 },
+      { question: 'これが誰の傘___、知っていますか。', options: ['か', 'かどうか', 'だ', 'な'], answer: 0 },
     ]
   },
 
@@ -680,6 +714,8 @@ export const chaptersN4 = [
       { question: '社長に教えて___ました。(請社長教我)', options: ['いただきました', 'くださいました', 'さしあげました', 'くれました'], answer: 0 },
       { question: '「淹れる」的讀音是？', options: ['いれる', 'あれる', 'のむ', 'わかす'], answer: 0 },
       { question: 'ていただく相當於哪一個基礎動詞的謙讓語？', options: ['てあげる', 'てくれる', 'てもらう', 'てみる'], answer: 2 },
+      { question: '先生が本を貸して___ました。', options: ['ください', 'いただき', 'さしあげ', 'もらい'], answer: 0 },
+      { question: '私は社長に傘をお貸しして___ました。', options: ['さしあげ', 'いただき', 'ください', 'あげ'], answer: 0 },
     ]
   },
 
@@ -716,6 +752,8 @@ export const chaptersN4 = [
       { question: '「貯金」的意思是？', options: ['存款/存錢', '貸款', '花錢', '投資'], answer: 0 },
       { question: '「健康」的讀音是？', options: ['けんこう', 'げんき', 'けんきょう', 'げんごう'], answer: 0 },
       { question: '痩せる___、ダイエットをします。', options: ['ように', 'ために', 'ことに', 'ものに'], answer: 1 },
+      { question: '家族の___、家を買います。', options: ['ために', 'ように', 'から', 'ので'], answer: 0 },
+      { question: '漢字を覚える___、毎日書いています。', options: ['ために', 'ように', 'から', 'ので'], answer: 0 },
     ]
   },
 
@@ -752,6 +790,8 @@ export const chaptersN4 = [
       { question: 'ボタンが___そうです。(看起來快掉了)', options: ['落ち', '落ちる', '落ちて', '落ちた'], answer: 0 },
       { question: '「忙しい」的樣態接續是？', options: ['忙しいそう', '忙しそう', '忙しくそう', '忙しなそう'], answer: 1 },
       { question: '「暇」的讀音是？', options: ['ひま', 'やすみ', 'じかん', 'きゅうか'], answer: 0 },
+      { question: 'この料理は辛___。', options: ['そうです', 'いそうです', 'だそうです', 'なそうです'], answer: 0 },
+      { question: '雨が降り___です。', options: ['そう', 'るそう', 'たそう', 'てそう'], answer: 0 },
     ]
   },
 
@@ -788,6 +828,8 @@ export const chaptersN4 = [
       { question: '「難しい」的反義詞是？', options: ['易しい', '高い', '重い', '速い'], answer: 0 },
       { question: '値段が___すぎます。(太貴)', options: ['高い', '高', '高く', '高て'], answer: 1 },
       { question: '「昨夜」的常用讀音（表示昨晚）是？', options: ['さくや', 'ゆうべ', 'きのうのよる', '以上皆可'], answer: 3 },
+      { question: 'このテレビは___すぎます。', options: ['高', '高い', '高く', '高て'], answer: 0 },
+      { question: 'お酒を飲み___ました。', options: ['すぎ', 'やすい', 'にくい', 'たい'], answer: 0 },
     ]
   },
 
@@ -816,7 +858,7 @@ export const chaptersN4 = [
       { word: '飲む', reading: 'のむ', romaji: 'nomu', meaning: '喝 (I類動詞)' },
       { word: '薬', reading: 'くすり', romaji: 'kusuri', meaning: '藥' },
       { word: '靴', reading: 'くつ', romaji: 'kutsu', meaning: '鞋子' },
-      { word: 'ガラス', reading: 'がらす', romaji: 'garasu', meaning: '玻璃' },
+      { word: 'ガラス', reading: 'ガラス', romaji: 'garasu', meaning: '玻璃' },
     ],
     quiz: [
       { question: 'このペンは書き___。(很好寫)', options: ['やすい', 'にくい', 'たい', 'ながら'], answer: 0 },
@@ -824,6 +866,8 @@ export const chaptersN4 = [
       { question: 'ガラスは割れ___。(容易破)', options: ['やすい', 'にくい', 'たい', 'ながら'], answer: 0 },
       { question: '漢字は覚え___です。(很難記)', options: ['やすい', 'にくい', 'たい', 'ながら'], answer: 1 },
       { question: '「割れる」的讀音是？', options: ['われる', 'こわれる', 'おれる', 'きれる'], answer: 0 },
+      { question: 'この靴は歩き___です。', options: ['やすい', 'にくい', 'たい', 'ながら'], answer: 0 },
+      { question: 'この本は字が小さくて読み___です。', options: ['にくい', 'やすい', 'たい', 'ながら'], answer: 0 },
     ]
   },
 
@@ -860,6 +904,8 @@ export const chaptersN4 = [
       { question: '今から出かける___です。(正準備要出門)', options: ['ところ', 'ばかり', 'ため', 'よう'], answer: 0 },
       { question: '「出発」的讀音是？', options: ['しゅっぱつ', 'しゅばつ', 'しゅうぱつ', 'しゅうばつ'], answer: 0 },
       { question: 'ちょうど会議が終わっ___ところです。(剛結束)', options: ['た', 'て', 'る', 'ない'], answer: 0 },
+      { question: '今からご飯を食べる___です。', options: ['ところ', 'ばかり', 'ため', 'よう'], answer: 0 },
+      { question: '今、部屋を掃除して___ところです。', options: ['いる', 'ある', 'みる', 'おく'], answer: 0 },
     ]
   },
 
@@ -896,6 +942,8 @@ export const chaptersN4 = [
       { question: '「厳しい」的意思是？', options: ['溫柔的', '嚴格的', '寂寞的', '開心的'], answer: 1 },
       { question: '明日は雨___そうです。(聽說)', options: ['だ', 'な', 'の', '（不加）'], answer: 0 },
       { question: '「天気予報」的讀音是？', options: ['てんきよほう', 'てんきよぼう', 'でんきよほう', 'でんきよぼう'], answer: 0 },
+      { question: 'ニュースによると、明日は雪___そうです。', options: ['だ', 'な', 'の', '（不加）'], answer: 0 },
+      { question: '田中さんは来月結婚___そうです。', options: ['する', 'し', 'して', 'した'], answer: 0 },
     ]
   },
 
@@ -932,6 +980,8 @@ export const chaptersN4 = [
       { question: '「運ぶ」的意思是？', options: ['運動', '駕駛', '搬運', '丟棄'], answer: 2 },
       { question: '私にやら___ください。(請讓我做)', options: ['れて', 'せて', 'して', 'めて'], answer: 1 },
       { question: '「待つ」的使役形是？', options: ['待たせる', '待たれる', '待てる', '待つせる'], answer: 0 },
+      { question: '「飲む」的使役形是？', options: ['飲ませる', '飲まれる', '飲める', '飲みさせる'], answer: 0 },
+      { question: '先生は学生に作文を___。', options: ['書かせました', '書かれました', '書けました', '書きました'], answer: 0 },
     ]
   },
 
@@ -976,12 +1026,227 @@ export const chaptersN4 = [
       { question: '「おっしゃる」的意思是？', options: ['吃/喝', '看', '做', '說(尊敬)'], answer: 3 },
       { question: '私が荷物をお持ち___。', options: ['します', 'なります', 'いらっしゃいます', 'なさります'], answer: 0 },
       { question: '「伺う」的意思包含？', options: ['問/聽/拜訪(謙讓)', '吃/喝(尊敬)', '說(尊敬)', '做(謙讓)'], answer: 0 },
+      { question: '「食べる」的謙讓語是？', options: ['いただく', '召し上がる', 'おっしゃる', 'なさる'], answer: 0 },
+      { question: '社長は新聞を___。', options: ['ご覧になります', '拝見します', '見られます', 'お見します'], answer: 0 },
     ]
   },
 
-  // ---- 第 54 關：總複習 (動詞變化/長句) ----
+  // ---- 第 54 關：改變與決定 (～になる / ～にする) ----
   {
-    id: 'n4_review',
+    id: 'n4_ch54',
+    level: 'N4',
+    title: '改變與決定 (なる / にする)',
+    grammar: [
+      {
+        pattern: 'い形容詞(去い)く / な形容詞・名詞に ＋ なります',
+        explanation: '表示自然狀態或客觀事實的改變。「變得... / 成為...」。',
+        examples: [
+          { jp: '最近{さいきん}、寒{さむ}くなりました。', romaji: 'Saikin, samuku narimashita.', zh: '最近變冷了。' },
+          { jp: '彼{かれ}は医者{いしゃ}になりました。', romaji: 'Kare wa isha ni narimashita.', zh: '他成為了醫生。' },
+        ]
+      },
+      {
+        pattern: '名詞 ＋ にします',
+        explanation: '表示主觀的意志選擇或決定。「決定是... / 就選...吧」。常用於點餐或做選擇。',
+        examples: [
+          { jp: '私{わたし}はコーヒーにします。', romaji: 'Watashi wa kōhī ni shimasu.', zh: '我要咖啡（點餐）。' },
+          { jp: '明日{あした}の会議{かいぎ}は３時{さんじ}にします。', romaji: 'Ashita no kaigi wa san-ji ni shimasu.', zh: '明天的會議定在三點。' },
+        ]
+      }
+    ],
+    vocabulary: [
+      { word: 'なる', reading: 'なる', romaji: 'naru', meaning: '變成/成為 (I類動詞)' },
+      { word: 'する', reading: 'する', romaji: 'suru', meaning: '做/決定 (III類動詞)' },
+      { word: '寒い', reading: 'さむい', romaji: 'samui', meaning: '寒冷的 (い形容詞)' },
+      { word: '医者', reading: 'いしゃ', romaji: 'isha', meaning: '醫生' },
+      { word: '最近', reading: 'さいきん', romaji: 'saikin', meaning: '最近' },
+      { word: '会議', reading: 'かいぎ', romaji: 'kaigi', meaning: '會議' },
+      { word: '暖かい', reading: 'あたたかい', romaji: 'atatakai', meaning: '溫暖的 (い形容詞)' },
+      { word: '丈夫', reading: 'じょうぶ', romaji: 'jōbu', meaning: '堅固的/健康的 (な形容詞)' },
+      { word: '決める', reading: 'きめる', romaji: 'kimeru', meaning: '決定 (II類動詞)' },
+      { word: '静か', reading: 'しずか', romaji: 'shizuka', meaning: '安靜的 (な形容詞)' },
+    ],
+    quiz: [
+      { question: '私はコーヒー___します。(點餐：我要咖啡)', options: ['を', 'に', 'が', 'で'], answer: 1 },
+      { question: '春になって、暖かく___。(變暖和了)', options: ['しました', 'なりました', 'ありました', 'いました'], answer: 1 },
+      { question: '「医者」的意思是？', options: ['護士', '醫生', '老師', '律師'], answer: 1 },
+      { question: '部屋が静か___なりました。(變得安靜)', options: ['く', 'に', 'な', 'で'], answer: 0 },
+      { question: '「暖かい」的讀音是？', options: ['あたたかい', 'あつい', 'つめたい', 'すずしい'], answer: 0 },
+      { question: '私は紅茶___します。', options: ['に', 'を', 'が', 'で'], answer: 0 },
+      { question: '日本語が上手___なりました。', options: ['に', 'く', 'な', 'で'], answer: 0 },
+    ]
+  },
+
+  // ---- 第 55 關：準備與嘗試 (～ておく / ～てみる) ----
+  {
+    id: 'n4_ch55',
+    level: 'N4',
+    title: '準備與嘗試 (ておく/てみる)',
+    grammar: [
+      {
+        pattern: '動詞て形 ＋ おきます',
+        explanation: '表示（1）為了將來做準備而事先完成某動作；（2）讓事物保持目前的狀態（放置不管）。日常對話中常縮約為「～とく」。',
+        examples: [
+          { jp: '旅行{りょこう}の前{まえ}に、ホテルを予約{よやく}しておきます。', romaji: 'Ryokō no mae ni, hoteru o yoyaku shite okimasu.', zh: '旅行前，我會事先預約好飯店。' },
+          { jp: '窓{まど}は開{あ}けておいてください。', romaji: 'Mado wa akete oite kudasai.', zh: '窗戶請保持開著。' },
+        ]
+      },
+      {
+        pattern: '動詞て形 ＋ みます',
+        explanation: '表示嘗試做某事。「...看看」。常用於沒做過的事情，或是請對方嘗試看看。',
+        examples: [
+          { jp: 'この靴{くつ}を履{は}いてみてもいいですか。', romaji: 'Kono kutsu o haite mite mo ii desu ka.', zh: '我可以試穿這雙鞋看看嗎？' },
+          { jp: '美味{おい}しいから、食{た}べてみてください。', romaji: 'Oishii kara, tabete mite kudasai.', zh: '這很好吃，請吃吃看。' },
+        ]
+      }
+    ],
+    vocabulary: [
+      { word: '置く', reading: 'おく', romaji: 'oku', meaning: '放置/事先做好 (I類動詞)' },
+      { word: '見る', reading: 'みる', romaji: 'miru', meaning: '看/嘗試 (II類動詞)' },
+      { word: '予約する', reading: 'よやくする', romaji: 'yoyaku suru', meaning: '預約 (III類動詞)' },
+      { word: '旅行', reading: 'りょこう', romaji: 'ryokō', meaning: '旅行' },
+      { word: '履く', reading: 'はく', romaji: 'haku', meaning: '穿(下半身/鞋) (I類動詞)' },
+      { word: 'ホテル', reading: 'ホテル', romaji: 'hoteru', meaning: '飯店' },
+      { word: '切符', reading: 'きっぷ', romaji: 'kippu', meaning: '車票' },
+      { word: '考える', reading: 'かんがえる', romaji: 'kangaeru', meaning: '思考 (II類動詞)' },
+      { word: '開ける', reading: 'あける', romaji: 'akeru', meaning: '打開(他動) (II類動詞)' },
+      { word: '閉める', reading: 'しめる', romaji: 'shimeru', meaning: '關閉(他動) (II類動詞)' },
+    ],
+    quiz: [
+      { question: '明日までに切符を買って___。(事先買好)', options: ['おきます', 'みます', 'います', 'あります'], answer: 0 },
+      { question: '美味しいかどうか、食べて___。(吃吃看)', options: ['おきます', 'みます', 'しまいます', 'あります'], answer: 1 },
+      { question: '「予約する」的意思是？', options: ['準備', '預約', '約定', '購買'], answer: 1 },
+      { question: 'ドアはそのままにして___。(讓它保持原樣/放置不管)', options: ['おいてください', 'みてください', 'いってください', 'きてください'], answer: 0 },
+      { question: '「履く」的意思是？', options: ['穿(鞋/褲)', '穿(外套)', '戴(帽子)', '戴(眼鏡)'], answer: 0 },
+      { question: '旅行の前に、ホテルを予約して___。', options: ['おきます', 'みます', 'あります', 'います'], answer: 0 },
+      { question: 'この靴を履いて___もいいですか。', options: ['みて', 'おいて', 'あって', 'いて'], answer: 0 },
+    ]
+  },
+
+  // ---- 第 56 關：徹底與遺憾 (～てしまう) ----
+  {
+    id: 'n4_ch56',
+    level: 'N4',
+    title: '徹底與遺憾 (～てしまう)',
+    grammar: [
+      {
+        pattern: '動詞て形 ＋ しまいます',
+        explanation: '表示兩個層面：（1）動作徹底完成、結束；（2）表示遺憾、後悔或不小心做了某事。「糟糕了 / 不小心...」。口語中常縮約為「～ちゃう / ～じゃう」。',
+        examples: [
+          { jp: '宿題{しゅくだい}は全部{ぜんぶ}やってしまいました。', romaji: 'Shukudai wa zenbu yatte shimaimashita.', zh: '作業全部做完了（徹底完成）。' },
+          { jp: '電車{でんしゃ}に傘{かさ}を忘{わす}れてしまいました。', romaji: 'Densha ni kasa o wasurete shimaimashita.', zh: '不小心把傘忘在電車上了（糟糕、遺憾）。' },
+        ]
+      }
+    ],
+    vocabulary: [
+      { word: 'しまう', reading: 'しまう', romaji: 'shimau', meaning: '收拾/結束 (I類動詞)' },
+      { word: '忘れる', reading: 'わすれる', romaji: 'wasureru', meaning: '忘記 (II類動詞)' },
+      { word: '宿題', reading: 'しゅくだい', romaji: 'shukudai', meaning: '作業' },
+      { word: '全部', reading: 'ぜんぶ', romaji: 'zenbu', meaning: '全部' },
+      { word: '傘', reading: 'かさ', romaji: 'kasa', meaning: '傘' },
+      { word: '落とす', reading: 'おとす', romaji: 'otosu', meaning: '弄掉/掉落 (I類動詞)' },
+      { word: '壊す', reading: 'こわす', romaji: 'kowasu', meaning: '弄壞 (I類動詞)' },
+      { word: '遅れる', reading: 'おくれる', romaji: 'okureru', meaning: '遲到 (II類動詞)' },
+      { word: '間違える', reading: 'まちがえる', romaji: 'machigaeru', meaning: '弄錯 (II類動詞)' },
+      { word: 'パソコン', reading: 'パソコン', romaji: 'pasokon', meaning: '電腦' },
+    ],
+    quiz: [
+      { question: '昨日買った本は、もう読んで___。(彻底讀完了)', options: ['みました', 'おきました', 'しまいました', 'ありました'], answer: 2 },
+      { question: '「落とす」的意思是？', options: ['掉落/遺失', '弄壞', '忘記', '弄錯'], answer: 0 },
+      { question: 'パスポートをなくして___。(糟糕，護照弄丟了)', options: ['しまいました', 'おきました', 'みました', 'いきました'], answer: 0 },
+      { question: '「宿題」的讀音是？', options: ['しゅくだい', 'じゅくだい', 'しゅくたい', 'じゅくたい'], answer: 0 },
+      { question: '「～てしまう」的口語縮略形「～ちゃう」是表示？', options: ['吃掉某物', '糟糕或徹底完成', '事先做好', '嘗試做'], answer: 1 },
+      { question: '電車に傘を忘れて___。', options: ['おきました', 'しまいました', 'みました', 'ありました'], answer: 1 },
+      { question: '宿題は全部やって___。', options: ['しまいました', 'おきました', 'みました', 'ありました'], answer: 0 },
+    ]
+  },
+
+  // ---- 第 57 關：不僅與限定 (～し / ～しか) ----
+  {
+    id: 'n4_ch57',
+    level: 'N4',
+    title: '不僅與限定 (し / しか)',
+    grammar: [
+      {
+        pattern: '普通形 ＋ し、 普通形 ＋ し、 ～',
+        explanation: '不僅這樣，還那樣。用於並列列舉兩個以上的優點、缺點或原因。名詞與な形容詞要加「だ」。',
+        examples: [
+          { jp: 'この店{みせ}は美味{おい}しいし、安{やす}いし、よく来{き}ます。', romaji: 'Kono mise wa oishii shi, yasui shi, yoku kimasu.', zh: '這家店不但好吃而且便宜，所以我常來。' },
+          { jp: '熱{ねつ}もあるし、頭{あたま}も痛{いた}いし、今日{きょう}は休{やす}みます。', romaji: 'Netsu mo aru shi, atama mo itai shi, kyō wa yasumimasu.', zh: '因為發燒加上頭痛，所以今天請假。' },
+        ]
+      },
+      {
+        pattern: '名詞 ＋ しか ＋ 否定形',
+        explanation: '表示限定。「只有... / 僅僅...」。與「だけ」意思相近，但「しか」的後方必定接否定形，帶有「實在太少」的負面語氣。',
+        examples: [
+          { jp: '財布{さいふ}に千円{せんえん}しかありません。', romaji: 'Saifu ni sen-en shika arimasen.', zh: '錢包裡竟然只有一千日圓。' },
+        ]
+      }
+    ],
+    vocabulary: [
+      { word: '美味しい', reading: 'おいしい', romaji: 'oishii', meaning: '好吃的 (い形容詞)' },
+      { word: '安い', reading: 'やすい', romaji: 'yasui', meaning: '便宜的 (い形容詞)' },
+      { word: '熱', reading: 'ねつ', romaji: 'netsu', meaning: '發燒' },
+      { word: '頭', reading: 'あたま', romaji: 'atama', meaning: '頭' },
+      { word: '痛い', reading: 'いたい', romaji: 'itai', meaning: '痛的 (い形容詞)' },
+      { word: '千円', reading: 'せんえん', romaji: 'sen-en', meaning: '一千日圓' },
+      { word: '少し', reading: 'すこし', romaji: 'sukoshi', meaning: '一點點' },
+      { word: '財布', reading: 'さいふ', romaji: 'saifu', meaning: '錢包' },
+      { word: '近い', reading: 'ちかい', romaji: 'chikai', meaning: '近的 (い形容詞)' },
+      { word: '選ぶ', reading: 'えらぶ', romaji: 'erabu', meaning: '選擇 (I類動詞)' },
+    ],
+    quiz: [
+      { question: 'ここは駅から近い___、家賃も安い___。(不僅...而且...)', options: ['し／し', 'と／と', 'から／から', 'たり／たり'], answer: 0 },
+      { question: '時間が5分___ありません。(竟然只有五分鐘/太少了)', options: ['だけ', 'しか', 'ばかり', 'ぐらい'], answer: 1 },
+      { question: '日本語が少し___話せません。(只會說一點)', options: ['だけ', 'しか', 'まで', 'から'], answer: 1 },
+      { question: '「財布」的意思是？', options: ['財產', '錢包', '背包', '鞋子'], answer: 1 },
+      { question: '「選ぶ」的讀音是？', options: ['えらぶ', 'ならぶ', 'あそぶ', 'よぶ'], answer: 0 },
+      { question: 'この店は美味しい___、安い___、よく来ます。', options: ['し／し', 'と／と', 'から／から', 'たり／たり'], answer: 0 },
+      { question: '財布に千円___ありません。', options: ['だけ', 'しか', 'ばかり', 'ぐらい'], answer: 1 },
+    ]
+  },
+
+  // ---- 第 58 關：要不要... (～たらどうですか) ----
+  {
+    id: 'n4_ch58',
+    level: 'N4',
+    title: '要不要... (勸誘與建議)',
+    grammar: [
+      {
+        pattern: '動詞た形 ＋ らどうですか',
+        explanation: '用來輕微地給予對方建議或勸誘。「要不要做某事看看？ / ...如何呢？」。比「ほうがいいです(最好...)」語氣更委婉。',
+        examples: [
+          { jp: '少{すこ}し休{やす}んだらどうですか。', romaji: 'Sukoshi yasundara dō desu ka.', zh: '你要不要稍微休息一下呢？' },
+          { jp: '先生{せんせい}に聞{き}いてみたらどうですか。', romaji: 'Sensei ni kiite mitara dō desu ka.', zh: '你要不試著問問老師？' },
+        ]
+      }
+    ],
+    vocabulary: [
+      { word: '休む', reading: 'やすむ', romaji: 'yasumu', meaning: '休息 (I類動詞)' },
+      { word: '聞く', reading: 'きく', romaji: 'kiku', meaning: '問/聽 (I類動詞)' },
+      { word: '病院', reading: 'びょういん', romaji: 'byōin', meaning: '醫院' },
+      { word: '薬', reading: 'くすり', romaji: 'kusuri', meaning: '藥' },
+      { word: '疲れる', reading: 'つかれる', romaji: 'tsukareru', meaning: '疲累 (II類動詞)' },
+      { word: '相談する', reading: 'そうだんする', romaji: 'sōdan suru', meaning: '商量/諮詢 (III類動詞)' },
+      { word: '少し', reading: 'すこし', romaji: 'sukoshi', meaning: '稍微/一點點' },
+      { word: '気分', reading: 'きぶん', romaji: 'kibun', meaning: '心情/精神狀態' },
+      { word: '悪い', reading: 'わるい', romaji: 'warui', meaning: '不好的/差的 (い形容詞)' },
+      { word: '帰る', reading: 'かえる', romaji: 'kaeru', meaning: '回去 (I類動詞)' },
+    ],
+    quiz: [
+      { question: '早く病院へ行っ___。(要不要去醫院呢?)', options: ['たらどうですか', 'たほうがいいです', 'てはいけません', 'てみてください'], answer: 0 },
+      { question: '先生に相談し___。(要不要商量看看?)', options: ['たらどうですか', 'なければなりません', 'てもいいです', 'てはいけません'], answer: 0 },
+      { question: '「相談する」的意思是？', options: ['思考', '商量/諮詢', '聊天', '吵架'], answer: 1 },
+      { question: '「気分」的意思是？', options: ['氣候', '天氣', '氣氛', '心情/精神狀態'], answer: 3 },
+      { question: '疲れたなら、少し休ん___。(要不要休息呢)', options: ['だらどうですか', 'だほうがいい', 'でください', 'でもいい'], answer: 0 },
+      { question: '先生に聞いてみ___。(要不要問問看?)', options: ['たらどうですか', 'たほうがいいです', 'てはいけません', 'てみてください'], answer: 0 },
+      { question: 'もっと野菜を食べ___。(要不要多吃點蔬菜?)', options: ['たらどうですか', 'なければなりません', 'てもいいです', 'てはいけません'], answer: 0 },
+    ]
+  },
+
+  // ---- 第 59 關：N4 總複習 (動詞變化/長句) ----
+  {
+    id: 'n4_ch59',
     level: 'N4',
     title: 'N4 總複習 (動詞變化/長句)',
     grammar: [
@@ -994,10 +1259,10 @@ export const chaptersN4 = [
         ]
       },
       {
-        pattern: 'N4 重大動詞變形 (可能形、被動形、使役形、條件形「ば」)',
-        explanation: '五段動詞 (I類) 的三大進階變形：\n- 可能形 (能做...)：改 e段 + る (書ける)\n- 被動形 (被做...)：改 a段 + れる (書かれる)\n- 使役形 (讓/逼著做...)：改 a段 + せる (書かせる)\nII類皆為去ます加 られる/させる，III類為 できる/される/させる。',
+        pattern: 'N4 重大動詞變形與銜接心法 (可能、被動、使役、ば形、て形延伸)',
+        explanation: '五段動詞 (I類) 的三大進階變形：\n- 可能形 (能做...)：改 e段 + る (書ける)\n- 被動形 (被做...)：改 a段 + れる (書かれる)\n- 使役形 (讓/逼著做...)：改 a段 + せる (書かせる)\nII類皆為去ます加 られる/させる，III類為 できる/される/させる。\n- て形延伸包含：ておく(事先做)、てみる(嘗試做)、てしまう(徹底/遺憾)。',
         examples: [
-          { jp: '飲{の}める(可能) / 飲{の}まれる(被動) / 飲{の}ませる(使役) / 飲{の}めば(條件)', romaji: 'nomeru / nomareru / nomaseru / nomeba', zh: '能喝 / 被喝 / 讓...喝 / 如果喝' }
+          { jp: '飲{の}める(可能) / 飲{の}まれる(被動) / 飲{の}ませる(使役) / 飲{の}めば(條件)', romaji: 'nomeru / nomareru / nomaseru / nomaseru / nomeba', zh: '能喝 / 被喝 / 讓...喝 / 如果喝' }
         ]
       },
       {
@@ -1026,7 +1291,9 @@ export const chaptersN4 = [
       { question: '「褒める」的被動形（被稱讚）是？', options: ['褒めさせる', '褒められる', '褒めれる', '褒めませる'], answer: 1 },
       { question: '先生が学生に本を___。（讓學生讀，使役形）', options: ['読ませた', '読まれた', '読めた', '読めば'], answer: 0 },
       { question: '「走る」的條件形（如果跑的話）是？', options: ['走れば', '走らば', '走ろば', '走って'], answer: 0 },
-      { question: '昨日私が___本はとても面白かったです。(買的)', options: ['買う', '買った', '買って', '買わない'], answer: 1 }
+      { question: '昨日私が___本はとても面白かったです。(買的)', options: ['買う', '買った', '買って', '買わない'], answer: 1 },
+      { question: '日本へ行く予定が___。', options: ['あります', 'います', 'します', 'なります'], answer: 0 },
+      { question: '「食べる」的ない形是？', options: ['食べない', '食べらない', '食ばない', '食ばらない'], answer: 0 }
     ]
   }
 ];

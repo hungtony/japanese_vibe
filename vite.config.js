@@ -12,8 +12,8 @@ export default defineConfig({
       },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg', 'vite.svg'],
       manifest: {
-        name: 'Nihongo Vibe',
-        short_name: 'NihongoVibe',
+        name: 'Vibe！日語學習',
+        short_name: 'Vibe！日語學習',
         description: '極簡地圖式日語學習 App',
         theme_color: '#111111',
         background_color: '#111111',
