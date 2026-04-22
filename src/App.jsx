@@ -8,6 +8,8 @@ import QuizPage from './pages/QuizPage'
 import FlashcardPage from './pages/FlashcardPage'
 import TravelMapPage from './pages/TravelMapPage'
 import TravelChapterPage from './pages/TravelChapterPage'
+import { Analytics } from "@vercel/analytics/react"
+
 
 function App() {
   const placementDone = useStore(s => s.placementDone)
@@ -38,6 +40,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </div>
   )
 }
