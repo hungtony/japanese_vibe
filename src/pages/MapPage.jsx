@@ -14,10 +14,30 @@ export default function MapPage() {
   const getNodeStatus = useStore(s => s.getNodeStatus)
   const currentRef = useRef(null)
 
-  // 預設只展開使用者目前的等級，其他等級收合
+  // 找出目前進行中的章節所屬等級
+  const currentLevel = useMemo(() => {
+    if (!unlockedNodeId) return userLevel
+    const currentChapter = chapters.find(ch => ch.id === unlockedNodeId)
+    return currentChapter?.level || userLevel
+  }, [unlockedNodeId, userLevel])
+
+  // 預設只展開目前進行中章節的等級，其他等級收合
   const [openLevels, setOpenLevels] = useState(() =>
-    Object.fromEntries(levelOrder.map(l => [l, l === userLevel]))
+    Object.fromEntries(levelOrder.map(l => [l, l === currentLevel]))
   )
+
+  // 當完成章節後，若進入下一個等級，自動收合舊等級、展開新等級
+  useEffect(() => {
+    if (currentLevel) {
+      setOpenLevels(prev => {
+        const next = {}
+        levelOrder.forEach(l => {
+          next[l] = l === currentLevel
+        })
+        return next
+      })
+    }
+  }, [currentLevel])
 
   const toggleLevel = (level) => {
     setOpenLevels(prev => ({ ...prev, [level]: !prev[level] }))

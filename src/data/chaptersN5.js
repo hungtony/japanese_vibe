@@ -7,19 +7,25 @@ export const chaptersN5 = [
     title: '我是誰 (AはBです)',
     grammar: [
       {
-        pattern: 'AはBです',
-        explanation: '表示「A是B」，最基本的肯定句型。「は」讀作「wa」。',
+        pattern: 'A は B です',
+        explanation: '「は」讀作「wa」，用來提示句子的主題。「です」是名詞的肯定結尾，表示「是」。\n這是日文最基礎的肯定句結構。',
         examples: [
           { jp: '私{わたし}は学生{がくせい}です。', romaji: 'Watashi wa gakusei desu.', zh: '我是學生。' },
           { jp: '田中{たなか}さんは先生{せんせい}です。', romaji: 'Tanaka-san wa sensei desu.', zh: '田中先生是老師。' },
+          { jp: 'これらは日本{にほん}のカメラです。', romaji: 'Korera wa nihon no kamera desu.', zh: '這些是日本的相機。' },
+          { jp: '彼{かれ}は親切{しんせつ}な人{ひと}です。', romaji: 'Kare wa shinsetsu na hito desu.', zh: '他是個親切的人。' },
+          { jp: '今日{きょう}は月曜日{げつようび}です。', romaji: 'Kyō wa getsuyōbi desu.', zh: '今天是星期一。' }
         ]
       },
       {
-        pattern: 'AはBじゃありません',
-        explanation: '「A不是B」。口語也常用「〜じゃないです」。',
+        pattern: 'A は B じゃありません',
+        explanation: '名詞的否定形，表示「A 不是 B」。\n在口語中常說「〜じゃないです」，而在更正式的書面語中則會使用「〜ではありません」。\n【時態變化】\n・過去肯定：A は B でした。(A 以前是 B)\n・過去否定：A は B じゃありませんでした。(A 以前不是 B)',
         examples: [
           { jp: '私{わたし}は先生{せんせい}じゃありません。', romaji: 'Watashi wa sensei ja arimasen.', zh: '我不是老師。' },
           { jp: 'あれは本{ほん}じゃないです。', romaji: 'Are wa hon ja nai desu.', zh: '那不是書。' },
+          { jp: '山田{やまだ}さんは医者{いしゃ}ではありません。', romaji: 'Yamada-san wa isha dewa arimasen.', zh: '山田先生不是醫生。' },
+          { jp: '昨日{きのう}は休{やす}みじゃありませんでした。', romaji: 'Kinō wa yasumi ja arimasen deshita.', zh: '昨天不是假日。' },
+          { jp: 'あの人{ひと}は日本人{にほんじん}じゃありません。', romaji: 'Ano hito wa nihonjin ja arimasen.', zh: '那個人不是日本人。' }
         ]
       }
     ],
@@ -54,17 +60,24 @@ export const chaptersN5 = [
     grammar: [
       {
         pattern: '〜ですか',
-        explanation: '在句尾加「か」表示疑問。',
+        explanation: '在句尾加上助詞「か」，就構成了疑問句。日文的疑問句不需要改變語序，只要在最後加上「か」，並在說話時語調上揚即可。',
         examples: [
           { jp: '田中{たなか}さんは先生{せんせい}ですか。', romaji: 'Tanaka-san wa sensei desu ka.', zh: '田中先生是老師嗎？' },
           { jp: 'あなたも学生{がくせい}ですか。', romaji: 'Anata mo gakusei desu ka.', zh: '你也是學生嗎？' },
+          { jp: 'これは山田{やまだ}さんの本{ほん}ですか。', romaji: 'Kore wa Yamada-san no hon desu ka.', zh: '這是山田先生的書嗎？' },
+          { jp: '明日{あした}は仕事{しごと}ですか。', romaji: 'Ashita wa shigoto desu ka.', zh: '明天要工作嗎？' },
+          { jp: '郵便局{ゆうびんきょく}はどこですか。', romaji: 'Yūbinkyoku wa doko desu ka.', zh: '郵局在哪裡？' }
         ]
       },
       {
         pattern: '何（なん / なに）',
-        explanation: '「什麼」。詢問內容。',
+        explanation: '「何」的意思是「什麼」，用來詢問事物。\n【發音規則】\n・當「何」後面接續 d, t, n 行的字（如：です、と、の），或者作為量詞（如：何歳）時，讀作「なん (nan)」。\n・其他情況，或是作為單獨受詞時，讀作「なに (nani)」。',
         examples: [
           { jp: 'お名前{なまえ}は何{なん}ですか。', romaji: 'O-namae wa nan desu ka.', zh: '請問您的名字是什麼？' },
+          { jp: 'これは何{なん}ですか。', romaji: 'Kore wa nan desu ka.', zh: '這是什麼？' },
+          { jp: '何{なに}を食{た}べますか。', romaji: 'Nani o tabemasu ka.', zh: '你要吃什麼？' },
+          { jp: '何歳{なんさい}ですか。', romaji: 'Nansai desu ka.', zh: '請問幾歲？' },
+          { jp: '何{なん}の雑誌{ざっし}ですか。', romaji: 'Nan no zasshi desu ka.', zh: '是什麼樣的雜誌？' }
         ]
       }
     ],
@@ -98,11 +111,14 @@ export const chaptersN5 = [
     title: '這是什麼 (指示物品)',
     grammar: [
       {
-        pattern: 'これ / それ / あれ',
-        explanation: '指示物品。這、那(近你)、那(遠的)。',
+        pattern: 'これ / それ / あれ / どれ',
+        explanation: '指示代名詞，用來指稱事物（這個、那個、那個）。\n【指示詞 (こ・そ・あ・ど) 規則】\n・こ (これ)：距離說話者近的事物（這個）。\n・そ (それ)：距離聽話者近的事物（那個）。\n・あ (あれ)：距離說話者與聽話者都遠的事物（那個）。\n・ど (どれ)：用於疑問句，表示「哪一個」。',
         examples: [
           { jp: 'これは本{ほん}です。', romaji: 'Kore wa hon desu.', zh: '這是書。' },
-          { jp: 'あれは私{わたし}の車{くるま}です。', romaji: 'Are wa watashi no kuruma desu.', zh: '那是我的車。' },
+          { jp: 'それは私{わたし}の車{くるま}です。', romaji: 'Sore wa watashi no kuruma desu.', zh: '那是我的車。' },
+          { jp: 'あれは田中{たなか}さんの鞄{かばん}です。', romaji: 'Are wa Tanaka-san no kaban desu.', zh: '那是田中先生的包包。' },
+          { jp: 'あなたの傘{かさ}はどれですか。', romaji: 'Anata no kasa wa dore desu ka.', zh: '你的傘是哪一把？' },
+          { jp: 'これは何{なん}の雑誌{ざっし}ですか。', romaji: 'Kore wa nan no zasshi desu ka.', zh: '這是什麼雜誌？' }
         ]
       }
     ],
@@ -136,11 +152,14 @@ export const chaptersN5 = [
     title: '我在哪裡 (指示場所)',
     grammar: [
       {
-        pattern: 'ここ / そこ / あそこ',
-        explanation: '指示場所。這兒、那兒、那兒(遠方)。',
+        pattern: 'ここ / そこ / あそこ / どこ',
+        explanation: '場所指示代名詞，用來指稱地點。\n【指示詞 (こ・そ・あ・ど) 規則】\n・ここ：說話者所在的地點（這裡）。\n・そこ：聽話者所在的地點，或稍微有些距離的地點（那裡）。\n・あそこ：距離說話者與聽話者都遠的地點（那裡/遠方）。\n・どこ：用於疑問句，表示「哪裡」。\n※禮貌形為：こちら、そちら、あちら、どちら。',
         examples: [
           { jp: 'ここは教室{きょうしつ}です。', romaji: 'Koko wa kyōshitsu desu.', zh: '這裡是教室。' },
           { jp: 'お手洗{てあら}いはあそこです。', romaji: 'O-tearai wa asoko desu.', zh: '洗手間在那邊。' },
+          { jp: 'そこは私{わたし}の部屋{へや}です。', romaji: 'Soko wa watashi no heya desu.', zh: '那裡是我的房間。' },
+          { jp: '駅{えき}はどこですか。', romaji: 'Eki wa doko desu ka.', zh: '車站在哪裡？' },
+          { jp: '会議室{かいぎしつ}はどちらですか。', romaji: 'Kaigishitsu wa dochira desu ka.', zh: '請問會議室在哪裡？(禮貌)' }
         ]
       }
     ],
@@ -175,10 +194,13 @@ export const chaptersN5 = [
     grammar: [
       {
         pattern: 'N1 の N2',
-        explanation: '助詞「の」表示所有、所屬。',
+        explanation: '助詞「の」用來連接兩個名詞，最常見的用法是表示「所有、所屬」（A 的 B）。\n此外，「の」還可以表示內容（關於A的B）、產地（A製造的B）等關係。日文中的「の」非常靈活，名詞修飾名詞時幾乎都會用到它。',
         examples: [
-          { jp: '私{わたし}の本{ほん}です。', romaji: 'Watashi no hon desu.', zh: '是我的書。' },
-          { jp: '日本{にほん}の車{くるま}です。', romaji: 'Nihon no kuruma desu.', zh: '是日本的車。' },
+          { jp: '私{わたし}の本{ほん}です。', romaji: 'Watashi no hon desu.', zh: '是我的書。(所屬)' },
+          { jp: '日本{にほん}の車{くるま}です。', romaji: 'Nihon no kuruma desu.', zh: '是日本的車。(產地)' },
+          { jp: '日本語{にほんご}の先生{せんせい}です。', romaji: 'Nihongo no sensei desu.', zh: '是日語老師。(內容)' },
+          { jp: 'これは誰{だれ}の傘{かさ}ですか。', romaji: 'Kore wa dare no kasa desu ka.', zh: '這是誰的傘？' },
+          { jp: '東京{とうきょう}の大学{だいがく}の学生{がくせい}です。', romaji: 'Tōkyō no daigaku no gakusei desu.', zh: '是東京的大學的學生。(多個「の」連用)' }
         ]
       }
     ],
@@ -212,11 +234,14 @@ export const chaptersN5 = [
     title: '現在幾點 (時間表達)',
     grammar: [
       {
-        pattern: '時（じ）/ 分（ふん・ぷん）',
-        explanation: '表示時間。注意 4, 7, 9 時的讀法。',
+        pattern: '時間表達：～時（じ） / ～分（ふん・ぷん）',
+        explanation: '用來表示具體時間。「分」的讀法會根據前面的數字變化（如1,3,4,6,8,10用ぷん，2,5,7,9用ふん）。\n【特殊發音注意】\n・4時：よじ (非よんじ)\n・7時：しちじ (非ななじ)\n・9時：くじ (非きゅうじ)\n・30分：可以說 30分（さんじゅっぷん） 或 半（はん）。',
         examples: [
           { jp: '今{いま}、四時{よじ}です。', romaji: 'Ima, yo-ji desu.', zh: '現在是四點。' },
           { jp: '九時{くじ}半{はん}です。', romaji: 'Kuji han desu.', zh: '九點半。' },
+          { jp: '毎朝{まいあさ}七時{しちじ}に起{お}きます。', romaji: 'Maiasa shichiji ni okimasu.', zh: '每天早上七點起床。' },
+          { jp: '会議{かいぎ}は二時{にじ}十分{じゅっぷん}からです。', romaji: 'Kaigi wa niji juppun kara desu.', zh: '會議從兩點十分開始。' },
+          { jp: '今{いま}、何時{なんじ}ですか。', romaji: 'Ima, nanji desu ka.', zh: '現在幾點？' }
         ]
       }
     ],
@@ -250,11 +275,14 @@ export const chaptersN5 = [
     title: '動詞啟動 (～ます)',
     grammar: [
       {
-        pattern: '動詞ます形',
-        explanation: '肯定：～ます，否定：～ません，過去：～ました。日文動詞依「ます」前一音分為I類(い段)、II類(え段或少數い段)、III類(します、きます)。',
+        pattern: '動詞ます形 (肯定/否定/過去)',
+        explanation: '「ます」是動詞的敬體結尾，給人禮貌的感覺。\n【時態變化規則】\n・現在/未來肯定：〜ます (做... / 將要做...)\n・現在/未來否定：〜ません (不做... / 不將做...)\n・過去肯定：〜ました (做了...)\n・過去否定：〜ませんでした (沒有做...)\n\n※動詞在日文中分為三類 (I類、II類、III類)，但其ます形的字尾變化規則都是相同的。',
         examples: [
-          { jp: '勉強{べんきょう}します。', romaji: 'Benkyō shimasu.', zh: '學習。' },
-          { jp: '昨日{きのう}、起{お}きませんでした。', romaji: 'Kinō, okimasen deshita.', zh: '昨天沒起床。' },
+          { jp: '毎日{まいにち}、日本語{にほんご}を勉強{べんきょう}します。', romaji: 'Mainichi, nihongo o benkyō shimasu.', zh: '每天學習日語。' },
+          { jp: '昨日{きのう}は起{お}きませんでした。', romaji: 'Kinō wa okimasen deshita.', zh: '昨天沒有起床。' },
+          { jp: '明日{あした}、学校{がっこう}へ行{い}きます。', romaji: 'Ashita, gakkō e ikimasu.', zh: '明天要去學校。' },
+          { jp: '昨日{きのう}、テレビを見{み}ました。', romaji: 'Kinō, terebi o mimashita.', zh: '昨天看了電視。' },
+          { jp: '今日{きょう}は働{はたら}きません。', romaji: 'Kyō wa hatarakimasen.', zh: '今天不工作。' }
         ]
       }
     ],
@@ -289,10 +317,13 @@ export const chaptersN5 = [
     grammar: [
       {
         pattern: '場所 + へ + 行きます / 来ます / 帰ります',
-        explanation: '表示移動的方向。助詞「へ」讀作「e」。',
+        explanation: '表示移動的方向。助詞「へ」作為方向標記時，讀作「e」而不是「he」。\n【動詞差異】\n・行きます：離開說話者當前位置去某處。\n・来ます：朝著說話者當前位置過來。\n・帰ります：回到原本所屬的地方（如家、自己的國家）。',
         examples: [
-          { jp: '日本{にほん}へ行{い}きます。', romaji: 'Nihon e ikimasu.', zh: '去日本。' },
-          { jp: '家{うち}へ帰{かえ}ります。', romaji: 'Uchi e kaerimasu.', zh: '回家。' },
+          { jp: '明日{あした}、日本{にほん}へ行{い}きます。', romaji: 'Ashita, Nihon e ikimasu.', zh: '明天去日本。' },
+          { jp: '昨日{きのう}、うちへ帰{かえ}りました。', romaji: 'Kinō, uchi e kaerimashita.', zh: '昨天回家了。' },
+          { jp: '田中{たなか}さんは学校{がっこう}へ来{き}ませんでした。', romaji: 'Tanaka-san wa gakkō e kimasen deshita.', zh: '田中先生沒有來學校。' },
+          { jp: '日曜日{にちようび}、どこへ行{い}きますか。', romaji: 'Nichiyōbi, doko e ikimasu ka.', zh: '星期天要去哪裡？' },
+          { jp: 'どこへも行{い}きません。', romaji: 'Doko e mo ikimasen.', zh: '哪裡都不去。' }
         ]
       }
     ],
@@ -327,10 +358,13 @@ export const chaptersN5 = [
     grammar: [
       {
         pattern: '交通工具 + で / 人 + と',
-        explanation: '「で」表示手段，「と」表示夥伴。',
+        explanation: '表示移動的手段與夥伴。\n【助詞用法】\n・で：表示方法、手段、交通工具。例如「バスで」(搭公車)。\n※特例：走路去不是「足で」，而是用動詞て形「歩いて」(aruite)。\n・と：表示共同做動作的對象（和...一起）。如果是自己一個人，則用「一人で」(hitori de)，不需要加「と」。',
         examples: [
-          { jp: '電車{でんしゃ}で行{い}きます。', romaji: 'Densha de ikimasu.', zh: '搭電車去。' },
-          { jp: '家族{かぞく}と来{き}ました。', romaji: 'Kazoku to kimashita.', zh: '和家人一起來。' },
+          { jp: '電車{でんしゃ}で会社{かいしゃ}へ行{い}きます。', romaji: 'Densha de kaisha e ikimasu.', zh: '搭電車去公司。' },
+          { jp: '家族{かぞく}と日本{にほん}へ来{き}ました。', romaji: 'Kazoku to Nihon e kimashita.', zh: '和家人一起來日本。' },
+          { jp: '一人{ひとり}でスーパーへ行{い}きます。', romaji: 'Hitori de sūpā e ikimasu.', zh: '自己一個人去超市。' },
+          { jp: '誰{だれ}と映画{えいが}を見{み}ますか。', romaji: 'Dare to eiga o mimasu ka.', zh: '要和誰看電影？' },
+          { jp: '自転車{じてんしゃ}で帰{かえ}ります。', romaji: 'Jitensha de kaerimasu.', zh: '騎自行車回家。' }
         ]
       }
     ],
@@ -364,11 +398,14 @@ export const chaptersN5 = [
     title: '吃喝玩樂 (受詞 + を)',
     grammar: [
       {
-        pattern: '名詞 + を + 動詞',
-        explanation: '「を」標示動作的直接對象。',
+        pattern: '名詞 + を + 及物動詞',
+        explanation: '助詞「を」讀作「o」，專門用來標示及物動詞（他動詞）的直接受詞，表示動作作用的對象。\n【句型結構】\n日文的基本語序是「主語 + 受詞 + 動詞」。例如：私(主語)は ご飯(受詞)を 食べます(動詞)。',
         examples: [
           { jp: 'ご飯{ごはん}を食{た}べます。', romaji: 'Gohan o tabemasu.', zh: '吃飯。' },
           { jp: '音楽{おんがく}を聞{き}きます。', romaji: 'Ongaku o kikimasu.', zh: '聽音樂。' },
+          { jp: '毎日{まいにち}、新聞{しんぶん}を読{よ}みます。', romaji: 'Mainichi, shinbun o yomimasu.', zh: '每天看報紙。' },
+          { jp: '手紙{てがみ}を書{か}きました。', romaji: 'Tegami o kakimashita.', zh: '寫了信。' },
+          { jp: '写真{しゃしん}を撮{と}りませんでした。', romaji: 'Shashin o torimasen deshita.', zh: '沒有拍照。' }
         ]
       }
     ],
@@ -402,11 +439,14 @@ export const chaptersN5 = [
     title: '現在正在... (狀態與進行)',
     grammar: [
       {
-        pattern: 'Vて形 + います',
-        explanation: '表示動作正在進行、狀態持續或反覆的習慣。',
+        pattern: '動詞て形 + います',
+        explanation: '表示「動作正在進行」或「狀態的持續」。\n【兩種主要用法】\n1. 正在進行的動作：如「食べています」(正在吃)。\n2. 狀態或習慣：某些瞬間動作完成後留下的狀態，如「結婚しています」(已婚狀態)、「知っています」(知道)、「住んでいます」(居住著)。\n※「て形」的變化請參考第23關與第25關。',
         examples: [
           { jp: '今{いま}、雨{あめ}が降{ふ}っています。', romaji: 'Ima, ame ga futte imasu.', zh: '現在正在下雨。' },
-          { jp: '私{わたし}は車{くるま}を持{も}っています。', romaji: 'Watashi wa kuruma o motte imasu.', zh: '我有一輛車（狀態持續）。' }
+          { jp: '私{わたし}は車{くるま}を持{も}っています。', romaji: 'Watashi wa kuruma o motte imasu.', zh: '我有一輛車（狀態持續）。' },
+          { jp: '田中{たなか}さんは東京{とうきょう}に住{す}んでいます。', romaji: 'Tanaka-san wa Tōkyō ni sunde imasu.', zh: '田中先生住在東京。' },
+          { jp: '山田{やまだ}さんは結婚{けっこん}しています。', romaji: 'Yamada-san wa kekkon shite imasu.', zh: '山田先生已經結婚了。' },
+          { jp: '今{いま}、音楽{おんがく}を聞{き}いています。', romaji: 'Ima, ongaku o kiite imasu.', zh: '現在正在聽音樂。' }
         ]
       }
     ],
@@ -441,10 +481,13 @@ export const chaptersN5 = [
     grammar: [
       {
         pattern: '〜ませんか / 〜ましょう',
-        explanation: '邀請與提議。「要不要...」、「...吧」。',
+        explanation: '這兩個句型都用來邀請或提議對方一起做某事。\n【語氣差異】\n・〜ませんか (要不要...？)：比較禮貌、委婉，給予對方拒絕的空間，常用於第一次詢問。\n・〜ましょう (...吧！)：比較積極的提議，通常用於雙方都可能同意，或是在「〜ませんか」對方答應後，作為決定行動的回應。',
         examples: [
-          { jp: '行{い}きませんか。', romaji: 'Ikimasen ka.', zh: '要不要一起去呢？' },
-          { jp: '休{やす}みましょう。', romaji: 'Yasumimashō.', zh: '休息一下吧。' },
+          { jp: '一緒{いっしょ}に行{い}きませんか。', romaji: 'Issho ni ikimasen ka.', zh: '要不要一起去呢？' },
+          { jp: '少し{すこし}休{やす}みましょう。', romaji: 'Sukoshi yasumimashō.', zh: '稍微休息一下吧。' },
+          { jp: '明日{あした}、映画{えいが}を見{み}ませんか。', romaji: 'Ashita, eiga o mimasen ka.', zh: '明天要不要看電影？' },
+          { jp: 'お茶{ちゃ}を飲{の}みましょう。', romaji: 'O-cha o nomimashō.', zh: '我們喝杯茶吧。' },
+          { jp: 'タクシーで帰{かえ}りましょう。', romaji: 'Takushī de kaerimashō.', zh: '我們搭計程車回家吧。' }
         ]
       }
     ],
@@ -478,11 +521,14 @@ export const chaptersN5 = [
     title: '工具的運用',
     grammar: [
       {
-        pattern: '道具 + で + 動作',
-        explanation: '「で」表示使用的工具或手段。',
+        pattern: '道具/手段 + で + 動作',
+        explanation: '助詞「で」可以用來表示執行動作所使用的「工具、手段、材料或語言」。\n此句型不僅可以用於實體工具（如剪刀、筷子），也可以用於抽象手段（如語言、網路）。',
         examples: [
-          { jp: '箸{はし}で食{た}べます。', romaji: 'Hashi de tabemasu.', zh: '用筷子吃。' },
+          { jp: '箸{はし}でご飯{ごはん}を食{た}べます。', romaji: 'Hashi de gohan o tabemasu.', zh: '用筷子吃飯。' },
           { jp: '日本語{にほんご}で手紙{てがみ}を書{か}きます。', romaji: 'Nihongo de tegami o kakimasu.', zh: '用日語寫信。' },
+          { jp: 'ハサミで紙{かみ}を切{き}ります。', romaji: 'Hasami de kami o kirimasu.', zh: '用剪刀剪紙。' },
+          { jp: 'ケータイで写真{しゃしん}を撮{と}ります。', romaji: 'Kētai de shashin o torimasu.', zh: '用手機拍照。' },
+          { jp: '「ありがとう」は英語{えいご}で何{なん}ですか。', romaji: '"Arigatō" wa eigo de nan desu ka.', zh: '「ありがとう」的英文是什麼？' }
         ]
       }
     ],
@@ -516,11 +562,14 @@ export const chaptersN5 = [
     title: '收與送 (授受基礎)',
     grammar: [
       {
-        pattern: 'A は B に 物 を あげます / もらいます',
-        explanation: '「あげます」是我給別人，「もらいます」是我從別人那裡得到。',
+        pattern: 'あげる / もらう (基礎授受表現)',
+        explanation: '日文中有嚴格的「給予與得到」的方向性：\n・A は B に 物 を あげます：A 給 B 物品。(主語是給予者。注意：不能用在「別人給我」的情況)\n・A は B に 物 を もらいます：A 從 B 那裡得到物品。(主語是接受者)\n※在「もらいます」的句型中，助詞「に」也可以替換成「から」。',
         examples: [
           { jp: '私{わたし}は田中{たなか}さんに本{ほん}をあげました。', romaji: 'Watashi wa Tanaka-san ni hon o agemashita.', zh: '我給了田中先生書。' },
           { jp: '私{わたし}は先生{せんせい}に時計{とけい}をもらいました。', romaji: 'Watashi wa sensei ni tokei o moraimashita.', zh: '我從老師那裡得到了手錶。' },
+          { jp: '母{はは}に花{はな}をあげます。', romaji: 'Haha ni hana o agemasu.', zh: '我要送花給媽媽。' },
+          { jp: '友達{ともだち}から手紙{てがみ}をもらいました。', romaji: 'Tomodachi kara tegami o moraimashita.', zh: '從朋友那裡收到了信。' },
+          { jp: 'これは父{ちち}にもらったカメラです。', romaji: 'Kore wa chichi ni moratta kamera desu.', zh: '這是我從爸爸那得到的相機。' }
         ]
       }
     ],
@@ -554,11 +603,14 @@ export const chaptersN5 = [
     title: '形容詞入門',
     grammar: [
       {
-        pattern: 'い形容詞 / な形容詞',
-        explanation: '形容詞分兩類：い形容詞字尾是「い」，な形容詞接名詞時加「な」。(注意：きれい、有名是な形容詞)',
+        pattern: 'い形容詞 / な形容詞 (肯定句)',
+        explanation: '日文形容詞分兩類：\n・い形容詞：字尾一定有「い」，如「高い」「安い」。直接加「です」作為結尾。\n・な形容詞：不以「い」結尾（※少數例外如「きれい」「有名」字尾有い，但仍是な形容詞）。接續名詞時要加上「な」，結尾用「です」。',
         examples: [
           { jp: 'この靴{くつ}は安{やす}いです。', romaji: 'Kono kutsu wa yasui desu.', zh: '這雙鞋很便宜。' },
           { jp: '田中{たなか}さんは親切{しんせつ}な人{ひと}です。', romaji: 'Tanaka-san wa shinsetsu na hito desu.', zh: '田中先生是個親切的人。' },
+          { jp: '東京{とうきょう}は賑{にぎ}やかです。', romaji: 'Tōkyō wa nigiyaka desu.', zh: '東京很熱鬧。' },
+          { jp: '日本{にほん}のカメラは高{たか}いです。', romaji: 'Nihon no kamera wa takai desu.', zh: '日本的相機很貴。' },
+          { jp: '桜{さくら}はきれいな花{はな}です。', romaji: 'Sakura wa kirei na hana desu.', zh: '櫻花是漂亮的花。' }
         ]
       }
     ],
@@ -579,7 +631,7 @@ export const chaptersN5 = [
       { question: '「きれい」是哪種形容詞？', options: ['い形容詞', 'な形容詞', '動詞', '副詞'], answer: 1 },
       { question: '「おいしい」的意思是？', options: ['好吃的', '難吃的', '貴的', '便宜的'], answer: 0 },
       { question: '「有名」的讀音是？', options: ['ゆうめい', 'ゆうめ', 'ゆめ', 'ゆうな'], answer: 0 },
-      { question: '「熱」的反義詞(冷)是？', options: ['寒い', '冷たい', '暑い', '低い'], answer: 0 },
+      { question: '「炎熱(暑い)」的反義詞(冷)是？', options: ['寒い', '冷たい', '暑い', '低い'], answer: 0 },
       { question: 'このケーキはとても___です。', options: ['おいしい', 'おいしいな', 'おいし', 'おいしく'], answer: 0 },
       { question: '奈良は___町です。', options: ['静かな', '静かい', '静か', '静かだ'], answer: 0 }
     ]
@@ -592,11 +644,14 @@ export const chaptersN5 = [
     title: '形容詞變身',
     grammar: [
       {
-        pattern: 'い形：〜くない / 〜かった',
-        explanation: 'い形容詞的否定去「い」加「くない」，過去式去「い」加「かった」。(な形容詞則用 じゃありません / でした)',
+        pattern: '形容詞變身 (否定與過去式)',
+        explanation: '形容詞的時態變化規則：\n【い形容詞】去「い」變化：\n・否定：〜くないです (如：高くないです)\n・過去：〜かったです (如：高かったです)\n※例外：「いい」(好) 的變化是用「よい」去變，為 よくありません、よかったです。\n【な形容詞】跟名詞一樣變化：\n・否定：〜じゃありません\n・過去：〜でした',
         examples: [
-          { jp: '安{やす}くないです。', romaji: 'Yasukunai desu.', zh: '不便宜。' },
-          { jp: '安{やす}かったです。', romaji: 'Yasukatta desu.', zh: '很便宜(過去)。' },
+          { jp: 'この本{ほん}は安{やす}くないです。', romaji: 'Kono hon wa yasukunai desu.', zh: '這本書不便宜。' },
+          { jp: '昨日{きのう}は寒{さむ}かったです。', romaji: 'Kinō wa samukatta desu.', zh: '昨天很冷。' },
+          { jp: 'その映画{えいが}は面白{おもしろ}くなかったです。', romaji: 'Sono eiga wa omoshirokunakatta desu.', zh: '那部電影不有趣。' },
+          { jp: '昔{むかし}、ここは静{しず}かでした。', romaji: 'Mukashi, koko wa shizuka deshita.', zh: '以前，這裡很安靜。' },
+          { jp: 'テストは簡単{かんたん}じゃありませんでした。', romaji: 'Tesuto wa kantan ja arimasen deshita.', zh: '考試不簡單。' }
         ]
       }
     ],
@@ -630,11 +685,14 @@ export const chaptersN5 = [
     title: '專長與喜好',
     grammar: [
       {
-        pattern: 'A は B が 好{す}き / 上{じょう}手{ず} です',
-        explanation: '喜好與能力對象用「が」。',
+        pattern: 'A は B が 好き / 嫌い / 上手 / 下手 です',
+        explanation: '表達自己的「喜好」與「專長能力」時，對象語需要使用助詞「が」。\n這裡的「好き」「嫌い」「上手」「下手」都是な形容詞。\n※在詢問別人喜歡什麼時，常說「どんな〜が好きですか」(喜歡什麼樣的...)。',
         examples: [
           { jp: '私{わたし}は料理{りょうり}が好{す}きです。', romaji: 'Watashi wa ryōri ga suki desu.', zh: '我喜歡料理。' },
           { jp: '田中{たなか}さんは日本語{にほんご}が上手{じょうず}です。', romaji: 'Tanaka-san wa nihongo ga jōzu desu.', zh: '田中先生日語很好。' },
+          { jp: '私{わたし}はスポーツが嫌{きら}いです。', romaji: 'Watashi wa supōtsu ga kirai desu.', zh: '我討厭運動。' },
+          { jp: '彼{かれ}は歌{うた}が下手{へた}です。', romaji: 'Kare wa uta ga heta desu.', zh: '他唱歌不好聽。' },
+          { jp: 'どんな音楽{おんがく}が好{す}きですか。', romaji: 'Donna ongaku ga suki desu ka.', zh: '你喜歡哪種音樂？' }
         ]
       }
     ],
@@ -668,11 +726,14 @@ export const chaptersN5 = [
     title: '有什麼東西 (存在句)',
     grammar: [
       {
-        pattern: 'あります / います',
-        explanation: '無生命或植物用「あります」，人或動物用「います」。',
+        pattern: '存在句：場所 に 物 が あります / います',
+        explanation: '表示某個地方有某個東西或人。\n・あります：用於無生命的物品，或是植物。\n・います：用於有生命、會自己移動的人或動物。\n※地點的助詞要用「に」(表示存在的場所)。對象的助詞用「が」。',
         examples: [
-          { jp: '本{ほん}があります。', romaji: 'Hon ga arimasu.', zh: '有書。' },
-          { jp: '犬{いぬ}がいます。', romaji: 'Inu ga imasu.', zh: '有狗。' },
+          { jp: '机{つくえ}の上{うえ}に本{ほん}があります。', romaji: 'Tsukue no ue ni hon ga arimasu.', zh: '桌上有書。' },
+          { jp: '公園{こうえん}に犬{いぬ}がいます。', romaji: 'Kōen ni inu ga imasu.', zh: '公園裡有狗。' },
+          { jp: 'あそこに男{おとこ}の人{ひと}がいます。', romaji: 'Asoko ni otoko no hito ga imasu.', zh: '那邊有個男人。' },
+          { jp: '冷蔵庫{れいぞうこ}に何{なに}がありますか。', romaji: 'Reizōko ni nani ga arimasu ka.', zh: '冰箱裡有什麼？' },
+          { jp: '教室{きょうしつ}に誰{だれ}がいますか。', romaji: 'Kyōshitsu ni dare ga imasu ka.', zh: '教室裡有誰？' }
         ]
       }
     ],
@@ -706,10 +767,14 @@ export const chaptersN5 = [
     title: '上上下下 (位置詞)',
     grammar: [
       {
-        pattern: '物品 A + の + 位置',
-        explanation: '表示相對位置。',
+        pattern: '名詞 A + の + 位置詞',
+        explanation: '用來表示相對位置。常見的位置詞包含：上(うえ)、下(した)、前(まえ)、後ろ(うしろ)、中(なか)、外(そと)、右(みぎ)、左(ひだり)、隣(となり)、近く(ちかく)。\n※「隣」專指同類事物的左右兩邊；「近く」指周圍大範圍的附近。',
         examples: [
           { jp: '箱{はこ}の中{なか}に何{なに}がありますか。', romaji: 'Hako no naka ni nani ga arimasu ka.', zh: '箱子裡有什麼？' },
+          { jp: '銀行{ぎんこう}は郵便局{ゆうびんきょく}の隣{となり}にあります。', romaji: 'Ginkō wa yūbinkyoku no tonari ni arimasu.', zh: '銀行在郵局旁邊。' },
+          { jp: 'ベッドの下{した}に靴{くつ}があります。', romaji: 'Beddo no shita ni kutsu ga arimasu.', zh: '床下有鞋子。' },
+          { jp: '駅{えき}の近{ちか}くにスーパーがあります。', romaji: 'Eki no chikaku ni sūpā ga arimasu.', zh: '車站附近有超市。' },
+          { jp: '私{わたし}の前{まえ}に田中{たなか}さんがいます。', romaji: 'Watashi no mae ni Tanaka-san ga imasu.', zh: '田中先生在我的前面。' }
         ]
       }
     ],
@@ -743,10 +808,14 @@ export const chaptersN5 = [
     title: '算算有幾個 (數量詞)',
     grammar: [
       {
-        pattern: '～つ / ～人（にん） / ～枚（まい）',
-        explanation: '常見的數量詞。',
+        pattern: '數量詞的使用',
+        explanation: '日文的數量詞有非常多種。物品沒有特定形狀時通常用日本固有數字：一つ(ひとつ), 二つ(ふたつ)...到 十(とお)。\n數量詞在句子中的位置通常放在「助詞之後、動詞之前」。\n・人數：一人(ひとり), 二人(ふたり), 三人(さんにん)。\n・薄平物品：〜枚(まい) (如紙、衣服)。\n・細長物品：〜本(ほん) (如筆、傘)。\n・機器/車輛：〜台(だい)。',
         examples: [
           { jp: 'りんごを三{みっ}つ買{か}いました。', romaji: 'Ringo o mittsu kaimashita.', zh: '買了三個蘋果。' },
+          { jp: '切手{きって}を二枚{にまい}ください。', romaji: 'Kitte o nimai kudasai.', zh: '請給我兩張郵票。' },
+          { jp: '教室{きょうしつ}に学生{がくせい}が四人{よにん}います。', romaji: 'Kyōshitsu ni gakusei ga yonin imasu.', zh: '教室裡有四個學生。' },
+          { jp: 'みかんをいくつ食{た}べましたか。', romaji: 'Mikan o ikutsu tabemashita ka.', zh: '你吃了幾個橘子？' },
+          { jp: '一週間{いっしゅうかん}に二回{にかい}、テニスをします。', romaji: 'Isshūkan ni nikai, tenisu o shimasu.', zh: '一星期打兩次網球。' }
         ]
       }
     ],
@@ -780,10 +849,14 @@ export const chaptersN5 = [
     title: '超級比一比 (比較)',
     grammar: [
       {
-        pattern: 'A より B の ほうが 〜',
-        explanation: 'A比B更...。',
+        pattern: '比較句型：A は B より 〜 / A と B と どちらが 〜',
+        explanation: '用來進行兩者或多者的比較。\n・A は B より 形容詞：A 比 B 更...\n・A より B の ほうが 形容詞：比起 A，B 更...\n・A と B と どちらが 形容詞：A 跟 B 哪一個比較...？\n・群體 で 〜が いちばん 形容詞：在某群體中，...是最...的。',
         examples: [
           { jp: '夏{なつ}より冬{ふゆ}のほうが好{す}きです。', romaji: 'Natsu yori fuyu no hō ga suki desu.', zh: '比起夏天，更喜歡冬天。' },
+          { jp: '中国{ちゅうごく}は日本{にほん}より大{おお}きいです。', romaji: 'Chūgoku wa Nihon yori ōkii desu.', zh: '中國比日本大。' },
+          { jp: '肉{にく}と魚{さかな}とどちらが好{す}きですか。', romaji: 'Niku to sakana to dochira ga suki desu ka.', zh: '肉和魚你比較喜歡哪一個？' },
+          { jp: '魚{さかな}のほうが好{す}きです。', romaji: 'Sakana no hō ga suki desu.', zh: '比較喜歡魚。' },
+          { jp: 'クラスで田中{たなか}さんが一番{いちばん}背{せ}が高{たか}いです。', romaji: 'Kurasu de Tanaka-san ga ichiban se ga takai desu.', zh: '班上田中先生個子最高。' }
         ]
       }
     ],
@@ -817,11 +890,14 @@ export const chaptersN5 = [
     title: '我想要... (願望)',
     grammar: [
       {
-        pattern: '〜が 欲{ほ}しい / 〜たい',
-        explanation: '「欲しい」想要物品，「たい」想做動作。',
+        pattern: '〜が 欲しい / 〜たい',
+        explanation: '表達自己的願望。\n・名詞 + が + 欲しい：想要某個「物品」。\n・動詞去ます + たい：想要做某個「動作」。\n※這兩者在語法上都被當作「い形容詞」來變化（例如否定為 欲しくない、〜たくない）。\n※動詞搭配「たい」時，原本的受詞助詞「を」可以換成「が」。',
         examples: [
-          { jp: '私{わたし}は車{くるま}が欲{ほ}しいです。', romaji: 'Watashi wa kuruma ga hoshii desu.', zh: '我想要車子。' },
+          { jp: '私{わたし}は新{あたら}しい車{くるま}が欲{ほ}しいです。', romaji: 'Watashi wa atarashii kuruma ga hoshii desu.', zh: '我想要新車。' },
           { jp: '日本{にほん}へ行{い}きたいです。', romaji: 'Nihon e ikitai desu.', zh: '我想去日本。' },
+          { jp: '何{なに}も食{た}べたくないです。', romaji: 'Nani mo tabetakunai desu.', zh: '什麼都不想吃。' },
+          { jp: '今日{きょう}は仕事{しごと}をしたくないです。', romaji: 'Kyō wa shigoto o shitakunai desu.', zh: '今天不想工作。' },
+          { jp: 'どんな鞄{かばん}が欲{ほ}しいですか。', romaji: 'Donna kaban ga hoshii desu ka.', zh: '你想要什麼樣的包包？' }
         ]
       }
     ],
@@ -856,10 +932,13 @@ export const chaptersN5 = [
     grammar: [
       {
         pattern: '動詞て形 + ください',
-        explanation: '請求對方做某事。て形變化：I類(いちり→って、みびに→んで、き→いて、ぎ→いで)、II類(去ます加て)、III類(します→して、きます→きて)。',
+        explanation: '用來「請求、指示或勸告」對方做某事。\n【て形變化規則】\n・I類動詞：依據「ます」前面的音節變化。\n  - い、ち、り → って (例：買います→買って)\n  - み、び、に → んで (例：読みます→読んで)\n  - き → いて (例：書きます→書いて) ※例外：行きます→行って\n  - ぎ → いで (例：泳ぎます→泳いで)\n  - し → して (例：話します→話して)\n・II類動詞：去「ます」直接加「て」 (例：食べます→食べて)\n・III類動詞：します→して、来(き)ます→来(き)て',
         examples: [
           { jp: 'ちょっと待{ま}ってください。', romaji: 'Chotto matte kudasai.', zh: '請等一下。' },
-          { jp: '見{み}てください。', romaji: 'Mite kudasai.', zh: '請看。' },
+          { jp: 'ここにお名前{なまえ}を書{か}いてください。', romaji: 'Koko ni o-namae o kaite kudasai.', zh: '請把名字寫在這裡。' },
+          { jp: 'ゆっくり話{はな}してください。', romaji: 'Yukkuri hanashite kudasai.', zh: '請說慢一點。' },
+          { jp: 'ドアを開{あ}けてください。', romaji: 'Doa o akete kudasai.', zh: '請開門。' },
+          { jp: '明日{あした}、ここへ来{き}てください。', romaji: 'Ashita, koko e kite kudasai.', zh: '明天請來這裡。' }
         ]
       }
     ],
@@ -893,11 +972,14 @@ export const chaptersN5 = [
     title: '可以嗎？不行！ (許可/禁止)',
     grammar: [
       {
-        pattern: '〜てもいい / 〜てはいけない',
-        explanation: '表示許可與禁止。',
+        pattern: '〜てもいいです / 〜てはいけません',
+        explanation: '表示許可與禁止。\n・動詞て形 + もいいです：表示許可，「做...也可以」。\n・動詞て形 + はいけません：表示禁止，「不可以做...」。(注意這裡的「は」讀作 wa)',
         examples: [
-          { jp: '入{はい}ってもいいですか。', romaji: 'Haittemo ii desu ka.', zh: '可以進去嗎？' },
+          { jp: '写真{しゃしん}を撮{と}ってもいいですか。', romaji: 'Shashin o tottemo ii desu ka.', zh: '可以拍照嗎？' },
+          { jp: 'ええ、いいですよ。', romaji: 'Ee, ii desu yo.', zh: '嗯，可以喔。' },
           { jp: 'ここでタバコを吸{す}ってはいけません。', romaji: 'Koko de tabako o sutte wa ikemasen.', zh: '這裡不能抽菸。' },
+          { jp: 'この本{ほん}を借{か}りてもいいですか。', romaji: 'Kono hon o karitemo ii desu ka.', zh: '可以借這本書嗎？' },
+          { jp: 'ここに入{はい}ってはいけません。', romaji: 'Koko ni haitte wa ikemasen.', zh: '不可以進去這裡。' }
         ]
       }
     ],
@@ -931,10 +1013,14 @@ export const chaptersN5 = [
     title: '動作的連接 (順序)',
     grammar: [
       {
-        pattern: 'V1て、V2て、V3ます',
-        explanation: '用て形連接多個動作。依發生順序排列，時態由最後一個動詞決定。',
+        pattern: '動作順序：V1て、V2て、V3ます',
+        explanation: '當我們要敘述連續發生的兩個或以上的動作時，可以使用動詞的「て形」來連接。動作的順序就是按照句子中出現的順序，整句話的時態（現在或過去）由最後一個動詞來決定。',
         examples: [
-          { jp: '朝{あさ}起{お}きて、ご飯{ごはん}を食{た}べて、学校{がっこう}へ行{い}きます。', romaji: 'Asa okite, gohan o tabete, gakkō e ikimasu.', zh: '早起，吃飯，然後去學校。' },
+          { jp: '朝{あさ}起{お}きて、ご飯{ごはん}を食{た}べて、学校{がっこう}へ行{い}きます。', romaji: 'Asa okite, gohan o tabete, gakkō e ikimasu.', zh: '早上起床，吃飯，然後去學校。' },
+          { jp: '昨日{きのう}は買{か}い物{もの}をして、映画{えいが}を見{み}ました。', romaji: 'Kinō wa kaimono o shite, eiga o mimashita.', zh: '昨天買了東西，看了電影。' },
+          { jp: '神戸{こうべ}へ行{い}って、友達{ともだち}に会{あ}って、ご飯{ごはん}を食{た}べました。', romaji: 'Kōbe e itte, tomodachi ni atte, gohan o tabemashita.', zh: '去了神戶，見了朋友，吃了飯。' },
+          { jp: 'シャワーを浴{あ}びて、寝{ね}ます。', romaji: 'Shawā o abite, nemasu.', zh: '洗個澡然後睡覺。' },
+          { jp: '図書館{としょかん}で本{ほん}を借{か}りて、うちへ帰{かえ}ります。', romaji: 'Toshokan de hon o karite, uchi e kaerimasu.', zh: '在圖書館借書，然後回家。' }
         ]
       }
     ],
@@ -968,11 +1054,14 @@ export const chaptersN5 = [
     title: '因為所以 (原因理由)',
     grammar: [
       {
-        pattern: '〜から / 〜ので',
-        explanation: '表示原因理由。「から」主觀原因，「ので」客觀原因。な形容詞和名詞接「ので」時要用「な」。',
+        pattern: '原因理由：〜から / 〜ので',
+        explanation: '表示原因和理由的接續助詞。\n・〜から：比較主觀，通常接在普通形或禮貌形(ます/です)的後面。\n・〜ので：比較客觀、委婉，常接在普通形後面。注意：な形容詞和名詞接續「ので」時，要加上「な」(例如：静かなので、日曜日なので)。',
         examples: [
           { jp: '忙{いそが}しいから、行{い}きません。', romaji: 'Isogashii kara, ikimasen.', zh: '因為很忙，所以不去。' },
-          { jp: '雨{あめ}なので、休{やす}みます。', romaji: 'Ame na node, yasumimasu.', zh: '因為下雨，所以休息。' }
+          { jp: '雨{あめ}なので、休{やす}みます。', romaji: 'Ame na node, yasumimasu.', zh: '因為下雨，所以休息。' },
+          { jp: '時間{じかん}がありませんから、タクシーで行{い}きましょう。', romaji: 'Jikan ga arimasen kara, takushī de ikimashō.', zh: '因為沒有時間，我們搭計程車去吧。' },
+          { jp: '日曜日{にちようび}なので、人{ひと}が多{おお}いです。', romaji: 'Nichiyōbi na node, hito ga ōi desu.', zh: '因為是星期天，所以人很多。' },
+          { jp: '好{す}きだから、買{か}いました。', romaji: 'Suki da kara, kaimashita.', zh: '因為喜歡，所以買了。' }
         ]
       }
     ],
@@ -1007,10 +1096,13 @@ export const chaptersN5 = [
     grammar: [
       {
         pattern: '動詞ない形 + でください',
-        explanation: '請求對方不要做某事。ない形變化：I類(ます前音改あ段加ない)、II類(去ます加ない)、III類(しない、こない)。',
+        explanation: '用來「請求或指示」對方「不要做」某事。\n【ない形變化規則】\n・I類動詞：將「ます」前面的音節改為「あ段」的音，再加上「ない」。(例：書きます→書かない、読みます→読まない。※例外：買います→買わない、あります→ない)\n・II類動詞：去「ます」直接加「ない」。(例：食べます→食べない)\n・III類動詞：します→しない、来(き)ます→来(こ)ない。',
         examples: [
-          { jp: '忘{わす}れないでください。', romaji: 'Wasurenaide kudasai.', zh: '請不要忘記。' },
+          { jp: '私{わたし}の傘{かさ}を持{も}っていかないでください。', romaji: 'Watashi no kasa o motteikanaide kudasai.', zh: '請不要把我的傘拿走。' },
           { jp: '写真{しゃしん}を撮{と}らないでください。', romaji: 'Shashin o toranaide kudasai.', zh: '請不要拍照。' },
+          { jp: 'ここでタバコを吸{す}わないでください。', romaji: 'Koko de tabako o suwanaide kudasai.', zh: '請不要在這裡抽菸。' },
+          { jp: '無理{むり}をしないでください。', romaji: 'Muri o shinaide kudasai.', zh: '請不要勉強。' },
+          { jp: '心配{しんぱい}しないでください。', romaji: 'Shinpai shinaide kudasai.', zh: '請不要擔心。' }
         ]
       }
     ],
@@ -1044,11 +1136,14 @@ export const chaptersN5 = [
     title: 'N5 總複習 (介詞/形容詞/時態)',
     grammar: [
       {
-        pattern: '介詞比較 (は/が/を/に/で)',
-        explanation: '「は」提示主題，「が」提示主語或新資訊，「を」接續動作對象，「に」表示時間、目的地或對象，「で」表示方法、工具或動作場所。',
+        pattern: '介詞比較 (は/が/を/に/で/へ/と)',
+        explanation: 'N5核心助詞總整理：\n・は：提示主題。\n・が：提示主語、存在主體、或是表示好惡/能力的對象。\n・を：標示他動詞的直接受詞。\n・に：表示時間點、目的地、存在的場所、動作對象。\n・で：表示方法、工具、交通手段、動作發生的場所。\n・へ：表示移動方向。\n・と：表示共同做動作的夥伴，或並列名詞。',
         examples: [
           { jp: '私{わたし}は家{いえ}でご飯{ごはん}を食{た}べます。', romaji: 'Watashi wa ie de gohan o tabemasu.', zh: '我在家吃飯。' },
-          { jp: '明日{あした}、学校{がっこう}に行{い}きます。', romaji: 'Ashita, gakkō ni ikimasu.', zh: '明天去學校。' }
+          { jp: '明日{あした}、学校{がっこう}に行{い}きます。', romaji: 'Ashita, gakkō ni ikimasu.', zh: '明天去學校。' },
+          { jp: '犬{いぬ}がいます。', romaji: 'Inu ga imasu.', zh: '有狗。' },
+          { jp: '友達{ともだち}とバスで帰{かえ}ります。', romaji: 'Tomodachi to basu de kaerimasu.', zh: '和朋友搭公車回家。' },
+          { jp: '料理{りょうり}が好{す}きです。', romaji: 'Ryōri ga suki desu.', zh: '喜歡料理。' }
         ]
       },
       {
@@ -1056,15 +1151,21 @@ export const chaptersN5 = [
         explanation: 'い形容詞：肯定(〜いです)、否定(〜くないです)、過去(〜かったです)、過去否定(〜くなかったです)。\nな形容詞：肯定(〜です)、否定(〜じゃありません)、過去(〜でした)、過去否定(〜じゃありませんでした)。',
         examples: [
           { jp: '昨日{きのう}の天気{てんき}は良{よ}くなかったです。', romaji: 'Kinō no tenki wa yokunakatta desu.', zh: '昨天的天氣不好。' },
-          { jp: '昔{むかし}、この町{まち}は静{しず}かでした。', romaji: 'Mukashi, kono machi wa shizuka deshita.', zh: '以前這個城鎮很安靜。' }
+          { jp: '昔{むかし}、この町{まち}は静{しず}かでした。', romaji: 'Mukashi, kono machi wa shizuka deshita.', zh: '以前這個城鎮很安靜。' },
+          { jp: '今日{きょう}は暑{あつ}いです。', romaji: 'Kyō wa atsui desu.', zh: '今天很熱。' },
+          { jp: 'この本{ほん}は安{やす}くなかったです。', romaji: 'Kono hon wa yasukunakatta desu.', zh: '這本書以前不便宜。' },
+          { jp: '田中{たなか}さんは親切{しんせつ}じゃありません。', romaji: 'Tanaka-san wa shinsetsu ja arimasen.', zh: '田中先生不親切。' }
         ]
       },
       {
-        pattern: '動詞時態與基本變化',
-        explanation: 'ます(現在/未來肯定)，ました(過去肯定)，ません(現在/未來否定)，ませんでした(過去否定)。て形(連接/請求/進行狀態)，ない形(否定請求)。',
+        pattern: '動詞變化總複習 (ます/て/ない/たい)',
+        explanation: 'N5核心動詞變化總結：\n・ます形：禮貌表達。肯定(〜ます)、否定(〜ません)、過去(〜ました)、過去否定(〜ませんでした)。\n・て形：請求(〜てください)、進行中/狀態(〜ています)、許可/禁止(〜てもいい/てはいけない)、順序。\n・ない形：否定請求(〜ないでください)。\n・たい：願望(〜たいです)。',
         examples: [
           { jp: '昨日{きのう}、テレビを見{み}ませんでした。', romaji: 'Kinō, terebi o mimasen deshita.', zh: '昨天沒有看電視。' },
-          { jp: 'ここに座{すわ}らないでください。', romaji: 'Koko ni suwaranaide kudasai.', zh: '請不要坐在這裡。' }
+          { jp: 'ここに座{すわ}らないでください。', romaji: 'Koko ni suwaranaide kudasai.', zh: '請不要坐在這裡。' },
+          { jp: '今{いま}、本{ほん}を読{よ}んでいます。', romaji: 'Ima, hon o yonde imasu.', zh: '現在正在看書。' },
+          { jp: '水{みず}を飲{の}みたいです。', romaji: 'Mizu o nomitai desu.', zh: '我想喝水。' },
+          { jp: 'ここで写真{しゃしん}を撮{と}ってもいいですか。', romaji: 'Koko de shashin o tottemo ii desu ka.', zh: '可以在這裡拍照嗎？' }
         ]
       }
     ],
