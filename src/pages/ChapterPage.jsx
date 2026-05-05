@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowLeft, BookOpen, Languages, ClipboardCheck, ChevronRight, Volume2, Square } from 'lucide-react'
 import { chapters, levelConfig } from '../data/chapters'
+import useStore from '../store/useStore'
 import FuriganaText from '../components/FuriganaText'
 import { useSpeech } from '../hooks/useSpeech'
 
@@ -14,6 +15,7 @@ export default function ChapterPage() {
   const { id } = useParams()
   const navigate = useNavigate()
   const chapter = chapters.find(ch => ch.id === id)
+  const getNodeStatus = useStore(s => s.getNodeStatus)
   const [currentStep, setCurrentStep] = useState(0)
   const [vocabIndex, setVocabIndex] = useState(0)
   const [direction, setDirection] = useState(0)
@@ -31,7 +33,14 @@ export default function ChapterPage() {
     return () => window.removeEventListener('resize', updateHeight)
   }, [])
 
+  // 若章節不存在或未解鎖，導回地圖頁
   if (!chapter) {
+    navigate('/')
+    return null
+  }
+
+  const status = getNodeStatus(chapter.id)
+  if (status === 'locked') {
     navigate('/')
     return null
   }
@@ -152,7 +161,7 @@ export default function ChapterPage() {
                         <FuriganaText text={g.pattern} />
                       </span>
                     </div>
-                    <p className="text-surface-300 text-sm mb-5 leading-relaxed">{g.explanation}</p>
+                    <p className="text-surface-300 text-sm mb-5 leading-relaxed whitespace-pre-line">{g.explanation}</p>
 
                     <div className="space-y-3">
                       {g.examples.map((ex, exIdx) => {

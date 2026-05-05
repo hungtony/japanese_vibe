@@ -11,6 +11,7 @@ export default function QuizPage() {
   const { id } = useParams()
   const navigate = useNavigate()
   const completeNode = useStore(s => s.completeNode)
+  const getNodeStatus = useStore(s => s.getNodeStatus)
   const chapter = chapters.find(ch => ch.id === id)
 
   const [currentQ, setCurrentQ] = useState(0)
@@ -19,7 +20,14 @@ export default function QuizPage() {
   const [showResult, setShowResult] = useState(false)
   const [showConfetti, setShowConfetti] = useState(false)
 
+  // 若章節不存在或未解鎖，導回地圖頁
   if (!chapter) {
+    navigate('/')
+    return null
+  }
+
+  const status = getNodeStatus(chapter.id)
+  if (status === 'locked') {
     navigate('/')
     return null
   }

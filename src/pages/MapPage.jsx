@@ -1,4 +1,4 @@
-import { useEffect, useRef, useMemo, useState } from 'react'
+import { useEffect, useRef, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Lock, RotateCcw, Map, Brain, Sun, Moon, ChevronDown } from 'lucide-react'
@@ -12,36 +12,16 @@ export default function MapPage() {
   const navigate = useNavigate()
   const { completedNodes, unlockedNodeId, userLevel, resetProgress, theme, toggleTheme } = useStore()
   const getNodeStatus = useStore(s => s.getNodeStatus)
+  const openLevels = useStore(s => s.openLevels)
+  const toggleLevel = useStore(s => s.toggleLevel)
+  const initOpenLevels = useStore(s => s.initOpenLevels)
   const currentRef = useRef(null)
 
-  // 找出目前進行中的章節所屬等級
-  const currentLevel = useMemo(() => {
-    if (!unlockedNodeId) return userLevel
-    const currentChapter = chapters.find(ch => ch.id === unlockedNodeId)
-    return currentChapter?.level || userLevel
-  }, [unlockedNodeId, userLevel])
-
-  // 預設只展開目前進行中章節的等級，其他等級收合
-  const [openLevels, setOpenLevels] = useState(() =>
-    Object.fromEntries(levelOrder.map(l => [l, l === currentLevel]))
-  )
-
-  // 當完成章節後，若進入下一個等級，自動收合舊等級、展開新等級
+  // 僅在首次啟動時初始化展開狀態（openLevels 為 null 時才執行）
+  // 之後使用者手動展開/收合的狀態會保留，不會被覆蓋
   useEffect(() => {
-    if (currentLevel) {
-      setOpenLevels(prev => {
-        const next = {}
-        levelOrder.forEach(l => {
-          next[l] = l === currentLevel
-        })
-        return next
-      })
-    }
-  }, [currentLevel])
-
-  const toggleLevel = (level) => {
-    setOpenLevels(prev => ({ ...prev, [level]: !prev[level] }))
-  }
+    initOpenLevels()
+  }, [initOpenLevels])
 
   // 按等級分組
   const grouped = useMemo(() => {
@@ -155,7 +135,7 @@ export default function MapPage() {
           const config = levelConfig[level]
           const cs = colorMap[level]
           const levelChapters = grouped[level]
-          const isOpen = openLevels[level]
+          const isOpen = openLevels ? openLevels[level] : false
 
           return (
             <motion.section
@@ -225,7 +205,6 @@ export default function MapPage() {
                         const status = getNodeStatus(chapter.id)
                         const isCurrent = status === 'current'
                         const isCompleted = status === 'completed'
-                        const isAccessible = status === 'accessible'
                         const isLocked = status === 'locked'
 
                         return (
@@ -250,9 +229,6 @@ export default function MapPage() {
                                   className={`w-3 h-3 rounded-full ${cs.bg}`}
                                 />
                               )}
-                              {isAccessible && (
-                                <div className={`w-3 h-3 rounded-full opacity-50 ${cs.bg}`} />
-                              )}
                               {isLocked && (
                                 <div className="w-3 h-3 rounded-full bg-surface-700" />
                               )}
@@ -268,7 +244,6 @@ export default function MapPage() {
                                 w-full text-left rounded-2xl p-5 transition-all duration-300
                                 ${isCompleted ? `card-glass border-white/10 ${cs.lightBg}` : ''}
                                 ${isCurrent ? `card-glass ring-2 ${cs.ring} ${cs.lightBg} shadow-lg ${cs.shadow}` : ''}
-                                ${isAccessible ? 'card-glass border border-white/10 hover:bg-white/5 cursor-pointer' : ''}
                                 ${isLocked ? 'bg-white/[0.02] border border-white/[0.04] cursor-not-allowed' : 'cursor-pointer'}
                               `}
                             >
@@ -307,11 +282,6 @@ export default function MapPage() {
                                     >
                                       <span className="text-white text-lg">→</span>
                                     </motion.div>
-                                  )}
-                                  {isAccessible && (
-                                    <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors">
-                                      <span className={`text-sm font-bold ${cs.text}`}>GO</span>
-                                    </div>
                                   )}
                                   {isLocked && (
                                     <div className="w-10 h-10 rounded-xl bg-surface-800/50 flex items-center justify-center">

@@ -2,6 +2,8 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { chapters } from '../data/chapters'
 
+const levelOrder = ['N5', 'N4', 'N3', 'N2', 'N1']
+
 const useStore = create(
   persist(
     (set, get) => ({
@@ -14,6 +16,7 @@ const useStore = create(
       completedNodes: [],        // 已通關章節 id 列表
       masteredWords: {},         // 已記住的單字 { 'N5': ['学生', '先生'], 'N4': [...], ... }
       completedTravelChapters: [], // 已完成的旅遊章節 id 列表
+      openLevels: null,          // 地圖頁面各等級展開/收合狀態（null = 尚未初始化）
 
       // ---- 程度測驗完成 ----
       completePlacement: (level) => {
@@ -54,15 +57,9 @@ const useStore = create(
 
       // ---- 取得節點狀態 ----
       getNodeStatus: (nodeId) => {
-        const { completedNodes, unlockedNodeId, userLevel } = get()
+        const { completedNodes, unlockedNodeId } = get()
         if (completedNodes.includes(nodeId)) return 'completed'
         if (nodeId === unlockedNodeId) return 'current'
-
-        const chapter = chapters.find(ch => ch.id === nodeId)
-        if (chapter && userLevel && chapter.level === userLevel) {
-          return 'accessible'
-        }
-        
         return 'locked'
       },
 
@@ -94,6 +91,23 @@ const useStore = create(
         return masteredWords[level] || []
       },
 
+      // ---- 地圖等級展開/收合 ----
+      // 僅在首次啟動（openLevels 為 null）時初始化，之後不會再自動覆蓋
+      initOpenLevels: () => {
+        const { openLevels, unlockedNodeId, userLevel } = get()
+        if (openLevels !== null) return // 已初始化過，不再覆蓋
+        const currentChapter = chapters.find(ch => ch.id === unlockedNodeId)
+        const currentLevel = currentChapter?.level || userLevel || 'N5'
+        set({
+          openLevels: Object.fromEntries(levelOrder.map(l => [l, l === currentLevel]))
+        })
+      },
+
+      toggleLevel: (level) => {
+        const { openLevels } = get()
+        set({ openLevels: { ...openLevels, [level]: !openLevels[level] } })
+      },
+
       // ---- 旅遊章節完成 ----
       completeTravelChapter: (chapterId) => {
         const { completedTravelChapters } = get()
@@ -110,6 +124,7 @@ const useStore = create(
           completedNodes: [],
           masteredWords: {},
           completedTravelChapters: [],
+          openLevels: null,          // 重置展開狀態，下次進入地圖時重新初始化
         })
       },
     }),
