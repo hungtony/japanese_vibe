@@ -8,6 +8,9 @@ import BottomNav from '../components/BottomNav'
 
 const levelOrder = ['N5', 'N4', 'N3', 'N2', 'N1']
 
+// 僅在首次進入地圖頁或解鎖新章節時自動捲動，從章節頁返回時不再自動跳轉
+let lastScrolledNodeId = null
+
 export default function MapPage() {
   const navigate = useNavigate()
   const { completedNodes, unlockedNodeId, userLevel, resetProgress, theme, toggleTheme } = useStore()
@@ -33,9 +36,10 @@ export default function MapPage() {
     return map
   }, [])
 
-  // 自動捲動到當前進度
+  // 自動捲動到當前進度（僅在解鎖新章節時，從章節頁返回不會觸發）
   useEffect(() => {
-    if (currentRef.current) {
+    if (currentRef.current && unlockedNodeId !== lastScrolledNodeId) {
+      lastScrolledNodeId = unlockedNodeId
       setTimeout(() => {
         currentRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
       }, 500)
